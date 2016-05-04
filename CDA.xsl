@@ -125,7 +125,7 @@ body { margin: 0; padding: 0; }
 	</xsl:template>
 	<!-- header elements -->
 	<xsl:template name="documentGeneral">
-		<table class="header_table">
+		<table class="header_table notminhead">
 			<tbody>
 				<tr>
 					<td class="FakeHead"  width="20%">
@@ -179,7 +179,7 @@ body { margin: 0; padding: 0; }
 	</xsl:template>
 	<!-- author -->
 	<xsl:template name="author">
-		<table class="header_table">
+		<table class="header_table notminhead">
 			<tbody>
 				<xsl:for-each select="n1:author/n1:assignedAuthor">
 					<tr>
@@ -493,7 +493,7 @@ body { margin: 0; padding: 0; }
 	<!-- documentationOf -->
 	<xsl:template name="documentationOf">
 		<xsl:if test="n1:documentationOf">
-			<table class="header_table">
+			<table class="header_table notminhead">
 				<tbody>
 					<xsl:for-each select="n1:documentationOf">
 						<xsl:if test="n1:serviceEvent/@classCode and n1:serviceEvent/n1:code">
@@ -586,7 +586,7 @@ body { margin: 0; padding: 0; }
 	<!-- inFulfillmentOf -->
 	<xsl:template name="inFulfillmentOf">
 		<xsl:if test="n1:infulfillmentOf">
-			<table class="header_table">
+			<table class="header_table notminhead">
 				<tbody>
 					<xsl:for-each select="n1:inFulfillmentOf">
 						<tr>
@@ -621,7 +621,7 @@ body { margin: 0; padding: 0; }
 	<!-- informant -->
 	<xsl:template name="informant">
 		<xsl:if test="n1:informant">
-			<table class="header_table">
+			<table class="header_table notminhead">
 				<tbody>
 					<xsl:for-each select="n1:informant">
 						<tr>
@@ -679,7 +679,7 @@ body { margin: 0; padding: 0; }
 	<!-- informantionRecipient -->
 	<xsl:template name="informationRecipient">
 		<xsl:if test="n1:informationRecipient">
-			<table class="header_table">
+			<table class="header_table notminhead">
 				<tbody>
 					<xsl:for-each select="n1:informationRecipient">
 						<tr>
@@ -732,7 +732,7 @@ body { margin: 0; padding: 0; }
 	<!-- participant -->
 	<xsl:template name="participant">
 		<xsl:if test="n1:participant">
-			<table class="header_table">
+			<table class="header_table notminhead">
 				<tbody>
 					<xsl:for-each select="n1:participant">
 						<tr>
@@ -827,7 +827,7 @@ body { margin: 0; padding: 0; }
 								</xsl:for-each>
 							</td>
 						</tr>
-						<tr>
+						<tr class="notminhead">
 							<td class="FakeHead" width="10%">
 								<xsl:text>Contact info</xsl:text>
 							</td>
@@ -849,16 +849,23 @@ body { margin: 0; padding: 0; }
 						<tr/>
 						<tr>
 							<td class="FakeHead" width="10%">
-								<xsl:text>Marital Status</xsl:text>
-							</td>
-							<td width="35%">
-								<xsl:value-of select="n1:patient/n1:maritalStatusCode/@displayName"/>
-							</td>
-							<td class="FakeHead" width="10%">
 								<xsl:text>Race</xsl:text>
 							</td>
 							<td>
 								<xsl:value-of select="n1:patient/n1:raceCode/@displayName"/>
+							</td>
+							<td class="FakeHead" width="10%">
+								<xsl:text>Ethnicity</xsl:text>
+							</td>
+							<td>
+								<xsl:choose>
+									<xsl:when test="not(n1:patient/n1:ethnicGroupCode/@nullFlavor)">
+										<xsl:value-of select="n1:patient/n1:ethnicGroupCode/@displayName"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:text>Not Available</xsl:text>
+									</xsl:otherwise>
+								</xsl:choose>
 							</td>
 						</tr>
 						<tr/>
@@ -901,17 +908,10 @@ body { margin: 0; padding: 0; }
 								</xsl:choose>
 							</td>
 							<td class="FakeHead" width="10%">
-								<xsl:text>Ethnicity</xsl:text>
+								<xsl:text>Marital Status</xsl:text>
 							</td>
-							<td>
-								<xsl:choose>
-									<xsl:when test="not(n1:patient/n1:ethnicGroupCode/@nullFlavor)">
-										<xsl:value-of select="n1:patient/n1:ethnicGroupCode/@displayName"/>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:text>Not Available</xsl:text>
-									</xsl:otherwise>
-								</xsl:choose>
+							<td width="35%">
+								<xsl:value-of select="n1:patient/n1:maritalStatusCode/@displayName"/>
 							</td>
 						</tr>
 					</xsl:if>
@@ -1027,7 +1027,7 @@ body { margin: 0; padding: 0; }
 			<xsl:with-param name="title" select="n1:title"/>
 			<xsl:with-param name="loinc" select="n1:code/@code"/>
 		</xsl:call-template>
-		<div class="sectionContent">
+		<div class="sectionContent" id="text_{n1:code/@code}">
 			<xsl:call-template name="section-author"/>
 			<xsl:call-template name="section-text"/>
 			<xsl:for-each select="n1:component/n1:section">

@@ -966,9 +966,12 @@ jQuery( document ).ready(function() {
 	});
 	
 	jQuery('#autosave').bootstrapToggle(localStorage.getItem("autosave_value"));
+	jQuery('#minimalhead').bootstrapToggle(localStorage.getItem("minimalhead_value"));
+
 	jQuery('#hide-file-opts').bootstrapToggle(localStorage.getItem("hide-file-opts_value"));
 	
 	TaskTooling.setAutoSave(jQuery('#autosave').prop('checked'));
+	TaskTooling.setminimalhead(jQuery('#minimalhead').prop('checked'));
 	TaskTooling.setfileOpts(jQuery('#hide-file-opts').prop('checked'));
 	
 	if(jQuery('#hide-file-opts').prop('checked') == false){
@@ -981,6 +984,12 @@ jQuery( document ).ready(function() {
 		localStorage.setItem("autosave_value", state ? "on" : "off");
 		TaskTooling.setAutoSave(jQuery(this).prop('checked'));
     });
+
+	jQuery('#minimalhead').change(function() {
+		var state =  jQuery(this).prop('checked');
+		localStorage.setItem("minimalhead_value", state ? "on" : "off");
+		TaskTooling.setminimalhead(jQuery(this).prop('checked'));
+    });    
 	
 	jQuery('#hide-file-opts').change(function() {
 		var state =  jQuery(this).prop('checked');
@@ -1047,6 +1056,7 @@ var TaskTooling = (function () {
 	var curr = null;
 	var begun = false;
 	var autoSave = true;
+	var minimalhead = true;
 	var hideOpts = true;
 	var loadData;
 	var getDumpData;
@@ -1150,6 +1160,10 @@ var TaskTooling = (function () {
 	pub.setAutoSave = function (s) {
 		autoSave = s;
 	};
+
+	pub.setminimalhead = function (s) {
+		minimalhead = s;
+	}
 	
 	pub.setfileOpts = function (e) {
 		hideOpts = e;
@@ -1347,6 +1361,10 @@ var TaskTooling = (function () {
         }
     }
 
+	function openViewFH() {
+		$( ".notminhead").css('display','');		
+	}
+
 	function openViewXML(idname) {
        var column = [];
        var element = -1;
@@ -1413,6 +1431,7 @@ var TaskTooling = (function () {
 			if (element==-1) {
 				var panel = '<div id="file'+idname+'" class="tab-pane fade"><div id="XML'+idname+'" ></div><BR clear=all></div>';
 				$("#viewxml-btn").attr('onclick','openViewXML("file'+idname+'");');
+				$("#viewfh-btn").attr('onclick','openViewFH();');				
 				$('#pageContent').append(panel);
 				res = displayXMLResult(contents,'XML' +idname);
 				if (document.getElementById('XML'+idname).innerHTML.length>0) {
@@ -1433,6 +1452,7 @@ var TaskTooling = (function () {
 						var myTH = myTHs[i].getElementsByTagName("tr")[0].getElementsByTagName("th")[0];
 						if (myTH) sorttable.innerSortFunction.apply(myTH, []);					
 					}
+				  sectionRemoval();
 				} else {
 					$("#file-message").html("This is not a valid XML file.");
 					$("#file"+idname).remove();
@@ -1445,6 +1465,25 @@ var TaskTooling = (function () {
 		} else { 
 		  alert('Failed to load file');
 		}
+	}
+
+	function sectionRemoval() {
+	  	var items = localStorage.getItem("hide_list");
+	  	if (items) {
+		  	var hideList = JSON.parse(items);		
+ 			for (var j = 0; j < hideList.length; j++){
+				var name = hideList[j][0];
+				var loinc = hideList[j][1];
+				$( "#header_"+loinc ).css('display','none');
+				$( "#text_"+loinc ).css('display','none');
+			}			
+		}
+
+	  	var minimalhead_value = localStorage.getItem("minimalhead_value");
+	  	if (minimalhead_value=="on") {
+				$( ".notminhead").css('display','none');	  		
+	  	}
+
 	}
 
 	function loadXMLDoc(filename)
@@ -1499,6 +1538,10 @@ var TaskTooling = (function () {
 					$("#CommentsButton").css("display","");
 				} else {
 					$("#ViewXMLButton").css("display","");
+					var minimalhead_value = localStorage.getItem("minimalhead_value");
+						  	if (minimalhead_value=="on") {					
+								$("#ViewFullHeadButton").css("display","");
+							}
 				}
 			}
 		} else {
@@ -1521,12 +1564,57 @@ var TaskTooling = (function () {
 		var sectionTitle = node.childNodes[1].innerHTML;
 		var sectionLoinc = node.getAttribute('id').replace("header_","");
 		var sectionNode = document.getElementById(nodeid).nextSibling.nextSibling;
-		var hiddenSections = document.getElementById("hiddenSections");
 
-		var blockall = confirm("Do you want to set this section to always be hidden?");
-		alert (blockall);
+		var blockall = confirm("Click OK if you want to set this section to always be hidden when using FroozHIE.  Otherwise, click cancel.");
+		if (blockall) {
+			var lslist = localStorage.getItem("hide_list");
+			var hideList;
+			var section = [sectionTitle,sectionLoinc];
+			if (!lslist || lslist.length==0) 
+				hideList = [];
+			else {
+				hideList = JSON.parse(localStorage.getItem("hide_list"));			
+			}
+			hideList.push(section);
+			var txtList = JSON.stringify(hideList);
+			localStorage.setItem("hide_list",txtList);	
+		}
 		sectionNode.style.display = 'none';
-		node.style.display = 'none';
+		node.style.display = 'none';	
+	}
+
+	function removeAllChildNodes(x) {
+		while (x.firstChild) {
+		    x.removeChild(x.firstChild);
+		}		
+	}
+
+	function showHiddens() {
+		for(var key in localStorage) {
+		  if (key=="hide_list") {
+		  	var items = (localStorage.getItem(key));
+		  	var hideList = JSON.parse(items);		
+		  	var ul = document.getElementById("hiddenSections");
+		  	removeAllChildNodes(ul);
+			for (var j = 0; j < hideList.length; j++){
+				var li = document.createElement("li");
+				var txt = hideList[j][0]+" ("+hideList[j][1]+") ";				
+				li.appendChild(document.createTextNode(txt));
+				//"<button type=\"button\" style=\"height:15px;font-size:10px;margin-left:5px;padding: 0px 6px 1px 6px;\" value=\"Clear Section\" " +
+				//		"onclick=\"clearSingleSection("+hideList[j][1]+");\" title=\"Clear Removed Sections\" id=\"clearHidden-btn"+hideList[j][1]+"\" class=\"btn btn-primary btn-danger\">Unhide</button>";
+				ul.appendChild(li);
+			}		  	
+		  }
+		}		
+	}
+
+	function clearRemoveSection() {
+		var clearall = confirm("Click OK if you want to remove all existing hidden sections.  Otherwise, click cancel.");
+		var ul = document.getElementById("hiddenSections");
+		if (clearall) {
+			removeAllChildNodes(ul);
+			localStorage.setItem("hide_list","");
+		}				
 	}
 
 </script>
@@ -1548,7 +1636,8 @@ var TaskTooling = (function () {
 				</div>
 				<div class="modal-body">
 					<h2>Froozhie Tool</h2>
-					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be compared and reconciled with existing data in the practice EMR/EHR. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process.<br>
+					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be compared and reconciled with existing data in the practice EMR/EHR. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process.
+					<br>
 					<h3>Help / Suggestions</h3>
 					<p>If you find bugs or have a feature that needs to be added, please email us at : </p>
 				</div>
@@ -1568,13 +1657,23 @@ var TaskTooling = (function () {
 				</div>
 				<div class="modal-body">
 					<form>
+						<label for="minimalhead">Minimalist Header</label><br>
+						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1" checked data-onstyle="success" data-offstyle="danger" id="minimalhead" class="custom-toggle">
+					</form>
+				</div>				
+				<!--
+				<div class="modal-body">
+					<form>
 						<label for="autosave">Autosave</label><br>
 						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1" checked data-onstyle="success" data-offstyle="danger" id="autosave" class="custom-toggle">
 					</form>
 				</div>
+				-->
 				<div class="modal-body">
 					<form>
-						<label for="hiddenSections">Hidden Sections</label><br>
+						<label for="hiddenSections">Hidden Sections</label> <button type="button" 
+						style="height:15px;font-size:10px;margin-left:5px;padding: 0px 6px 1px 6px;" value="Clear Removed" 
+						onclick="clearRemoveSection();" title="Clear Removed Sections" id="clearHidden-btn" class="btn btn-primary btn-danger">Clear</button><br>
 						<ul id="hiddenSections">
 						</ul>
 					</form>
@@ -1616,7 +1715,7 @@ var TaskTooling = (function () {
 				<i onClick="document.getElementById('file-message').innerHTML='';" id="addButton" class="fa fa-file" data-toggle="modal" data-target="#file-modal"></i> <span class="header-text">Add File</span>
 			</div>
 			<div id="header-right">
-				<i id="settingsButton" class="fa fa-cogs" data-toggle="modal" data-target="#settings-modal"></i>
+				<i id="settingsButton" class="fa fa-cogs" data-toggle="modal" data-target="#settings-modal" onClick="showHiddens()"></i>
 				<i id="helpButton" class="fa fa-question-circle" data-toggle="modal" data-target="#help-modal"></i>
 			</div>
 			<IMG SRC="froozhie.png" style="height:29px" />
@@ -1627,19 +1726,22 @@ var TaskTooling = (function () {
 				<button type="button" value="Save" onclick="TaskTooling.save()" title="Save files" id="save-btn" class="btn btn-primary">Save</button>
 			</div>
 			<div id="ViewXMLButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="Save" onclick="" title="View XML" id="viewxml-btn" class="btn btn-primary">View XML</button>
+				<button type="button" value="ViewXML" onclick="" title="View XML" id="viewxml-btn" class="btn btn-primary">View XML</button>
 			</div>
+			<div id="ViewFullHeadButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
+				<button type="button" value="ViewFH" onclick="" title="View Full Header" id="viewfh-btn" class="btn btn-primary">View Full Header</button>
+			</div>			
 			<div id="CollapseButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="Save" onclick="SetElementCollapse();" title="Collapse All" id="collapse-btn" class="btn btn-primary">Collapse All</button>
+				<button type="button" value="CollapseAll" onclick="SetElementCollapse();" title="Collapse All" id="collapse-btn" class="btn btn-primary">Collapse All</button>
 			</div>
 			<div id="ExpandButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="Save" onclick="SetElementExpand();" title="Expand All" id="expand-btn" class="btn btn-primary">Expand All</button>
+				<button type="button" value="ExpandAll" onclick="SetElementExpand();" title="Expand All" id="expand-btn" class="btn btn-primary">Expand All</button>
 			</div>
 			<div id="CommentsButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="Save" onclick="SetComments();" title="Expand All" id="comments-btn" class="btn btn-primary" style="width:151px">Comments On</button>
+				<button type="button" value="Comments On" onclick="SetComments();" title="Expand All" id="comments-btn" class="btn btn-primary" style="width:151px">Comments On</button>
 			</div>
 			<div class="btn-group btn-group-lg desktop btn-group-right" role="group" aria-label="Global Controls">
-				<button type="button" value="Clear" onclick="TaskTooling.clear()" title="Remove files" id="clear-btn" class="btn btn-primary btn-danger desktop">Close All</button>
+				<button type="button" value="Close All" onclick="TaskTooling.clear()" title="Remove files" id="clear-btn" class="btn btn-primary btn-danger desktop">Close All</button>
 			</div>
 		</div>	
 	</div>
