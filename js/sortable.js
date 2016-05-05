@@ -53,7 +53,7 @@ sorttable = {
       // table doesn't have a tHead. Since it should have, create one and
       // put the first table row in it.
       the = document.createElement('thead');
-      the.appendChild(table.rows[0]);
+      if (table.rows[0]) the.appendChild(table.rows[0]);
       table.insertBefore(the,table.firstChild);
     }
     // Safari doesn't support table.tHead, sigh

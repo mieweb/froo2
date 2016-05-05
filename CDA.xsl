@@ -1090,7 +1090,11 @@ body { margin: 0; padding: 0; }
 		</div>
 		<xsl:choose>
 			<xsl:when test="count(.//*[name()='content']) &lt; 1">
-				<B>WARNING: NO CONTENT ELEMENTS!</B>
+				<xsl:choose>
+				<xsl:when test="count(.//*[name()='entry']) &lt; 1">
+					<B>WARNING: NO CONTENT ELEMENTS!</B>
+				</xsl:when>
+				</xsl:choose>
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>

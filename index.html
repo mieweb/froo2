@@ -1421,7 +1421,7 @@ var TaskTooling = (function () {
 		  r.onload = function(e) { 
 			var contents = e.target.result;
 			var fname = f.name;
-			var idname = fname.replace(".xml","").replace(/ /g,"").replace(/-/g,"").replace(/_/g,"");
+			var idname = fname.replace(".xml","").replace(/ /g,"").replace(/-/g,"").replace(/./g,"");
 			var column = [];
 			var element = -1;
 			for(var i=0; i<xmlFiles.length; i++){
@@ -1449,8 +1449,10 @@ var TaskTooling = (function () {
 					sorttable.retag();
 					var myTHs = document.getElementsByTagName("thead");
 					for (var i=0, max=myTHs.length; i < max; i++) {
-						var myTH = myTHs[i].getElementsByTagName("tr")[0].getElementsByTagName("th")[0];
-						if (myTH) sorttable.innerSortFunction.apply(myTH, []);					
+						if (myTHs[i].getElementsByTagName("tr")[0])	{
+							var myTH = myTHs[i].getElementsByTagName("tr")[0].getElementsByTagName("th")[0];
+							if (myTH) sorttable.innerSortFunction.apply(myTH, []);					
+						}
 					}
 				  sectionRemoval();
 				} else {
