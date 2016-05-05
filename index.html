@@ -1559,6 +1559,23 @@ var TaskTooling = (function () {
 		}
 	}
 
+	function removeListItem(lslistname,cellno,item) {
+		var lslist = localStorage.getItem(lslistname);
+		var hideList;
+		if (!lslist || lslist.length==0) 
+			hideList = [];
+		else {
+			hideList = JSON.parse(lslist);			
+		}
+		for (var i = 0; i < hideList.length; i++) {
+		    if (hideList[i][cellno] == item) {
+		    	hideList.splice(i,1);
+		    }
+		}
+		var txtList = JSON.stringify(hideList);
+		localStorage.setItem(lslistname,txtList);			
+	}
+
 	function removeSection(nodeid) {
 		var node = document.getElementById(nodeid);
 		var sectionTitle = node.childNodes[1].innerHTML;
@@ -1599,9 +1616,20 @@ var TaskTooling = (function () {
 			for (var j = 0; j < hideList.length; j++){
 				var li = document.createElement("li");
 				var txt = hideList[j][0]+" ("+hideList[j][1]+") ";				
+				var dbutton = document.createElement("button");
 				li.appendChild(document.createTextNode(txt));
-				//"<button type=\"button\" style=\"height:15px;font-size:10px;margin-left:5px;padding: 0px 6px 1px 6px;\" value=\"Clear Section\" " +
-				//		"onclick=\"clearSingleSection("+hideList[j][1]+");\" title=\"Clear Removed Sections\" id=\"clearHidden-btn"+hideList[j][1]+"\" class=\"btn btn-primary btn-danger\">Unhide</button>";
+				dbutton.setAttribute("type","button");
+				dbutton.setAttribute("style","height:15px;font-size:10px;margin-left:5px;padding: 0px 6px 1px 6px;");
+				dbutton.setAttribute("value",hideList[j][1]);
+				dbutton.setAttribute("title","Clear Section");
+				dbutton.setAttribute("type","button");
+				dbutton.innerHTML = " X ";
+				dbutton.setAttribute("id","clearHidden-btn"+hideList[j][1]);
+				dbutton.setAttribute("class","btn btn-primary btn-danger");
+				dbutton.onclick = function () {
+					clearSingleSection(this.value);//
+				};	
+				li.appendChild(dbutton);
 				ul.appendChild(li);
 			}		  	
 		  }
@@ -1609,13 +1637,23 @@ var TaskTooling = (function () {
 	}
 
 	function clearRemoveSection() {
-		var clearall = confirm("Click OK if you want to remove all existing hidden sections.  Otherwise, click cancel.");
+		var clearall = confirm("Click OK if you want to unset all existing hidden sections.  Otherwise, click cancel.");
 		var ul = document.getElementById("hiddenSections");
 		if (clearall) {
 			removeAllChildNodes(ul);
 			localStorage.setItem("hide_list","");
 		}				
 	}
+
+	function clearSingleSection(item) {
+		var clearall = confirm("Click OK if you want unset this section from being hidden.  Otherwise, click cancel.");
+		var ul = document.getElementById("hiddenSections");
+		var thisitem = document.getElementById("clearHidden-btn"+item);
+		if (clearall) {
+			removeListItem("hide_list",1,item);
+			thisitem.parentNode.parentNode.removeChild(thisitem.parentNode);
+		}				
+	}	
 
 </script>
 <body>
