@@ -16,6 +16,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-toggle.min.js"></script>
 <script src="js/sortable.js"></script>
+<script src="js/jquery.sortable.min.js"></script>
 <script src="js/bootbox.js"></script>
 <script src="js/froozhie.js"></script>
 <body>
@@ -35,11 +36,41 @@
 					<h1 class="modal-title" id="myModalLabel">Froozhie Information</h1>
 				</div>
 				<div class="modal-body">
-					<h2>Froozhie Tool</h2>
-					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be compared and reconciled with existing data in the practice EMR/EHR. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process.
-					<br>
+					<h2>FroozHIE Tool</h2>
+					<p>
+					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be viewed, compared and reconciled with existing data in the practice EMR/EHR. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process.  The goal of the FroozHIE is to allow for easy, customized viewing of CDA files, and ultimately easy reconciliation between two sources of information provided via CDA (usually an incoming file, and existing information within a system).
+					</p>
+					<h3>Features/Instructions</h3>
+					<p>
+					<ul>
+						<li><strong>Opening a file</strong>: To open a new CDA file, click the "Add File" file icon in the upper left
+						of the page.  Once the "Add File" modal window opens, click on the "Choose File" button to open the file 
+						selection window, and find your desired file to open it within the tool.
+						</li>
+						<li><strong>Viewing a file</strong>: Once a file is opened, it will be viewable within a tabbed element on the page.  A standard stylesheet is used for display (for security and usability reasons, outside stylesheets designated within the CDA file are not used in the FroozHIE tool.)  All appropriate data is displayed, other than what has been previously designated to be hidden (described in "Settings" below).   If you would like to view the raw XML of the file, a "View XML" button is available in the upper left.  You may close a file tab by clicking the "x" in the tab, or you can close all files by clicking the "Close All" button in the upper right of the page.
+						</li>
+						<li><strong>Viewing Raw XML</strong>: When viewing raw XML, there are three buttons available to help in your viewing.  The "collapse all" and "expand all" buttons will collapse or expand all of the nodes in the file.  The "comments on/off" button will toggle display of the comment elements within the file.  Also of note, multiple instances of a node type at the same node level will be numbered past the first instance (the multiple "Component" nodes under "structuredBody" will show a good example of this feature).
+						</li>
+						<li><strong>Settings</strong>: Under settings, you can set whether the CDA Header is in "Minimalist" mode.  When this is turned on, only a few demographic sections in the header are display on load.  A button to expand to show the full header will be displayed when this mode is enabled.  The order of the sections within the CDA can also be set on the settings page.   Sections are only added to the list once you have opened a file, and the sections within that file are added to the sections list for ordering.  To change the order, drag the section box to the desired position.  If you wish for the section to be completely hidden on load, move the section to the "Removed sections" list at the bottom of the settings window.  The "clear" button allows you to clear the list of sections and start over with ordering.
+						</li>
+					</ul>
+					</p>
+					<h3>Future planned enhancements/features:</h3>
+					<p>
+					<ul>
+						<li><strong>Order by document type</strong>: Section ordering/visibility settings to be set by CCD document type 
+						(Summary of Episode Note, Care Plan, etc.), so you may display different document types their own way.
+						</li>
+						<li><strong>File Merging</strong>: Ability to take two files, view differences between the files, and merge 
+						the sections into one resulting XML file.
+						</li>
+						<li><strong>Application integration</strong>: Settings that will allow for easier integration into other applications (ability to load a single designated file on page load, etc).
+						</li>						
+					</ul>
+					</p>					
 					<h3>Help / Suggestions</h3>
-					<p>If you find bugs or have a feature that needs to be added, please email us at : </p>
+					<p>If you find bugs or have a feature that needs to be added, please email us at: 
+					<a href="mailto:froozhie@mieweb.com?Subject=FroozHIE Inquiry" target="_top">froozhie@mieweb.com</a> </p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -47,6 +78,24 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Help Modal -->
+	<div class="modal fade" id="merge-modal" tabindex="-1" role="dialog" aria-labelledby="Merge Alert">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h1 class="modal-title" id="myModalLabel">Merge Alert</h1>
+				</div>
+				<div class="modal-body" id='Merge-Body'>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!--Settings Modal -->
 	<div class="modal fade" id="settings-modal" tabindex="-1" role="dialog" aria-labelledby="FroozHIE Settings">
 		<div class="modal-dialog" role="document">
@@ -60,23 +109,16 @@
 						<label for="minimalhead">Minimalist Header</label><br>
 						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1" checked data-onstyle="success" data-offstyle="danger" id="minimalhead" class="custom-toggle">
 					</form>
-				</div>				
-				<!--
-				<div class="modal-body">
-					<form>
-						<label for="autosave">Autosave</label><br>
-						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1" checked data-onstyle="success" data-offstyle="danger" id="autosave" class="custom-toggle">
-					</form>
-				</div>
-				-->
-				<div class="modal-body">
-					<form>
-						<label for="hiddenSections">Hidden Sections</label> <button type="button" 
-						style="height:15px;font-size:10px;margin-left:5px;padding: 0px 6px 1px 6px;" value="Clear Removed" 
-						onclick="clearRemoveSection();" title="Clear Removed Sections" id="clearHidden-btn" class="btn btn-primary btn-danger">Clear</button><br>
-						<ul id="hiddenSections">
-						</ul>
-					</form>
+					<label for="sectionOrder">Section Order</label> <button type="button" class="btn btn-danger" style="float:right" onClick="cleardata();">Clear</button><br>
+
+					<ul id="sectionOrder" class="connected sortable list">
+					</ul>
+					<BR clear=all>
+					<label for="removedSections">Removed Sections</label><br>
+
+					<ul id="removedSections" class="connected sortable list">
+
+					</ul>
 				</div>				
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -115,7 +157,7 @@
 				<i onClick="document.getElementById('file-message').innerHTML='';" id="addButton" class="fa fa-file" data-toggle="modal" data-target="#file-modal"></i> <span class="header-text">Add File</span>
 			</div>
 			<div id="header-right">
-				<i id="settingsButton" class="fa fa-cogs" data-toggle="modal" data-target="#settings-modal" onClick="showHiddens()"></i>
+				<i id="settingsButton" class="fa fa-cogs" data-toggle="modal" data-target="#settings-modal" onClick="showHiddens();"></i>
 				<i id="helpButton" class="fa fa-question-circle" data-toggle="modal" data-target="#help-modal"></i>
 			</div>
 			<IMG SRC="froozhie.png" style="height:29px" />
@@ -157,9 +199,8 @@
 		<div id="pageContent" class="tab-content">
 		  <div id="home" class="tab-pane fade in active">
 		    <h3>FroozHIE</h3>
-		    <p>FroozHIE is a tool to help physicians and health care workers view CCDA and related electronic healthcare documents.  Additional features include the ability to
-		    	compare two files, and create a merged file based on the data you want to include from each file.</p>
-		    <p>Click the "Add File" icon in the upper left to add files for viewing and usage.  Click the help icon in the upper right for additional help information.</p>
+		    <p>FroozHIE is a tool to help physicians and health care workers view CCDA and related electronic healthcare documents. </p>
+		    <p>Click the "Add File" icon in the upper left to add files for viewing and usage.  Click the help icon in the upper right for additional help and information.</p>
 		  </div>
 		</div>
 	</div>
@@ -169,3 +210,17 @@
 <SCRIPT>
     document.getElementById('file_name').addEventListener('change', readSingleFile, false);
 </SCRIPT>
+<script src="js/jquery.sortable.js"></script>
+<script>
+    $('.sortable').sortable();
+
+	$('.sortable').sortable().bind('sortupdate', function() {
+	    //Triggered when the user stopped sorting and the DOM position has changed.
+	    saveSections();
+	});
+
+	$('.sortable').sortable({
+	    items: ':not(.disabled)'
+	});
+
+</script>

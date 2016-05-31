@@ -82,7 +82,7 @@ body { margin: 0; padding: 0; }
 				</style>
 			</head>
 			<body>
-				<div class="clinicalDoc">
+				<div class="clinicalDoc" id='fulldoc'>
 					<h1><xsl:value-of select="$title"/></h1>
 					<!-- START display top portion of clinical document -->
 					<xsl:call-template name="recordTarget"/>
@@ -998,9 +998,11 @@ body { margin: 0; padding: 0; }
 	</xsl:template>
 	<!-- show StructuredBody -->
 	<xsl:template match="n1:component/n1:structuredBody">
+		<div name='mainBody'>
 		<xsl:for-each select="n1:component/n1:section">
 			<xsl:call-template name="section" />
 		</xsl:for-each>
+		</div>
 	</xsl:template>
 	<!-- show nonXMLBody -->
 	<xsl:template match='n1:component/n1:nonXMLBody'>
@@ -1023,18 +1025,20 @@ body { margin: 0; padding: 0; }
 	and process any nested component/sections
 	-->
 	<xsl:template name="section">
-		<xsl:call-template name="section-title">
-			<xsl:with-param name="title" select="n1:title"/>
-			<xsl:with-param name="loinc" select="n1:code/@code"/>
-		</xsl:call-template>
-		<div class="sectionContent" id="text_{n1:code/@code}">
-			<xsl:call-template name="section-author"/>
-			<xsl:call-template name="section-text"/>
-			<xsl:for-each select="n1:component/n1:section">
-				<xsl:call-template name="nestedSection">
-					<xsl:with-param name="margin" select="2"/>
-				</xsl:call-template>
-			</xsl:for-each>
+		<div id="secdiv_{n1:code/@code}">
+			<xsl:call-template name="section-title">
+				<xsl:with-param name="title" select="n1:title"/>
+				<xsl:with-param name="loinc" select="n1:code/@code"/>
+			</xsl:call-template>
+			<div class="sectionContent" id="text_{n1:code/@code}">
+				<xsl:call-template name="section-author"/>
+				<xsl:call-template name="section-text"/>
+				<xsl:for-each select="n1:component/n1:section">
+					<xsl:call-template name="nestedSection">
+						<xsl:with-param name="margin" select="2"/>
+					</xsl:call-template>
+				</xsl:for-each>
+			</div>
 		</div>
 	</xsl:template>
 	<!-- top level section title -->
@@ -1045,7 +1049,6 @@ body { margin: 0; padding: 0; }
 			<a name="{generate-id($title)}" href="#toc">
 				<xsl:value-of select="$title"/>
 			</a>
-			<button type="button" style="height:15px;font-size:10px;margin-left:5px;padding: 0px 6px 1px 6px;" value="Save" onclick="removeSection(this.parentNode.id);" title="Remove Section" id="viewxml-btn" class="btn btn-primary btn-danger">Remove</button>
 		</h3>
 	</xsl:template>
 	<!-- section author -->
@@ -1090,11 +1093,12 @@ body { margin: 0; padding: 0; }
 		</div>
 		<xsl:choose>
 			<xsl:when test="count(.//*[name()='content']) &lt; 1">
-				<xsl:choose>
+<!--				<xsl:choose>
 				<xsl:when test="count(.//*[name()='entry']) &lt; 1">
 					<B>WARNING: NO CONTENT ELEMENTS!</B>
 				</xsl:when>
 				</xsl:choose>
+-->
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>
@@ -1304,23 +1308,6 @@ body { margin: 0; padding: 0; }
 		<xsl:element name="sub">
 			<xsl:apply-templates/>
 		</xsl:element>
-	</xsl:template>
-	<!-- show nonXMLBody -->
-	<xsl:template match='n1:component/n1:nonXMLBody'>
-		<xsl:choose>
-			<!-- if there is a reference, use that in an IFRAME -->
-			<xsl:when test='n1:text/n1:reference'>
-				<IFRAME name='nonXMLBody' id='nonXMLBody' WIDTH='80%' HEIGHT='66%' src='{n1:text/n1:reference/@value}'/>
-			</xsl:when>
-			<xsl:when test='n1:text/@mediaType="text/plain"'>
-				<pre>
-					<xsl:value-of select='n1:text/text()'/>
-				</pre>
-			</xsl:when>
-			<xsl:otherwise>
-				<CENTER>Cannot display the text</CENTER>
-			</xsl:otherwise>
-		</xsl:choose>
 	</xsl:template>
 	<!-- show-signature -->
 	<xsl:template name="show-sig">
