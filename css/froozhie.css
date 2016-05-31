@@ -617,6 +617,14 @@ a, a:focus, a:hover{
 	margin-top: 2px;
 }
 
+.modal-content{
+	min-height:180px;
+}
+
+.modal-footer{
+	height:30px;
+}
+
 .close{
 	color: #DDD;
 	opacity: 0.5;
@@ -633,7 +641,7 @@ label{
 
 .modal-body{
 	color: #7F8C8D;
-	overflow:scroll; 
+	overflow:auto; 
 }
 
 .modal-body h2, .modal-body h3{

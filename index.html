@@ -30,30 +30,24 @@
 	<!-- Help Modal -->
 	<div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="FroozHIE Help">
 		<div class="modal-dialog" role="document">
-			<div class="modal-content">
+			<div class="modal-content" id="help-window">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h1 class="modal-title" id="myModalLabel">Froozhie Information</h1>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" id="help-body">
 					<h2>FroozHIE Tool</h2>
 					<p>
 					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be viewed, compared and reconciled with existing data in the practice EMR/EHR. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process.  The goal of the FroozHIE is to allow for easy, customized viewing of CDA files, and ultimately easy reconciliation between two sources of information provided via CDA (usually an incoming file, and existing information within a system).
 					</p>
 					<h3>Features/Instructions</h3>
 					<p>
-					<ul>
-						<li><strong>Opening a file</strong>: To open a new CDA file, click the "Add File" file icon in the upper left
+					<h4>Opening a file</h4> To open a new CDA file, click the "Add File" file icon in the upper left
 						of the page.  Once the "Add File" modal window opens, click on the "Choose File" button to open the file 
 						selection window, and find your desired file to open it within the tool.
-						</li>
-						<li><strong>Viewing a file</strong>: Once a file is opened, it will be viewable within a tabbed element on the page.  A standard stylesheet is used for display (for security and usability reasons, outside stylesheets designated within the CDA file are not used in the FroozHIE tool.)  All appropriate data is displayed, other than what has been previously designated to be hidden (described in "Settings" below).   If you would like to view the raw XML of the file, a "View XML" button is available in the upper left.  You may close a file tab by clicking the "x" in the tab, or you can close all files by clicking the "Close All" button in the upper right of the page.
-						</li>
-						<li><strong>Viewing Raw XML</strong>: When viewing raw XML, there are three buttons available to help in your viewing.  The "collapse all" and "expand all" buttons will collapse or expand all of the nodes in the file.  The "comments on/off" button will toggle display of the comment elements within the file.  Also of note, multiple instances of a node type at the same node level will be numbered past the first instance (the multiple "Component" nodes under "structuredBody" will show a good example of this feature).
-						</li>
-						<li><strong>Settings</strong>: Under settings, you can set whether the CDA Header is in "Minimalist" mode.  When this is turned on, only a few demographic sections in the header are display on load.  A button to expand to show the full header will be displayed when this mode is enabled.  The order of the sections within the CDA can also be set on the settings page.   Sections are only added to the list once you have opened a file, and the sections within that file are added to the sections list for ordering.  To change the order, drag the section box to the desired position.  If you wish for the section to be completely hidden on load, move the section to the "Removed sections" list at the bottom of the settings window.  The "clear" button allows you to clear the list of sections and start over with ordering.
-						</li>
-					</ul>
+						<h4>Viewing a file</h4> Once a file is opened, it will be viewable within a tabbed element on the page.  A standard stylesheet is used for display (for security and usability reasons, outside stylesheets designated within the CDA file are not used in the FroozHIE tool.)  All appropriate data is displayed, other than what has been previously designated to be hidden (described in "Settings" below).   If you would like to view the raw XML of the file, a "View XML" button is available in the upper left.  You may close a file tab by clicking the "x" in the tab, or you can close all files by clicking the "Close All" button in the upper right of the page.
+						<h4>Viewing Raw XML</h4> When viewing raw XML, there are three buttons available to help in your viewing.  The "collapse all" and "expand all" buttons will collapse or expand all of the nodes in the file.  The "comments on/off" button will toggle display of the comment elements within the file.  Also of note, multiple instances of a node type at the same node level will be numbered past the first instance (the multiple "Component" nodes under "structuredBody" will show a good example of this feature).
+						<h4>Settings</h4> Under settings, you can set whether the CDA Header is in "Minimalist" mode.  When this is turned on, only a few demographic sections in the header are display on load.  A button to expand to show the full header will be displayed when this mode is enabled.  The order of the sections within the CDA can also be set on the settings page.   Sections are only added to the list once you have opened a file, and the sections within that file are added to the sections list for ordering.  To change the order, drag the section box to the desired position.  If you wish for the section to be completely hidden on load, move the section to the "Removed sections" list at the bottom of the settings window.  The "clear" button allows you to clear the list of sections and start over with ordering.
 					</p>
 					<h3>Future planned enhancements/features:</h3>
 					<p>
@@ -79,7 +73,7 @@
 		</div>
 	</div>
 
-	<!-- Help Modal -->
+	<!-- Merge Modal -->
 	<div class="modal fade" id="merge-modal" tabindex="-1" role="dialog" aria-labelledby="Merge Alert">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -99,12 +93,12 @@
 	<!--Settings Modal -->
 	<div class="modal fade" id="settings-modal" tabindex="-1" role="dialog" aria-labelledby="FroozHIE Settings">
 		<div class="modal-dialog" role="document">
-			<div class="modal-content">
+			<div class="modal-content" id="settings-window">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h1 class="modal-title" id="myModalLabel">FroozHIE Settings</h1>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" id="settings-body">
 					<form>
 						<label for="minimalhead">Minimalist Header</label><br>
 						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1" checked data-onstyle="success" data-offstyle="danger" id="minimalhead" class="custom-toggle">
@@ -120,7 +114,7 @@
 
 					</ul>
 				</div>				
-				<div class="modal-footer">
+				<div class="modal-footer" id="settings-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 				</div>
 			</div>
@@ -129,7 +123,7 @@
 	<!--file Modal -->
 	<div class="modal fade" id="file-modal" tabindex="-1" role="dialog" aria-labelledby="FroozHIE Add File">
 		<div class="modal-dialog" role="document">
-			<div class="modal-content">
+			<div class="modal-content" style="height:240px">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h1 class="modal-title" id="myModalLabel">Add File</h1>
@@ -158,7 +152,7 @@
 			</div>
 			<div id="header-right">
 				<i id="settingsButton" class="fa fa-cogs" data-toggle="modal" data-target="#settings-modal" onClick="showHiddens();"></i>
-				<i id="helpButton" class="fa fa-question-circle" data-toggle="modal" data-target="#help-modal"></i>
+				<i id="helpButton" class="fa fa-question-circle" data-toggle="modal" data-target="#help-modal"  onClick="showHelp();"></i>
 			</div>
 			<IMG SRC="froozhie.png" style="height:29px" />
 		</div>
@@ -199,8 +193,9 @@
 		<div id="pageContent" class="tab-content">
 		  <div id="home" class="tab-pane fade in active">
 		    <h3>FroozHIE</h3>
-		    <p>FroozHIE is a tool to help physicians and health care workers view CCDA and related electronic healthcare documents. </p>
-		    <p>Click the "Add File" icon in the upper left to add files for viewing and usage.  Click the help icon in the upper right for additional help and information.</p>
+		    <p>FroozHIE is a tool to help physicians and health care workers view Consolidated-Clinical Document Architecture (CCDA) and related electronic healthcare documents. </p>
+		    <p>Click the Add File icon in the upper left to add files to view. </p>
+		    <p>Click the help icon (?) in the upper right for additional help and information.</p>
 		  </div>
 		</div>
 	</div>

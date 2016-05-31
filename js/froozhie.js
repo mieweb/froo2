@@ -769,7 +769,24 @@ function removeAllChildNodes(x) {
 	}		
 }
 
+function showHelp() {
+	var height = "innerHeight" in window 
+               ? window.innerHeight
+               : document.documentElement.offsetHeight; 
+
+    document.getElementById("help-window").style.height=(height*.8)+"px";
+    document.getElementById("help-body").style.height=((height*.8)-125)+"px";	
+}
+
 function showHiddens() {
+
+	var height = "innerHeight" in window 
+               ? window.innerHeight
+               : document.documentElement.offsetHeight; 
+
+    document.getElementById("settings-window").style.height=(height*.8)+"px";
+    document.getElementById("settings-body").style.height=((height*.8)-125)+"px";
+
 	for(var key in localStorage) {
 	  if (key=="hide_list") {
 	  	var items = (localStorage.getItem(key));
