@@ -38,32 +38,63 @@
 				<div class="modal-body" id="help-body">
 					<h2>FroozHIE Tool</h2>
 					<p>
-					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be viewed, compared and reconciled with existing data in the practice EMR/EHR. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process.  The goal of the FroozHIE is to allow for easy, customized viewing of CDA files, and ultimately easy reconciliation between two sources of information provided via CDA (usually an incoming file, and existing information within a system).
+					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be viewed, compared, and reconciled with existing electronic medical/health records (EMR/EHR) data. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process. 
+					</p>
+					<P>
+					The goal of FroozHIE is to allow for easy, customized viewing of clinical document architechture (CDA) files, and ultimately easy reconciliation between two sources of information provided via CDA (usually an incoming file, and existing information within a system).
 					</p>
 					<h3>Features/Instructions</h3>
 					<p>
-					<h4>Opening a file</h4> To open a new CDA file, click the "Add File" file icon in the upper left
-						of the page.  Once the "Add File" modal window opens, click on the "Choose File" button to open the file 
-						selection window, and find your desired file to open it within the tool.
-						<h4>Viewing a file</h4> Once a file is opened, it will be viewable within a tabbed element on the page.  A standard stylesheet is used for display (for security and usability reasons, outside stylesheets designated within the CDA file are not used in the FroozHIE tool.)  All appropriate data is displayed, other than what has been previously designated to be hidden (described in "Settings" below).   If you would like to view the raw XML of the file, a "View XML" button is available in the upper left.  You may close a file tab by clicking the "x" in the tab, or you can close all files by clicking the "Close All" button in the upper right of the page.
-						<h4>Viewing Raw XML</h4> When viewing raw XML, there are three buttons available to help in your viewing.  The "collapse all" and "expand all" buttons will collapse or expand all of the nodes in the file.  The "comments on/off" button will toggle display of the comment elements within the file.  Also of note, multiple instances of a node type at the same node level will be numbered past the first instance (the multiple "Component" nodes under "structuredBody" will show a good example of this feature).
-						<h4>Settings</h4> Under settings, you can set whether the CDA Header is in "Minimalist" mode.  When this is turned on, only a few demographic sections in the header are display on load.  A button to expand to show the full header will be displayed when this mode is enabled.  The order of the sections within the CDA can also be set on the settings page.   Sections are only added to the list once you have opened a file, and the sections within that file are added to the sections list for ordering.  To change the order, drag the section box to the desired position.  If you wish for the section to be completely hidden on load, move the section to the "Removed sections" list at the bottom of the settings window.  The "clear" button allows you to clear the list of sections and start over with ordering.
+					<h4>Opening a file</h4> 
+					To open a new CDA file:
+					<ol>
+					<li> Click the Add File file icon in the upper left of the page. The Add File window opens. </li>
+					<li> Click the Choose File button. A new window opens.The Choose window opens. </li>
+					<li> Select the desired file. The  file displays within the tool. </li>
+					</ol>
 					</p>
-					<h3>Future planned enhancements/features:</h3>
+					<h4>Viewing a file</h4> 
+					<p>Once a file is opened, all appropriate data is displayed, other than what has been previously designated to be hidden (described in the Settings section below). 
+					</p>
+					<p>Click the "x" in the tab to close a file, or close all files by clicking the Close All button in the upper right.
+					</p>
+					<h4>Viewing Raw XML</h4> 
+					<p>
+					Click the View XML button in the upper left to view the raw XML.
+					</p>
+					<p>
+					Three buttons available:
+					<ul>
+					<li>Collapse All: Collapse all of the  nodes in the file.</li>
+					<li>Expand All: Expand all of the nodes in the file. </li>
+					<li>The Comments On/Off: Toggles display of the comment elements within the file. </li>
+					</ul>
+					</p>
+					<p>
+					Note: Multiple instances of a node type at the same node level are numbered past the first instance (the multiple "Component" nodes under "structuredBody" show a good example of this feature).
+					</p>
+					<h4>Settings</h4> 
+					<p>
+					Click the Settings icon (the round gears) in the upper right. The following settings are available:
+					<ul>
+					<li>Minimalist Header: Toggle this switch to enable or disable the setting. When enabled, only a few demographic sections in the header display. A button to expand the full header displays when this mode is enabled. </li>
+					<li>Section Order: Drag and drop a section name to change the order the sections display. Sections are only added to the list once you have opened a file, and the sections within that file are added to the sections list for ordering. To hide a section, drag and drop the section to the Removed sections list at the bottom of the settings window.</li> 
+					<li>Clear: Click the Clear button to remove all of the sections and start over with ordering.</li>
+					</ul>
+					</p>
+					<h3>Future planned enhancements/features</h3>
 					<p>
 					<ul>
-						<li><strong>Order by document type</strong>: Section ordering/visibility settings to be set by CCD document type 
-						(Summary of Episode Note, Care Plan, etc.), so you may display different document types their own way.
+						<li><strong>Order by document type</strong>: Section ordering/visibility settings to be set by CCD document type (Summary of Episode Note, Care Plan, etc.), so you may display different document types their own way.
 						</li>
-						<li><strong>File Merging</strong>: Ability to take two files, view differences between the files, and merge 
-						the sections into one resulting XML file.
+						<li><strong>File Merging</strong>: Ability to take two files, view differences between the files, and merge the sections into one resulting XML file.
 						</li>
 						<li><strong>Application integration</strong>: Settings that will allow for easier integration into other applications (ability to load a single designated file on page load, etc).
-						</li>						
+						</li>
 					</ul>
 					</p>					
-					<h3>Help / Suggestions</h3>
-					<p>If you find bugs or have a feature that needs to be added, please email us at: 
+					<h3>Contact</h3>
+					<p>Email us at: 
 					<a href="mailto:froozhie@mieweb.com?Subject=FroozHIE Inquiry" target="_top">froozhie@mieweb.com</a> </p>
 				</div>
 				<div class="modal-footer">
