@@ -22,7 +22,7 @@
 <body>
 	<nav id="menu">
 		<div id="menu-container">
-			<div data-toggle="modal" data-target="#file-modal" ><i class="fa fa-file" ></i><span>Add File</span></div>
+			<div data-toggle="modal" data-target="#file-modal" id="addfilediv"><i class="fa fa-file" ></i><span>Add File</span></div>
 			<div data-toggle="modal" data-target="#settings-modal"><i class="fa fa-cogs" ></i><span>Settings</span></div>
 			<div data-toggle="modal" data-target="#help-modal"><i class="fa fa-question-circle" ></i><span>Help</span></div>
 		</div>
@@ -133,6 +133,8 @@
 					<form>
 						<label for="minimalhead">Minimalist Header</label><br>
 						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1" checked data-onstyle="success" data-offstyle="danger" id="minimalhead" class="custom-toggle">
+						<label for="initdisplay">Sections to display on load (0=All)</label>&nbsp;
+						<input type="text" style="width:25px" value="0" id="initdisplay" />
 					</form>
 					<label for="sectionOrder">Section Order</label> <button type="button" class="btn btn-danger" style="float:right" onClick="cleardata();">Clear</button><br>
 
@@ -185,7 +187,7 @@
 				<i id="settingsButton" class="fa fa-cogs" data-toggle="modal" data-target="#settings-modal" onClick="showHiddens();"></i>
 				<i id="helpButton" class="fa fa-question-circle" data-toggle="modal" data-target="#help-modal"  onClick="showHelp();"></i>
 			</div>
-			<IMG SRC="froozhie.png" style="height:29px" />
+			<IMG ID="froologo" SRC="froozhie.png" style="height:29px;display:none;" />
 		</div>
 		<textarea id="dump" style="display: none"></textarea>
 		<div id="controls-container" class="cf">
@@ -197,7 +199,10 @@
 			</div>
 			<div id="ViewFullHeadButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
 				<button type="button" value="ViewFH" onclick="" title="View Full Header" id="viewfh-btn" class="btn btn-primary">View Full Header</button>
-			</div>			
+			</div>
+			<div id="ViewAllSectionsButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
+				<button type="button" value="ViewAS" onclick="" title="View All Sections" id="viewas-btn" class="btn btn-primary">View All Sections</button>
+			</div>
 			<div id="MergeXMLButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
 				<button type="button" value="MergeXML" onclick="MergeXML();" title="Merge XML" id="mergexml-btn" class="btn btn-primary">Merge XML Files</button>
 			</div>
@@ -249,4 +254,18 @@
 	    items: ':not(.disabled)'
 	});
 
+	var singlefile = window.parent.document.getElementById('froo_XML');
+	if (singlefile) {
+		displayCCDAstyled('singlefile.xml',singlefile.value);
+		var hidestring = window.parent.document.getElementById('froo_hide');
+		if (hidestring) {
+			hidestring=hidestring.value;
+			if (hidestring.includes("add")) $('#header-left').css('display','none');
+			if (hidestring.includes("xml")) $('#ViewXMLButton').css('display','none');
+			if (hidestring.includes("tabs")) $('#pageTab').css('display','none');
+			if (hidestring.includes("clear")) $('#clear-btn').css("display","none");
+			if (hidestring.includes("help")) $('#helpButton').css("display","none");
+			if (!(hidestring.includes("logo"))) $('#froologo').css("display","");
+		}
+	}
 </script>

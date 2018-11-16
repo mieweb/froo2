@@ -1,0 +1,3400 @@
+<HTML>
+<HEAD/>
+<BODY>
+<IFRAME src="index.html" STYLE="height:95%;width:100%"></IFRAME>
+<INPUT type="hidden" id="froo_XML" name="froo_XML" style="display:none;" VALUE="
+<ClinicalDocument xmlns=&quot;urn:hl7-org:v3&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:voc=&quot;urn:hl7-org:v3/voc&quot; xmlns:sdtc=&quot;urn:hl7-org:sdtc&quot;>
+	<realmCode code=&quot;US&quot;/>
+	<typeId extension=&quot;POCD_HD000040&quot; root=&quot;2.16.840.1.113883.1.3&quot;/>
+	<!-- CCD template ID-->
+	<templateId root=&quot;2.16.840.1.113883.10.20.22.1.2&quot; extension=&quot;2015-08-01&quot;/>
+	<templateId root=&quot;2.16.840.1.113883.10.20.22.1.2&quot;/>
+	<!-- Globally unique identifier for the document  -->
+	<id extension=&quot;TT988&quot; root=&quot;2.16.840.1.113883.19.5.99999.1&quot;/>
+	<code code=&quot;34133-9&quot; displayName=&quot;Summarization &amp;amp; Episode Note&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+	<!-- Title of this document -->
+	<title>Patient Chart &amp;amp; Summary</title>
+	<effectiveTime value=&quot;201308151030-0800&quot;/>
+	<confidentialityCode code=&quot;N&quot; displayName=&quot;normal&quot; codeSystem=&quot;2.16.840.1.113883.5.25&quot; codeSystemName=&quot;Confidentiality&quot;/>
+	<languageCode code=&quot;en-US&quot;/>
+	<setId extension=&quot;sTT988&quot; root=&quot;2.16.840.1.113883.19.5.99999.19&quot;/>
+	<!-- Version of this document -->
+	<versionNumber value=&quot;1&quot;/>
+	<recordTarget>
+		<patientRole>
+			<id extension=&quot;444222222&quot; root=&quot;2.16.840.1.113883.4.1&quot;/>
+			<!-- Example Social Security Number using the actual SSN OID. -->
+			<addr use=&quot;HP&quot;>
+				<!-- HP is &quot;primary home&quot; from codeSystem 2.16.840.1.113883.5.1119 -->
+				<streetAddressLine>2222 Home Street</streetAddressLine>
+				<city>Beaverton</city>
+				<state>OR</state>
+				<postalCode>97867</postalCode>
+				<country>US</country>
+				<!-- US is &quot;United States&quot; from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+			</addr>
+			<telecom value=&quot;tel:+1(555)555-2003&quot; use=&quot;HP&quot;/>
+			<!-- HP is &quot;primary home&quot; from HL7 AddressUse 2.16.840.1.113883.5.1119 -->
+			<patient>
+				<name use=&quot;L&quot;>
+					<given>Eve</given>
+					<!-- The &quot;SP&quot; is &quot;Spouse&quot; from HL7 Code System EntityNamePartQualifier 2.16.840.1.113883.5.43 -->
+					<family qualifier=&quot;SP&quot;>Betterhalf</family>
+				</name>
+				<administrativeGenderCode code=&quot;F&quot; displayName=&quot;Female&quot; codeSystem=&quot;2.16.840.1.113883.5.1&quot; codeSystemName=&quot;AdministrativeGender&quot;/>
+				<!-- Date of birth need only be precise to the day -->
+				<birthTime value=&quot;19750501&quot;/>
+				<maritalStatusCode code=&quot;M&quot; displayName=&quot;Married&quot; codeSystem=&quot;2.16.840.1.113883.5.2&quot; codeSystemName=&quot;MaritalStatusCode&quot;/>
+				<religiousAffiliationCode code=&quot;1013&quot; displayName=&quot;Christian (non-Catholic, non-specific)&quot; codeSystem=&quot;2.16.840.1.113883.5.1076&quot; codeSystemName=&quot;HL7 Religious Affiliation&quot;/>
+				<!-- CDC Race and Ethnicity code set contains the five minimum race and ethnicity categories defined by OMB Standards -->
+				<raceCode code=&quot;2106-3&quot; displayName=&quot;White&quot; codeSystem=&quot;2.16.840.1.113883.6.238&quot; codeSystemName=&quot;Race &amp;amp; Ethnicity - CDC&quot;/>
+				<!-- The raceCode extension is only used if raceCode is valued -->
+				<sdtc:raceCode code=&quot;2076-8&quot; displayName=&quot;Hawaiian or Other Pacific Islander&quot; codeSystem=&quot;2.16.840.1.113883.6.238&quot; codeSystemName=&quot;Race &amp;amp; Ethnicity - CDC&quot;/>
+				<ethnicGroupCode code=&quot;2186-5&quot; displayName=&quot;Not Hispanic or Latino&quot; codeSystem=&quot;2.16.840.1.113883.6.238&quot; codeSystemName=&quot;Race &amp;amp; Ethnicity - CDC&quot;/>
+				<guardian>
+					<code code=&quot;POWATT&quot; displayName=&quot;Power of Attorney&quot; codeSystem=&quot;2.16.840.1.113883.1.11.19830&quot; codeSystemName=&quot;ResponsibleParty&quot;/>
+					<addr use=&quot;HP&quot;>
+						<streetAddressLine>2222 Home Street</streetAddressLine>
+						<city>Beaverton</city>
+						<state>OR</state>
+						<postalCode>97867</postalCode>
+						<country>US</country>
+					</addr>
+					<telecom value=&quot;tel:+1(555)555-2008&quot; use=&quot;MC&quot;/>
+					<guardianPerson>
+						<name>
+							<given>Boris</given>
+							<given qualifier=&quot;CL&quot;>Bo</given>
+							<family>Betterhalf</family>
+						</name>
+					</guardianPerson>
+				</guardian>
+				<birthplace>
+					<place>
+						<addr>
+							<streetAddressLine>4444 Home Street</streetAddressLine>
+							<city>Beaverton</city>
+							<state>OR</state>
+							<postalCode>97867</postalCode>
+							<country>US</country>
+						</addr>
+					</place>
+				</birthplace>
+				<languageCommunication>
+					<languageCode code=&quot;en&quot;/>
+					<!-- &quot;en&quot; is ISO 639-1 alpha-2 code for &quot;English&quot; -->
+					<modeCode code=&quot;ESP&quot; displayName=&quot;Expressed spoken&quot; codeSystem=&quot;2.16.840.1.113883.5.60&quot; codeSystemName=&quot;LanguageAbilityMode&quot;/>
+					<proficiencyLevelCode code=&quot;G&quot; displayName=&quot;Good&quot; codeSystem=&quot;2.16.840.1.113883.5.61&quot; codeSystemName=&quot;LanguageAbilityProficiency&quot;/>
+					<!-- Patient's preferred language -->
+					<preferenceInd value=&quot;true&quot;/>
+				</languageCommunication>
+			</patient>
+			<providerOrganization>
+				<id extension=&quot;219BX&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+				<name>The DoctorsTogether Physician Group</name>
+				<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5000&quot;/>
+				<addr>
+					<streetAddressLine>1007 Health Drive</streetAddressLine>
+					<city>Portland</city>
+					<state>OR</state>
+					<postalCode>99123</postalCode>
+					<country>US</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- The author represents the person who provides the content in the document -->
+	<author>
+		<time value=&quot;201308151030-0800&quot;/>
+		<assignedAuthor>
+			<id extension=&quot;5555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+			<addr>
+				<streetAddressLine>1004 Healthcare Drive </streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1004&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Patricia</given>
+					<given qualifier=&quot;CL&quot;>Patty</given>
+					<family>Primary</family>
+					<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<!-- The dataEnterer transferred the content created by the author into the document -->
+	<dataEnterer>
+		<assignedEntity>
+			<id extension=&quot;333777777&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<addr>
+				<streetAddressLine>1007 Healthcare Drive</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1050&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Ellen</given>
+					<family>Enter</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<!-- The informant represents any sources of information for document content -->
+	<informant>
+		<assignedEntity>
+			<id extension=&quot;888888888&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<addr>
+				<streetAddressLine>1007 Healthcare Drive</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1003&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Harold</given>
+					<family>Hippocrates</family>
+					<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>The DoctorsApart Physician Group</name>
+			</representedOrganization>
+		</assignedEntity>
+	</informant>
+	<informant>
+		<assignedEntity>
+			<id extension=&quot;222223333&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<addr>
+				<streetAddressLine>1025 Health Drive</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1025&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Ramsey</given>
+					<family>Reaction</family>
+					<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>The DoctorsApart Physician Group</name>
+			</representedOrganization>
+		</assignedEntity>
+	</informant>
+	<informant>
+		<assignedEntity>
+			<id extension=&quot;333444444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<addr>
+				<streetAddressLine>1017 Health Drive</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1017&quot;/>
+			<assignedPerson>
+				<name>
+					<given>William</given>
+					<given qualifier=&quot;CL&quot;>Bill</given>
+					<family>Beaker</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Good Health Laboratory</name>
+			</representedOrganization>
+		</assignedEntity>
+	</informant>
+	<informant>
+		<assignedEntity>
+			<id extension=&quot;333222222&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<addr>
+				<streetAddressLine>1016 Health Drive</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1016&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Susan</given>
+					<family>Script</family>
+					<suffix qualifier=&quot;AC&quot;>Pharm.D.</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>People's Pharmacy</name>
+			</representedOrganization>
+		</assignedEntity>
+	</informant>
+	<informant>
+		<assignedEntity>
+			<id extension=&quot;222334444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<addr>
+				<streetAddressLine>1027 Health Drive</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1027&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Patrick</given>
+					<family>Pump</family>
+					<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>The DoctorsApart Physician Group</name>
+			</representedOrganization>
+		</assignedEntity>
+	</informant>
+	<informant>
+		<relatedEntity classCode=&quot;PRS&quot;>
+			<!-- classCode &quot;PRS&quot; represents a person with personal relationship with the patient -->
+			<code code=&quot;SPS&quot; displayName=&quot;SPOUSE&quot; codeSystem=&quot;2.16.840.1.113883.1.11.19563&quot; codeSystemName=&quot;Personal Relationship Role Type Value Set&quot;/>
+			<relatedPerson>
+				<name>
+					<given>Boris</given>
+					<given qualifier=&quot;CL&quot;>Bo</given>
+					<family>Betterhalf</family>
+				</name>
+			</relatedPerson>
+		</relatedEntity>
+	</informant>
+	<!-- The custodian represents the organization charged with maintaining the original source document -->
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension=&quot;321CX&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+				<name>Good Health HIE</name>
+				<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1009&quot;/>
+				<addr use=&quot;WP&quot;>
+					<streetAddressLine>1009 Healthcare Drive </streetAddressLine>
+					<city>Portland</city>
+					<state>OR</state>
+					<postalCode>99123</postalCode>
+					<country>US</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- The informationRecipient represents the intended recipient of the document -->
+	<informationRecipient>
+		<intendedRecipient>
+			<informationRecipient>
+				<name>
+					<given>Sara</given>
+					<family>Specialize</family>
+					<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+				</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<name>The DoctorsApart Physician Group</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- The legalAuthenticator represents the individual who is responsible for the document -->
+	<legalAuthenticator>
+		<time value=&quot;20130815223615-0800&quot;/>
+		<signatureCode code=&quot;S&quot;/>
+		<assignedEntity>
+			<id extension=&quot;5555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+			<addr>
+				<streetAddressLine>1004 Healthcare Drive </streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1004&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Patricia</given>
+					<given qualifier=&quot;CL&quot;>Patty</given>
+					<family>Primary</family>
+					<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- The authenticator represents the individual attesting to the accuracy of information in the document-->
+	<authenticator>
+		<time value=&quot;20130815221545-0800&quot;/>
+		<signatureCode code=&quot;S&quot;/>
+		<assignedEntity>
+			<id extension=&quot;5555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+			<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+			<addr>
+				<streetAddressLine>1004 Healthcare Drive </streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1004&quot;/>
+			<assignedPerson>
+				<name>
+					<given>Patricia</given>
+					<given qualifier=&quot;CL&quot;>Patty</given>
+					<family>Primary</family>
+					<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</authenticator>
+	<!-- The participant represents supporting entities -->
+	<participant typeCode=&quot;IND&quot;>
+		<!-- typeCode &quot;IND&quot; represents an individual -->
+		<associatedEntity classCode=&quot;NOK&quot;>
+			<!-- classCode &quot;NOK&quot; represents the patient's next of kin-->
+			<addr use=&quot;HP&quot;>
+				<streetAddressLine>2222 Home Street</streetAddressLine>
+				<city>Beaverton</city>
+				<state>OR</state>
+				<postalCode>97867</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value=&quot;tel:+1(555)555-2008&quot; use=&quot;MC&quot;/>
+			<associatedPerson>
+				<name>
+					<given>Boris</given>
+					<given qualifier=&quot;CL&quot;>Bo</given>
+					<family>Betterhalf</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<!-- Entities playing multiple roles are recorded in multiple participants -->
+	<participant typeCode=&quot;IND&quot;>
+		<associatedEntity classCode=&quot;ECON&quot;>
+			<!-- classCode &quot;ECON&quot; represents an emergency contact -->
+			<addr use=&quot;HP&quot;>
+				<streetAddressLine>2222 Home Street</streetAddressLine>
+				<city>Beaverton</city>
+				<state>OR</state>
+				<postalCode>97867</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value=&quot;tel:+1(555)555-2008&quot; use=&quot;MC&quot;/>
+			<associatedPerson>
+				<name>
+					<given>Boris</given>
+					<given qualifier=&quot;CL&quot;>Bo</given>
+					<family>Betterhalf</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<documentationOf>
+		<serviceEvent classCode=&quot;PCPR&quot;>
+			<!-- The effectiveTime reflects the provision of care summarized in the document. 
+				In this scenario, the provision of care summarized is the lifetime for the patient -->
+			<effectiveTime>
+				<low value=&quot;19750501&quot;/>
+				<!-- The low value represents when the summarized provision of care began. 
+					In this scenario, the patient's date of birth -->
+				<high value=&quot;20130815&quot;/>
+				<!-- The high value represents when the summarized provision of care being ended. 
+					In this scenario, when chart summary was created -->
+			</effectiveTime>
+			<performer typeCode=&quot;PRF&quot;>
+				<functionCode code=&quot;PCP&quot; codeSystem=&quot;2.16.840.1.113883.5.88&quot; codeSystemName=&quot;ParticipationFunction&quot; displayName=&quot;Primary Care Provider&quot;>
+					<originalText>Primary Care Provider</originalText>
+				</functionCode>
+				<assignedEntity>
+					<id extension=&quot;5555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+					<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+					<addr>
+						<streetAddressLine>1004 Healthcare Drive </streetAddressLine>
+						<city>Portland</city>
+						<state>OR</state>
+						<postalCode>99123</postalCode>
+						<country>US</country>
+					</addr>
+					<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1004&quot;/>
+					<assignedPerson>
+						<name>
+							<given>Patricia</given>
+							<given qualifier=&quot;CL&quot;>Patty</given>
+							<family>Primary</family>
+							<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+						</name>
+					</assignedPerson>
+					<representedOrganization>
+						<id extension=&quot;219BX&quot; root=&quot;1.2.16.840.1.113883.4.6&quot;/>
+						<name>The DoctorsTogether Physician Group</name>
+						<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5000&quot;/>
+						<addr>
+							<streetAddressLine>1004 Health Drive</streetAddressLine>
+							<city>Portland</city>
+							<state>OR</state>
+							<postalCode>99123</postalCode>
+							<country>US</country>
+						</addr>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<!-- ******************************************************** CDA Body ******************************************************** -->
+	<component>
+		<structuredBody>
+			<!-- ************* ADVANCE DIRECTIVES *************** -->
+			<component>
+				<section>
+					<!-- *** Advance Directives section with entries required *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.21&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.21&quot;/>
+					<code code=&quot;42348-3&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+					<title>ADVANCE DIRECTIVES</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Directive</th>
+									<th>Description</th>
+									<th>Verification</th>
+									<th>Supporting Document(s)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Resuscitation status</td>
+									<td ID=&quot;AD1&quot;>Do not resuscitate</td>
+									<td>Dr. Patricia Primary, Feb 19, 2011</td>
+									<td>
+										<linkHtml href=&quot;AdvanceDirective.b50b7910.pdf&quot;>Advance directive</linkHtml>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- *** Advance Directive Organizer (V2) template -->
+						<organizer classCode=&quot;CLUSTER&quot; moodCode=&quot;EVN&quot;>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.108&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.108&quot;/>
+							<id root=&quot;af6ebdf2-d996-11e2-a5b8-f23c91aec05e&quot;/>
+							<code code=&quot;45473-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;advance directive - living will&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<author>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<time value=&quot;201308011235-0800&quot;/>
+								<assignedAuthor>
+									<id root=&quot;20cf14fb-b65c-4c8c-a54d-b0cca834c18c&quot;/>
+									<code code=&quot;163W00000X&quot; displayName=&quot;Registered nurse&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+									<assignedPerson>
+										<name>
+											<given>Nurse</given>
+											<family>Nightingale</family>
+											<suffix>RN</suffix>
+										</name>
+									</assignedPerson>
+									<representedOrganization classCode=&quot;ORG&quot;>
+										<id root=&quot;2.16.840.1.113883.19.5&quot;/>
+										<name>Good Health Hospital</name>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<component>
+								<!-- ** Advance Directive Observation (V3) ** -->
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.48&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.48&quot;/>
+									<id root=&quot;9b54c3c9-1673-49c7-aef9-b037ed72ed27&quot;/>
+									<code code=&quot;304251008&quot; displayName=&quot;Resuscitation&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+										<translation code=&quot;75320-2&quot; displayName=&quot;Advance directive&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									</code>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<low value=&quot;20110219&quot;/>
+										<high nullFlavor=&quot;NA&quot;/>
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;304253006&quot; displayName=&quot;Do not resuscitate&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+									<author>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201308011235-0800&quot;/>
+										<assignedAuthor>
+											<id root=&quot;20cf14fb-b65c-4c8c-a54d-b0cca834c18c&quot;/>
+											<code code=&quot;163W00000X&quot; displayName=&quot;Registered nurse&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+											<assignedPerson>
+												<name>
+													<given>Nurse</given>
+													<family>Nightingale</family>
+													<suffix>RN</suffix>
+												</name>
+											</assignedPerson>
+											<representedOrganization classCode=&quot;ORG&quot;>
+												<id root=&quot;2.16.840.1.113883.19.5&quot;/>
+												<name>Good Health Hospital</name>
+											</representedOrganization>
+										</assignedAuthor>
+									</author>
+									<participant typeCode=&quot;VRF&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.1.58&quot;/>
+										<time value=&quot;201102019&quot;/>
+										<participantRole>
+											<id root=&quot;20cf14fb-b65c-4c8c-a54d-b0cca834c18c&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+											<playingEntity>
+												<name>
+													<prefix>Dr.</prefix>
+													<family>Patricia</family>
+													<given>Primary</given>
+												</name>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<participant typeCode=&quot;CST&quot;>
+										<participantRole classCode=&quot;AGNT&quot;>
+											<addr>
+												<streetAddressLine>1004 Health Drive</streetAddressLine>
+												<city>Portland</city>
+												<state>OR</state>
+												<postalCode>99123</postalCode>
+												<country>US</country>
+											</addr>
+											<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1004&quot;/>
+											<playingEntity>
+												<name>
+													<prefix>Dr.</prefix>
+													<family>Patricia</family>
+													<given>Primary</given>
+												</name>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<reference typeCode=&quot;REFR&quot;>
+										<seperatableInd value=&quot;false&quot;/>
+										<externalDocument>
+											<id root=&quot;b50b7910-7ffb-4f4c-bbe4-177ed68cbbf3&quot;/>
+											<text mediaType=&quot;application/pdf&quot;>
+												<reference value=&quot;AdvanceDirective.b50b7910.pdf&quot;/>
+											</text>
+										</externalDocument>
+									</reference>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<!-- ***************** ALLERGIES *************** -->
+			<component>
+				<section>
+					<!-- *** Allergies and Intolerances Section (entries required) (V3) *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.6.1&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.6.1&quot;/>
+					<code code=&quot;48765-2&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+					<title>ALLERGIES AND ADVERSE REACTIONS</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Substance</th>
+									<th>Reaction</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID=&quot;substance1&quot;>Penicillin</td>
+									<td ID=&quot;reaction1&quot;>Nausea</td>
+								</tr>
+								<tr>
+									<td ID=&quot;substance2&quot;>Codeine</td>
+									<td ID=&quot;reaction2&quot;>Wheezing</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Allergy Concern Act (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.30&quot; extension=&quot;2015-08-01&quot;/>
+							<!--Critical Change-->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.30&quot;/>
+							<id root=&quot;36e3e930-7b14-11db-9fe1-0800200c9a66&quot;/>
+							<code code=&quot;CONC&quot; codeSystem=&quot;2.16.840.1.113883.5.6&quot;/>
+							<!-- The statusCode represents the need to continue tracking the allergy -->
+							<!-- This is of ongoing concern to the provider -->
+							<statusCode code=&quot;active&quot;/>
+							<effectiveTime>
+								<!-- The low value represents when the allergy was first recorded in the patient's chart -->
+								<!-- Concern was documented on May 1, 1998 -->
+								<low value=&quot;199805011145-0800&quot;/>
+							</effectiveTime>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<!-- Same as Concern effectiveTime/low -->
+								<time value=&quot;199805011145-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode=&quot;SUBJ&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Allergy observation (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.7&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.7&quot;/>
+									<id root=&quot;4adc1020-7b14-11db-9fe1-0800200c9a66&quot;/>
+									<code code=&quot;ASSERTION&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot;/>
+									<text>
+										<reference value=&quot;#allergytype1&quot;/>
+									</text>
+									<!-- Observation statusCode represents the status of the act of observing -->
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<!-- The low value reflects the date of onset of the allergy -->
+										<!-- Based on patient symptoms, presumed onset is May 1, 1998 -->
+										<low value=&quot;19980501&quot;/>
+										<!-- The high value reflects when the allergy was known to be resolved (and will generally be absent) -->
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;419199007&quot; displayName=&quot;Allergy to substance&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;199805011145-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;222223333&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207KA0200X&quot; displayName=&quot;Allergy&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<participant typeCode=&quot;CSM&quot;>
+										<participantRole classCode=&quot;MANU&quot;>
+											<playingEntity classCode=&quot;MMAT&quot;>
+												<code code=&quot;70618&quot; displayName=&quot;Penicillin&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; codeSystemName=&quot;RxNorm&quot;/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+										<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Severity Observation  (V2)** -->
+											<!-- When the Severity Observation is associated directly with an allergy it characterizes the allergy. 
+                        When the Severity Observation is associated with a Reaction Observation it characterizes a Reaction. -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot;/>
+											<code code=&quot;SEV&quot; displayName=&quot;Severity Observation&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot; codeSystemName=&quot;ActCode&quot;/>
+											<text>
+												<reference value=&quot;#allergyseverity1&quot;/>
+											</text>
+											<statusCode code=&quot;completed&quot;/>
+											<value xsi:type=&quot;CD&quot; code=&quot;371924009&quot; displayName=&quot;Moderate to severe&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode=&quot;MFST&quot; inversionInd=&quot;true&quot;>
+										<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Reaction Observation (V2) ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.9&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.9&quot;/>
+											<id root=&quot;4adc1020-7b14-11db-9fe1-0800200c9a64&quot;/>
+											<code code=&quot;ASSERTION&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot;/>
+											<text>
+												<reference value=&quot;#reaction1&quot;/>
+											</text>
+											<statusCode code=&quot;completed&quot;/>
+											<effectiveTime>
+												<low value=&quot;200802260805-0800&quot;/>
+												<high value=&quot;200802281205-0800&quot;/>
+											</effectiveTime>
+											<value xsi:type=&quot;CD&quot; code=&quot;422587007&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Nausea&quot;/>
+											<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+												<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+													<!-- ** Severity observation ** -->
+													<!-- When the Severity Observation is associated directly with an allergy it characterizes the allergy. 
+														 When the Severity Observation is associated with a Reaction Observation it characterizes a Reaction. -->
+													<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot; extension=&quot;2014-06-09&quot;/>
+													<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot;/>
+													<code code=&quot;SEV&quot; displayName=&quot;Severity Observation&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot; codeSystemName=&quot;ActCode&quot;/>
+													<statusCode code=&quot;completed&quot;/>
+													<value xsi:type=&quot;CD&quot; code=&quot;255604002&quot; displayName=&quot;Mild&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Allergy concern act ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.30&quot; extension=&quot;2015-08-01&quot;/>
+							<!--Critical Change-->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.30&quot;/>
+							<id root=&quot;b03805bd-2eb6-4ab8-a9ff-473c6653971a&quot;/>
+							<code code=&quot;CONC&quot; codeSystem=&quot;2.16.840.1.113883.5.6&quot;/>
+							<!-- The statusCode represents the need to continue tracking the allergy -->
+							<!-- This is of ongoing concern to the provider -->
+							<statusCode code=&quot;active&quot;/>
+							<effectiveTime>
+								<!-- The low value represents when the allergy was first recorded in the patient's chart -->
+								<!-- Concern was documented on May 1, 1998 -->
+								<low value=&quot;199805011145-0800&quot;/>
+							</effectiveTime>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<!-- Same as Concern effectiveTime/low -->
+								<time value=&quot;199805011145-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode=&quot;SUBJ&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Allergy observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.7&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.7&quot;/>
+									<id root=&quot;901db0f8-9355-4794-81cd-fd951ef07917&quot;/>
+									<code code=&quot;ASSERTION&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot;/>
+									<text>
+										<reference value=&quot;#allergytype2&quot;/>
+									</text>
+									<!-- Observation statusCode represents the status of the act of observing -->
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<!-- The low value reflects the date of onset of the allergy -->
+										<low nullFlavor=&quot;UNK&quot;/>
+										<!-- The high value reflects when the allergy was known to be resolved (and will generally be absent) -->
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;419199007&quot; displayName=&quot;Allergy to substance&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201010110915-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;222223333&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207KA0200X&quot; displayName=&quot;Allergy&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<participant typeCode=&quot;CSM&quot;>
+										<participantRole classCode=&quot;MANU&quot;>
+											<playingEntity classCode=&quot;MMAT&quot;>
+												<code code=&quot;2670&quot; displayName=&quot;Codeine&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; codeSystemName=&quot;RxNorm&quot;/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode=&quot;MFST&quot; inversionInd=&quot;true&quot;>
+										<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Reaction observation ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.9&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.9&quot;/>
+											<id root=&quot;38c63dea-1a43-4f84-ab71-1ffd04f6a1dd&quot;/>
+											<code code=&quot;ASSERTION&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot;/>
+											<text>
+												<reference value=&quot;#reaction2&quot;/>
+											</text>
+											<statusCode code=&quot;completed&quot;/>
+											<effectiveTime>
+												<low nullFlavor=&quot;UNK&quot;/>
+											</effectiveTime>
+											<value xsi:type=&quot;CD&quot; code=&quot;56018004&quot; displayName=&quot;Wheezing&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+											<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+												<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+													<!-- ** Severity observation ** -->
+													<!-- When the Severity Observation is associated directly with an allergy it characterizes the allergy. 
+										             When the Severity Observation is associated with a Reaction Observation it characterizes a Reaction. -->
+													<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot; extension=&quot;2014-06-09&quot;/>
+													<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot;/>
+													<code code=&quot;SEV&quot; displayName=&quot;Severity Observation&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot; codeSystemName=&quot;ActCode&quot;/>
+													<text>
+														<reference value=&quot;#reactionseverity2&quot;/>
+													</text>
+													<statusCode code=&quot;completed&quot;/>
+													<value xsi:type=&quot;CD&quot; code=&quot;6736007&quot; displayName=&quot;Moderate&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+										<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Severity observation ** -->
+											<!-- When the Severity Observation is associated directly with an allergy it characterizes the allergy. 
+										          When the Severity Observation is associated with a Reaction Observation it characterizes a Reaction. -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.8&quot;/>
+											<code code=&quot;SEV&quot; displayName=&quot;Severity Observation&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot; codeSystemName=&quot;ActCode&quot;/>
+											<text>
+												<reference value=&quot;#allergyseverity2&quot;/>
+											</text>
+											<statusCode code=&quot;completed&quot;/>
+											<value xsi:type=&quot;CD&quot; code=&quot;255604002&quot; displayName=&quot;Mild&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************ ENCOUNTERS *********************** -->
+			<component>
+				<section>
+					<!-- *** Encounters section (entries required) (V3) *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.22.1&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.22.1&quot;/>
+					<code code=&quot;46240-8&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;History of encounters&quot;/>
+					<title>ENCOUNTERS</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Encounter</th>
+									<th>Performer</th>
+									<th>Location</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID=&quot;Encounter1&quot;> Checkup Examination </td>
+									<td>Performer Name</td>
+									<td>Community Urgent Care Center</td>
+									<td>September 27, 2012 at 1:00pm</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<encounter classCode=&quot;ENC&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Encounter Activity (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.49&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.49&quot;/>
+							<id root=&quot;2a620155-9d11-439e-92b3-5d9815ff4de8&quot;/>
+							<code code=&quot;99213&quot; displayName=&quot;Office outpatient visit 15 minutes&quot; codeSystemName=&quot;CPT-4&quot; codeSystem=&quot;2.16.840.1.113883.6.12&quot;>
+								<originalText>
+									<reference value=&quot;#Encounter1&quot;/>
+								</originalText>
+								<!-- MAY MAY contain zero or one [0..1] translation (CONF:1198-32323)
+									The translation may exist to map the code of EncounterTypeCode (2.16.840.1.113883.3.88.12.80.32) valueset to the code of Encounter Planned (2.16.840.1.113883.11.20.9.52) valueset.
+								<translation code=&quot;AMB&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot; displayName=&quot;Ambulatory&quot; codeSystemName=&quot;HL7 ActEncounterCode&quot;/>
+								-->
+							</code>
+							<effectiveTime value=&quot;201209271300+0500&quot;/>
+							<performer>
+								<assignedEntity>
+									<!-- Provider NPI &quot;333444555&quot; -->
+									<id extension=&quot;333444555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;59058001&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;General Physician&quot;/>
+								</assignedEntity>
+							</performer>
+							<participant typeCode=&quot;LOC&quot;>
+								<participantRole classCode=&quot;SDLOC&quot;>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.32&quot;/>
+									<!-- Service Delivery Location template -->
+									<code code=&quot;1160-1&quot; codeSystem=&quot;2.16.840.1.113883.6.259&quot; codeSystemName=&quot;HL7 HealthcareServiceLocation&quot; displayName=&quot;Urgent Care Center&quot;/>
+									<addr>
+										<streetAddressLine>1007 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+									<playingEntity classCode=&quot;PLC&quot;>
+										<name>Good Health Urgent Care</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+							<entryRelationship typeCode=&quot;RSON&quot;>
+								<!-- ** Indivcation (V2) ** -->
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.19&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.19&quot;/>
+									<id root=&quot;db734647-fc99-424c-a864-7e3cda82e703&quot; extension=&quot;45665&quot;/>
+									<!-- code is required; MAY be selected from ValueSet Problem Type (LOINC) urn:oid:2.16.840.1.113883.3.88.12.3221.7.2 STATIC 2014-09-02 (CONF:1098-31229) -->
+									<code code=&quot;404684003&quot; displayName=&quot;Finding&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+										<!--  of course this MAY be present 
+										<translation code=&quot;75321-0&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Clinical finding&quot;/>
+										-->
+									</code>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<low value=&quot;201209251130+0500&quot;/>
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;233604007&quot; displayName=&quot;Pneumonia&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+								</observation>
+							</entryRelationship>
+						</encounter>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************ FAMILY HISTORY *********************** -->
+			<component>
+				<section>
+					<!-- *** Family history section (V3) *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.15&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.15&quot;/>
+					<code code=&quot;10157-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+					<title>FAMILY HISTORY</title>
+					<text>
+						<paragraph>Father (deceased)</paragraph>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Diagnosis</th>
+									<th>Age At Onset</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Myocardial Infarction (cause of death)</td>
+									<td>57</td>
+								</tr>
+								<tr>
+									<td>Diabetes</td>
+									<td>40</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<organizer moodCode=&quot;EVN&quot; classCode=&quot;CLUSTER&quot;>
+							<!-- ** Family history organizer (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.45&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.45&quot;/>
+							<id root=&quot;d42ebf70-5c89-11db-b0de-0855200c9a66&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<subject>
+								<relatedSubject classCode=&quot;PRS&quot;>
+									<code code=&quot;FTH&quot; displayName=&quot;Father&quot; codeSystemName=&quot;FamilyRelationshipRoleType&quot; codeSystem=&quot;2.16.840.1.113883.5.111&quot;>
+										<!--
+										<translation code=&quot;9947008&quot; displayName=&quot;Biological father&quot; codeSystemName=&quot;SNOMED&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+										-->
+									</code>
+									<subject>
+										<sdtc:id root=&quot;2.16.840.1.113883.19.5.99999.2&quot; extension=&quot;99999999&quot;/>
+										<administrativeGenderCode code=&quot;M&quot; codeSystem=&quot;2.16.840.1.113883.1.11.1&quot; displayName=&quot;Male&quot;/>
+										<birthTime value=&quot;1910&quot;/>
+										<!-- Example use of sdtc extensions included below in comments -->
+										<!-- <sdtc:deceasedInd value=&quot;true&quot;/> <sdtc:deceasedTime value=&quot;1967&quot;/> -->
+									</subject>
+								</relatedSubject>
+							</subject>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Family history observation (V3) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.46&quot; extension=&quot;2015-08-01&quot;/>
+									<!--Critical Change-->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.46&quot;/>
+									<id root=&quot;d42ebf70-5c89-11db-b0de-0800200c9a66&quot;/>
+									<code code=&quot;64572001&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Condition&quot;>
+										<!-- a.	This code SHALL contain at least one [1..*] translation, which SHOULD be selected from ValueSet Problem Type (LOINC)
+										<translation code=&quot;75323-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Condition&quot;/>
+											very likely that the following is present, but use of LOINC as shown above would be better -->
+										<translation nullFlavor=&quot;NI&quot;/>
+									</code>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;1967&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;22298006&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Myocardial infarction&quot;/>
+									<entryRelationship typeCode=&quot;CAUS&quot;>
+										<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Family history death observation ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.47&quot;/>
+											<id root=&quot;6898fae0-5c8a-11db-b0de-0800200c9a66&quot;/>
+											<code code=&quot;ASSERTION&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot;/>
+											<statusCode code=&quot;completed&quot;/>
+											<value xsi:type=&quot;CD&quot; code=&quot;419099009&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Dead&quot;/>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+										<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Age observation ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.31&quot;/>
+											<code code=&quot;445518008&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Age At Onset&quot;/>
+											<statusCode code=&quot;completed&quot;/>
+											<value xsi:type=&quot;PQ&quot; value=&quot;57&quot; unit=&quot;a&quot;/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Family history observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.46&quot; extension=&quot;2015-08-01&quot;/>
+									<!--Critical Change-->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.46&quot;/>
+									<id root=&quot;5bfe3ec0-5c8b-11db-b0de-0800200c9a66&quot;/>
+									<code code=&quot;64572001&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Condition&quot;>
+										<!-- a.	This code SHALL contain at least one [1..*] translation, which SHOULD be selected from ValueSet Problem Type (LOINC)
+										<translation code=&quot;75323-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Condition&quot;/>
+											very likely that the following is present, but use of LOINC as shown above would be better -->
+										<translation nullFlavor=&quot;NI&quot;/>
+									</code>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;1950&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;44054006&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Diabetes mellitus type 2&quot;/>
+									<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+										<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Age observation ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.31&quot;/>
+											<code code=&quot;445518008&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Age At Onset&quot;/>
+											<statusCode code=&quot;completed&quot;/>
+											<value xsi:type=&quot;PQ&quot; value=&quot;40&quot; unit=&quot;a&quot;/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<!-- ***************** FUNCTIONAL STATUS *********************** -->
+			<component>
+				<!-- Functional Status Section (V2)-->
+				<section>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.14&quot; extension=&quot;2014-06-09&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.14&quot;/>
+					<code code=&quot;47420-5&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Functional Status&quot;/>
+					<title>FUNCTIONAL STATUS</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Functional Category</th>
+									<th>Effective Dates</th>
+									<th>Results of Evaluation</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID=&quot;FUNC1&quot;>Functional Assessment</td>
+									<td>March 11, 2013</td>
+									<td>Independent Walking</td>
+								</tr>
+								<tr>
+									<td>ADL/IADL: Bathing</td>
+									<td>March 11,2013</td>
+									<td>Independent</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<organizer classCode=&quot;CLUSTER&quot; moodCode=&quot;EVN&quot;>
+							<!-- Functional Status Organizer (V2) -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.66&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.66&quot;/>
+							<id root=&quot;a7bc1062-8649-42a0-833d-eed65bd017c9&quot;/>
+							<code code=&quot;d5&quot; displayName=&quot;Self-Care&quot; codeSystem=&quot;2.16.840.1.113883.6.254&quot; codeSystemName=&quot;ICF&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<time value=&quot;201307061145-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- Functional Status Observation (V2)-->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.67&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.67&quot;/>
+									<id root=&quot;b63a8636-cfff-4461-b018-40ba58ba8b32&quot;/>
+									<code code=&quot;54522-8&quot; displayName=&quot;Functional status&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<text>
+										<reference value=&quot;#FUNC1&quot;/>
+									</text>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20130311&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;165245003&quot; displayName=&quot; Independent walking&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201307061145-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<entryRelationship typeCode=&quot;COMP&quot;>
+										<!-- Non-Medicinal Supply Activity (V2) -->
+										<supply classCode=&quot;SPLY&quot; moodCode=&quot;EVN&quot;>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot;/>
+											<id root=&quot;2413773c-2372-4299-bbe6-5b0f60664446&quot;/>
+											<statusCode code=&quot;completed&quot;/>
+											<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+												<high value=&quot;20130311&quot;/>
+											</effectiveTime>
+											<quantity value=&quot;2&quot;/>
+											<participant typeCode=&quot;PRD&quot;>
+												<participantRole classCode=&quot;MANU&quot;>
+													<templateId root=&quot;2.16.840.1.113883.10.20.22.4.37&quot;/>
+													<!-- Product instance template -->
+													<id root=&quot;742aee30-21c5-11e1-bfc2-0800200c9a66&quot;/>
+													<playingDevice>
+														<code code=&quot;87405001&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;cane, device (physical object)&quot;/>
+													</playingDevice>
+													<scopingEntity>
+														<id root=&quot;eb936010-7b17-11db-9fe1-0800200c9b65&quot;/>
+													</scopingEntity>
+												</participantRole>
+											</participant>
+										</supply>
+									</entryRelationship>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- Self-Care Activities (ADL and IADL) -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.128&quot;/>
+									<id root=&quot;c6b5a04b-2bf4-49d1-8336-636a3813df0a&quot;/>
+									<code code=&quot;46008-9 &quot; displayName=&quot;Bathing&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;200130311&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;371153006&quot; displayName=&quot;Independent&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201307061148-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<!-- ******************** IMMUNIZATIONS ********************* -->
+			<component>
+				<section>
+					<!-- *** Immunizations Section (entries required) (V2) *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.2.1&quot; extension=&quot;2014-06-09&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.2.1&quot;/>
+					<code code=&quot;11369-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;History of immunizations&quot;/>
+					<title>IMMUNIZATIONS</title>
+					<text>
+						<content ID=&quot;immunSect&quot;/>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Vaccine</th>
+									<th>Date</th>
+									<th>Status</th>
+									<th>Series number</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<content ID=&quot;immi1&quot;/> Influenza, seasonal, IM </td>
+									<td>Nov 1999</td>
+									<td>Completed</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID=&quot;immi2&quot;/> Influenza, seasonal, IM </td>
+									<td>Dec 1998</td>
+									<td>Completed</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID=&quot;immi3&quot;/> Pneumococcal polysaccharide vaccine, IM </td>
+									<td>Dec 1998</td>
+									<td>Completed</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID=&quot;immi4&quot;/> Tetanus and diphtheria toxoids, IM </td>
+									<td>1997</td>
+									<td>Refused</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td>Hepatitis B</td>
+									<td>Aug 1, 2013</td>
+									<td>Completed</td>
+									<td>3rd</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<substanceAdministration classCode=&quot;SBADM&quot; moodCode=&quot;EVN&quot; negationInd=&quot;false&quot;>
+							<!-- ** Immunization Activity (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot;/>
+							<id root=&quot;e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92&quot;/>
+							<text>Influenza, seasonal, IM</text>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;199911&quot;/>
+							<routeCode code=&quot;C28161&quot; codeSystem=&quot;2.16.840.1.113883.3.26.1.1&quot; codeSystemName=&quot;National Cancer Institute (NCI) Thesaurus&quot; displayName=&quot;Intramuscular injection&quot;/>
+							<doseQuantity value=&quot;50&quot; unit=&quot;ug&quot;/>
+							<consumable>
+								<manufacturedProduct classCode=&quot;MANU&quot;>
+									<!-- ** Immunization Medication Information (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot;/>
+									<manufacturedMaterial>
+										<code code=&quot;88&quot; codeSystem=&quot;2.16.840.1.113883.6.59&quot; displayName=&quot;Influenza virus vaccine&quot; codeSystemName=&quot;CVX&quot;/>
+										<lotNumberText>1</lotNumberText>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Health LS - Immuno Inc.</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19.5.9999.456&quot; extension=&quot;2981824&quot;/>
+									<addr>
+										<streetAddressLine>1007 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+									<assignedPerson>
+										<name>
+											<given>Harold</given>
+											<family>Hippocrates</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5.9999.1394&quot;/>
+										<name>Good Health Clinic</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+										<addr>
+											<streetAddressLine>1007 Health Drive</streetAddressLine>
+											<city>Portland</city>
+											<state>OR</state>
+											<postalCode>99123</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;false&quot;>
+								<act classCode=&quot;ACT&quot; moodCode=&quot;INT&quot;>
+									<!-- ** Instruction (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.20&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.20&quot;/>
+									<code code=&quot;171044003&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;immunization education&quot;/>
+									<text>
+										<reference value=&quot;#immunSect&quot;/> Possible flu-like symptoms for three days. </text>
+									<statusCode code=&quot;completed&quot;/>
+								</act>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<substanceAdministration classCode=&quot;SBADM&quot; moodCode=&quot;EVN&quot; negationInd=&quot;true&quot;>
+							<!-- ** Immunization Activity (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot;/>
+							<id root=&quot;e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92&quot;/>
+							<text>
+								<reference value=&quot;#immun2&quot;/>
+							</text>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;19981215&quot;/>
+							<routeCode code=&quot;C28161&quot; codeSystem=&quot;2.16.840.1.113883.3.26.1.1&quot; codeSystemName=&quot;National Cancer Institute (NCI) Thesaurus&quot; displayName=&quot;Intramuscular injection&quot;/>
+							<doseQuantity value=&quot;50&quot; unit=&quot;ug&quot;/>
+							<consumable>
+								<manufacturedProduct classCode=&quot;MANU&quot;>
+									<!-- ** Immunization Medication Information (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot;/>
+									<manufacturedMaterial>
+										<code code=&quot;88&quot; codeSystem=&quot;2.16.840.1.113883.6.59&quot; displayName=&quot;Influenza virus vaccine&quot; codeSystemName=&quot;CVX&quot;>
+											<!-- i.	This code MAY contain zero or more [0..*] translation, which MAY be selected from ValueSet Vaccine Clinical Drug urn:oid:2.16.840.1.113762.1.4.1010.8 DYNAMIC (CONF:1098-31543).
+												ii.	This code MAY contain zero or more [0..*] translation, which MAY be selected from ValueSet Specific Vaccine Clinical Drug urn:oid:2.16.840.1.113762.1.4.1010.10 DYNAMIC (CONF:1098-31881).
+
+											<translation code=&quot;1427027&quot; displayName=&quot;Influenza A virus vaccine, A-California-7-2009 (H1N1)-like virus 0.03 MG/ML / Influenza A virus vaccine, A-Victoria-361-2011 (H3N2)-like virus 0.03 MG/ML / Influenza B virus vaccine, B-Brisbane-60-2008-like virus 0.03 MG/ML / Influenza B virus vaccine, B-Massachusetts-2-2012-like virus 0.03 MG/ML Injectable Suspension&quot; codeSystemName=&quot;RxNORM&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot;/>
+											-->
+										</code>
+										<lotNumberText>1</lotNumberText>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Health LS - Immuno Inc.</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19.5.9999.456&quot; extension=&quot;2981824&quot;/>
+									<addr>
+										<streetAddressLine>1007 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+									<assignedPerson>
+										<name>
+											<given>Harold</given>
+											<family>Hippocrates</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5.9999.1394&quot;/>
+										<name>Good Health Clinic</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+										<addr>
+											<streetAddressLine>1007 Health Drive</streetAddressLine>
+											<city>Portland</city>
+											<state>OR</state>
+											<postalCode>99123</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+								<act classCode=&quot;ACT&quot; moodCode=&quot;INT&quot;>
+									<!-- ** Instruction (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.20&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.20&quot;/>
+									<code code=&quot;171044003&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;immunization education&quot;/>
+									<text>
+										<reference value=&quot;#immunSect&quot;/> Possible flu-like symptoms for three days. </text>
+									<statusCode code=&quot;completed&quot;/>
+								</act>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<substanceAdministration classCode=&quot;SBADM&quot; moodCode=&quot;EVN&quot; negationInd=&quot;false&quot;>
+							<!-- ** Immunization Activity (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot;/>
+							<id root=&quot;e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92&quot;/>
+							<text>
+								<reference value=&quot;#immun3&quot;/>
+							</text>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;19981215&quot;/>
+							<routeCode code=&quot;C28161&quot; codeSystem=&quot;2.16.840.1.113883.3.26.1.1&quot; codeSystemName=&quot;National Cancer Institute (NCI) Thesaurus&quot; displayName=&quot;Intramuscular injection&quot;/>
+							<doseQuantity value=&quot;50&quot; unit=&quot;ug&quot;/>
+							<consumable>
+								<manufacturedProduct classCode=&quot;MANU&quot;>
+									<!-- ** Immunization Medication Information (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot;/>
+									<manufacturedMaterial>
+										<code code=&quot;33&quot; codeSystem=&quot;2.16.840.1.113883.6.59&quot; displayName=&quot;Pneumococcal polysaccharide vaccine&quot; codeSystemName=&quot;CVX&quot;>
+											<!-- i.	This code MAY contain zero or more [0..*] translation, which MAY be selected from ValueSet Vaccine Clinical Drug urn:oid:2.16.840.1.113762.1.4.1010.8 DYNAMIC (CONF:1098-31543).
+													ii.	This code MAY contain zero or more [0..*] translation, which MAY be selected from ValueSet Specific Vaccine Clinical Drug urn:oid:2.16.840.1.113762.1.4.1010.10 DYNAMIC (CONF:1098-31881).
+
+											<translation code=&quot;854981&quot; displayName=&quot;Pneumovax 23 (Pneumococcal vaccine polyvalent) Injectable Solution&quot; codeSystemName=&quot;RxNORM&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot;/>
+											-->
+										</code>
+										<lotNumberText>1</lotNumberText>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Health LS - Immuno Inc.</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19.5.9999.456&quot; extension=&quot;2981824&quot;/>
+									<addr>
+										<streetAddressLine>1007 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+									<assignedPerson>
+										<name>
+											<given>Harold</given>
+											<family>Hippocrates</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5.9999.1394&quot;/>
+										<name>Good Health Clinic</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+										<addr>
+											<streetAddressLine>1007 Health Drive</streetAddressLine>
+											<city>Portland</city>
+											<state>OR</state>
+											<postalCode>99123</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<substanceAdministration classCode=&quot;SBADM&quot; moodCode=&quot;EVN&quot; negationInd=&quot;true&quot;>
+							<!-- ** Immunization Activity (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot;/>
+							<id root=&quot;e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92&quot;/>
+							<text>
+								<reference value=&quot;#immun4&quot;/>
+							</text>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;19981215&quot;/>
+							<routeCode code=&quot;C28161&quot; codeSystem=&quot;2.16.840.1.113883.3.26.1.1&quot; codeSystemName=&quot;National Cancer Institute (NCI) Thesaurus&quot; displayName=&quot;Intramuscular injection&quot;/>
+							<doseQuantity value=&quot;50&quot; unit=&quot;ug&quot;/>
+							<consumable>
+								<manufacturedProduct classCode=&quot;MANU&quot;>
+									<!-- ** Immunization Medication Information (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot;/>
+									<manufacturedMaterial>
+										<code code=&quot;103&quot; codeSystem=&quot;2.16.840.1.113883.6.59&quot; displayName=&quot;Tetanus and diphtheria toxoids - preservative free&quot; codeSystemName=&quot;CVX&quot;>
+											<!-- i.	This code MAY contain zero or more [0..*] translation, which MAY be selected from ValueSet Vaccine Clinical Drug urn:oid:2.16.840.1.113762.1.4.1010.8 DYNAMIC (CONF:1098-31543).
+													ii.	This code MAY contain zero or more [0..*] translation, which MAY be selected from ValueSet Specific Vaccine Clinical Drug urn:oid:2.16.840.1.113762.1.4.1010.10 DYNAMIC (CONF:1098-31881).
+
+											<translation code=&quot;1300310&quot; displayName=&quot;Daptacel DTaP (Diphtheria and Tetanus Toxoids and Acellular Pertussis Vaccine Adsorbed) Injectable Suspension&quot; codeSystemName=&quot;RxNORM&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot;/>
+											-->
+										</code>
+										<lotNumberText>1</lotNumberText>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Health LS - Immuno Inc.</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19.5.9999.456&quot; extension=&quot;2981824&quot;/>
+									<addr>
+										<streetAddressLine>1007 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+									<assignedPerson>
+										<name>
+											<given>Harold</given>
+											<family>Hippocrates</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5.9999.1394&quot;/>
+										<name>Good Health Clinic</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+										<addr nullFlavor=&quot;UNK&quot;/>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<entryRelationship typeCode=&quot;RSON&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Immunization Refusal ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.53&quot;/>
+									<id root=&quot;2a620155-9d11-439e-92b3-5d9815ff4dd8&quot;/>
+									<code displayName=&quot;Patient Objection&quot; code=&quot;PATOBJ&quot; codeSystemName=&quot;HL7 ActNoImmunizationReason&quot; codeSystem=&quot;2.16.840.1.113883.5.8&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+								</observation>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<substanceAdministration classCode=&quot;SBADM&quot; moodCode=&quot;EVN&quot; negationInd=&quot;false&quot;>
+							<!-- ** Immunization Activity (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.52&quot;/>
+							<id root=&quot;de10790f-1496-4719-8fe6-f1b87b6219f7&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;20130801&quot;/>
+							<routeCode code=&quot;C28161&quot; codeSystem=&quot;2.16.840.1.113883.3.26.1.1&quot; codeSystemName=&quot;National Cancer Institute (NCI) Thesaurus&quot; displayName=&quot;Intramuscular injection&quot;/>
+							<consumable>
+								<manufacturedProduct classCode=&quot;MANU&quot;>
+									<!-- ** Immunization Medication Information (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.54&quot;/>
+									<manufacturedMaterial>
+										<code code=&quot;45&quot; codeSystem=&quot;2.16.840.1.113883.6.59&quot; displayName=&quot;Hepatitis B vaccine&quot; codeSystemName=&quot;CVX&quot;/>
+										<lotNumberText>1</lotNumberText>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19.5.9999.456&quot; extension=&quot;2981824&quot;/>
+									<addr>
+										<streetAddressLine>1007 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+									<assignedPerson>
+										<name>
+											<given>Harold</given>
+											<family>Hippocrates</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5.9999.1394&quot;/>
+										<name>Good Health Clinic</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1030&quot;/>
+										<addr>
+											<streetAddressLine>1007 Health Drive</streetAddressLine>
+											<city>Portland</city>
+											<state>OR</state>
+											<postalCode>99123</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<entryRelationship typeCode=&quot;COMP&quot; inversionInd=&quot;true&quot;>
+								<sequenceNumber value=&quot;3&quot;/>
+								<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+									<!-- Substance Administered Act -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.118&quot;/>
+									<id root=&quot;3f998a26-1b8b-4cbf-8e91-16fbb7a7080f&quot;/>
+									<code code=&quot;416118004&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;administration&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+								</act>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<!-- *********************** MEDICAL EQUIPMENT *************************** -->
+			<component>
+				<section>
+					<!-- Medical Equipment Section (V2) -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.23&quot; extension=&quot;2014-06-09&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.23&quot;/>
+					<code code=&quot;46264-8&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+					<title>MEDICAL EQUIPMENT</title>
+					<text>
+						<content styleCode=&quot;Bold&quot;>Medical Equipment</content>
+						<list>
+							<item>Implanted Devices: Cardiac PaceMaker July 3, 2013</item>
+							<item>Implanted Devices: Upper GI Prosthesis, January 3, 2013</item>
+							<item>Cane, February 2, 2003</item>
+						</list>
+						<content ID=&quot;Eqpt1&quot;>Biliary Stent, May 5, 2013</content>
+					</text>
+					<entry>
+						<!--  Medical Equipment Organizer -->
+						<organizer classCode=&quot;CLUSTER&quot; moodCode=&quot;EVN&quot;>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.135&quot;/>
+							<id root=&quot;3e414708-0e61-4d48-8863-484a2d473a02&quot;/>
+							<code code=&quot;40388003&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Implant&quot;>
+								<originalText>Implants</originalText>
+							</code>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+								<low value=&quot;20070103&quot;/>
+								<high nullFlavor=&quot;UNK&quot;/>
+							</effectiveTime>
+							<component>
+								<!-- Non-medicinal supply activity V2 template ******* -->
+								<supply classCode=&quot;SPLY&quot; moodCode=&quot;EVN&quot;>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot;/>
+									<id root=&quot;39b5f1b4-a8e1-4ad7-8849-0deab10c97b1&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+										<high value=&quot;20130703&quot;/>
+									</effectiveTime>
+									<quantity value=&quot;1&quot;/>
+									<participant typeCode=&quot;PRD&quot;>
+										<participantRole classCode=&quot;MANU&quot;>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.37&quot;/>
+											<!-- Product instance template -->
+											<id root=&quot;24993f33-6222-41ce-add6-37a9d3da6acb&quot;/>
+											<playingDevice>
+												<code code=&quot;14106009&quot; displayName=&quot;cardiac pacemaker, device (physical object)&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;>
+													<originalText>Cardiac Pacemaker</originalText>
+												</code>
+											</playingDevice>
+											<scopingEntity>
+												<id root=&quot;eb936010-7b17-11db-9fe1-0800200c9b65&quot;/>
+												<desc>Good Health Durable Medical Equipment</desc>
+											</scopingEntity>
+										</participantRole>
+									</participant>
+								</supply>
+							</component>
+							<component>
+								<supply classCode=&quot;SPLY&quot; moodCode=&quot;EVN&quot;>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot;/>
+									<!-- Non-medicinal supply activity V2 template ******* -->
+									<id root=&quot;39b5f1b4-a8e1-4ad7-8849-0deab10c97b1&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+										<high value=&quot;20130103&quot;/>
+									</effectiveTime>
+									<quantity value=&quot;1&quot;/>
+									<participant typeCode=&quot;PRD&quot;>
+										<participantRole classCode=&quot;MANU&quot;>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.37&quot;/>
+											<!-- Product instance template -->
+											<id root=&quot;24993f33-6222-41ce-add6-37a9d3da6acb&quot;/>
+											<playingDevice>
+												<code code=&quot;303406003&quot; displayName=&quot;upper gastrointestinal prosthesis (physical object)&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;>
+													<originalText>Upper GI Prosthesis</originalText>
+												</code>
+											</playingDevice>
+											<scopingEntity>
+												<id root=&quot;eb936010-7b17-11db-9fe1-0800200c9b65&quot;/>
+												<desc>Good Health Durable Medical Equipment</desc>
+											</scopingEntity>
+										</participantRole>
+									</participant>
+								</supply>
+							</component>
+						</organizer>
+					</entry>
+					<entry>
+						<supply classCode=&quot;SPLY&quot; moodCode=&quot;EVN&quot;>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.50&quot;/>
+							<!-- Non-medicinal supply activity V2 template ******* -->
+							<id root=&quot;cf75f5be-1da0-4256-8276-94b7fc73f9f9&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+								<high value=&quot;20030202&quot;/>
+							</effectiveTime>
+							<quantity value=&quot;1&quot;/>
+							<participant typeCode=&quot;PRD&quot;>
+								<participantRole classCode=&quot;MANU&quot;>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.37&quot;/>
+									<!-- Product instance template -->
+									<id root=&quot;24993f33-6222-41ce-add6-37a9d3da6acb&quot;/>
+									<playingDevice>
+										<code code=&quot;87405001&quot; displayName=&quot;cane&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;>
+											<originalText>Upper GI Prosthesis</originalText>
+										</code>
+									</playingDevice>
+									<scopingEntity>
+										<id root=&quot;eb936010-7b17-11db-9fe1-0800200c9b65&quot;/>
+										<desc>Good Health Durable Medical Equipment</desc>
+									</scopingEntity>
+								</participantRole>
+							</participant>
+						</supply>
+					</entry>
+					<entry>
+						<procedure classCode=&quot;PROC&quot; moodCode=&quot;EVN&quot;>
+							<!-- Procedure Activity Procedure V2-->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.14&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.14&quot;/>
+							<id root=&quot;d5b614bd-01ce-410d-8726-e1fd01dcc72a&quot;/>
+							<code code=&quot;103716009&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Stent Placement&quot;>
+								<originalText>
+									<reference value=&quot;#Proc1&quot;/>
+								</originalText>
+							</code>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;20130512&quot;/>
+							<targetSiteCode code=&quot;28273000&quot; displayName=&quot;bile duct&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+							<specimen typeCode=&quot;SPC&quot;>
+								<specimenRole classCode=&quot;SPEC&quot;>
+									<id root=&quot;a6d7b927-2b70-43c7-bdf3-0e7c4133062c&quot;/>
+									<specimenPlayingEntity>
+										<code code=&quot;57259009&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;gallbladder bile&quot;/>
+									</specimenPlayingEntity>
+								</specimenRole>
+							</specimen>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19&quot; extension=&quot;1234&quot;/>
+									<addr>
+										<streetAddressLine>1004 Health Care Drive</streetAddressLine>
+										<city>Ann Arbor</city>
+										<state>MI</state>
+										<postalCode>02368</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)-555-5004&quot;/>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5&quot;/>
+										<name>Community Health and Hospitals</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)-555-5005&quot;/>
+										<addr>
+											<streetAddressLine>1003 Health Care Drive</streetAddressLine>
+											<city>Ann Arbor</city>
+											<state>MI</state>
+											<postalCode>02368</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<!-- ******************************* MEDICATIONS ***************************** -->
+			<component>
+				<section>
+					<!-- *** Medications Section (entries required) (V2) *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.1.1&quot; extension=&quot;2014-06-09&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.1.1&quot;/>
+					<code code=&quot;10160-0&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;HISTORY OF MEDICATION USE&quot;/>
+					<title>MEDICATIONS</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Medication</th>
+									<th>Directions</th>
+									<th>Start Date</th>
+									<th>Status</th>
+									<th>Indications</th>
+									<th>Fill Instructions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Proventil 0.09 MG/ACTUAT inhalant solution</td>
+									<td>2 puffs q6 hours PRN wheezing</td>
+									<td>Jan 3, 2011</td>
+									<td>Active</td>
+									<td>Asthma</td>
+									<td>Generic Substitition Allowed</td>
+								</tr>
+								<tr>
+									<td>Atenolol 25 MG Oral Tablet</td>
+									<td>1 every 12 hours Orally</td>
+									<td>Mar 18, 2012</td>
+									<td>Active</td>
+									<td>Hypertension</td>
+									<td>-none-</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<substanceAdministration classCode=&quot;SBADM&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Medication Activity (V2) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.16&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.16&quot;/>
+							<id root=&quot;cdbd33f0-6cde-11db-9fe1-0800200c9a66&quot;/>
+							<statusCode code=&quot;active&quot;/>
+							<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+								<low value=&quot;20110103&quot;/>
+								<high nullFlavor=&quot;UNK&quot;/>
+							</effectiveTime>
+							<effectiveTime xsi:type=&quot;PIVL_TS&quot; institutionSpecified=&quot;true&quot; operator=&quot;A&quot;>
+								<period value=&quot;6&quot; unit=&quot;h&quot;/>
+							</effectiveTime>
+							<routeCode code=&quot;C38216&quot; codeSystem=&quot;2.16.840.1.113883.3.26.1.1&quot; codeSystemName=&quot;NCI Thesaurus&quot; displayName=&quot;RESPIRATORY (INHALATION)&quot;/>
+							<doseQuantity value=&quot;2&quot;/>
+							<administrationUnitCode code=&quot;PUFF&quot; displayName=&quot;Puff&quot; codeSystem=&quot;2.16.840.1.113883.5.85&quot; codeSystemName=&quot;orderableDrugForm&quot;/>
+							<consumable>
+								<manufacturedProduct classCode=&quot;MANU&quot;>
+									<!-- ** Medication information ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot;/>
+									<id root=&quot;2a620155-9d11-439e-92b3-5d9815ff4ee8&quot;/>
+									<manufacturedMaterial>
+										<code code=&quot;573621&quot; displayName=&quot;Proventil 0.09 MG/ACTUAT inhalant solution&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; codeSystemName=&quot;RxNorm&quot;/>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Medication Factory Inc.</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<assignedEntity>
+									<id extension=&quot;5555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<addr nullFlavor=&quot;UNK&quot;/>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-1004&quot;/>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5.9999.1393&quot;/>
+										<name>Community Health and Hospitals</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5000&quot;/>
+										<addr nullFlavor=&quot;UNK&quot;/>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<participant typeCode=&quot;CSM&quot;>
+								<participantRole classCode=&quot;MANU&quot;>
+									<!-- ** Drug vehicle ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.24&quot;/>
+									<code code=&quot;412307009&quot; displayName=&quot;drug vehicle&quot; codeSystemName=&quot;SNOMED CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+									<playingEntity classCode=&quot;MMAT&quot;>
+										<code code=&quot;324049&quot; displayName=&quot;Aerosol&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; codeSystemName=&quot;RxNorm&quot;/>
+										<name>Aerosol</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+							<entryRelationship typeCode=&quot;RSON&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Indication (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.19&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.19&quot;/>
+									<id root=&quot;db734647-fc99-424c-a864-7e3cda82e703&quot; extension=&quot;45665&quot;/>
+									<code code=&quot;404684003&quot; displayName=&quot;Finding&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+									<!-- MAY contain
+										<translation code=&quot;75321-0&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Clinical finding&quot;/>
+									-->
+									</code>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<low value=&quot;20110103&quot;/>
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;195967001&quot; displayName=&quot;Asthma&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode=&quot;REFR&quot;>
+								<supply classCode=&quot;SPLY&quot; moodCode=&quot;INT&quot;>
+									<!-- ** Medication supply order (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.17&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.17&quot;/>
+									<id nullFlavor=&quot;NI&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+										<low value=&quot;20070103&quot;/>
+										<high nullFlavor=&quot;UNK&quot;/>
+									</effectiveTime>
+									<repeatNumber value=&quot;1&quot;/>
+									<quantity value=&quot;75&quot;/>
+									<product>
+										<manufacturedProduct classCode=&quot;MANU&quot;>
+											<!-- ** Medication information (V2) ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot;/>
+											<id root=&quot;2a620155-9d11-439e-92b3-5d9815ff4ee8&quot;/>
+											<manufacturedMaterial>
+												<code code=&quot;573621&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; displayName=&quot;Proventil 0.09 MG/ACTUAT inhalant solution&quot;>
+													<!-- i.	This code MAY contain zero or more [0..*] translation, which MAY be selected from ValueSet Clinical Substance
+													<translation code=&quot;219483&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; displayName=&quot;Proventil HFA&quot; codeSystemName=&quot;RxNorm&quot;/>
+													-->
+												</code>
+											</manufacturedMaterial>
+											<manufacturerOrganization>
+												<name>Medication Factory Inc.</name>
+											</manufacturerOrganization>
+										</manufacturedProduct>
+									</product>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201208151235-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;5555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+											<addr>
+												<streetAddressLine>1004 Healthcare Drive </streetAddressLine>
+												<city>Portland</city>
+												<state>OR</state>
+												<postalCode>99123</postalCode>
+												<country>US</country>
+											</addr>
+											<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1004&quot;/>
+											<assignedPerson>
+												<name>
+													<given>Patricia</given>
+													<given qualifier=&quot;CL&quot;>Patty</given>
+													<family>Primary</family>
+													<suffix qualifier=&quot;AC&quot;>M.D.</suffix>
+												</name>
+											</assignedPerson>
+										</assignedAuthor>
+									</author>
+									<entryRelationship typeCode=&quot;SUBJ&quot; inversionInd=&quot;true&quot;>
+										<act classCode=&quot;ACT&quot; moodCode=&quot;INT&quot;>
+											<!-- ** Instruction (v2) ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.20&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.20&quot;/>
+											<code code=&quot;409073007&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;instruction&quot;/>
+											<text> label in spanish </text>
+											<statusCode code=&quot;completed&quot;/>
+										</act>
+									</entryRelationship>
+								</supply>
+							</entryRelationship>
+							<entryRelationship typeCode=&quot;REFR&quot;>
+								<supply classCode=&quot;SPLY&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Medication dispense (v2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.18&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.18&quot;/>
+									<id root=&quot;1.2.3.4.56789.1&quot; extension=&quot;cb734647-fc99-424c-a864-7e3cda82e704&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;201208151450-0800&quot;/>
+									<repeatNumber value=&quot;1&quot;/>
+									<quantity value=&quot;75&quot;/>
+									<product>
+										<manufacturedProduct classCode=&quot;MANU&quot;>
+											<!-- ** Medication information ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot; extension=&quot;2014-06-09&quot;/>
+											<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot;/>
+											<id root=&quot;2a620155-9d11-439e-92b3-5d9815ff4ee8&quot;/>
+											<manufacturedMaterial>
+												<code code=&quot;573621&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; displayName=&quot;Proventil 0.09 MG/ACTUAT inhalant solution&quot;/>
+											</manufacturedMaterial>
+											<manufacturerOrganization>
+												<name>Medication Factory Inc.</name>
+											</manufacturerOrganization>
+										</manufacturedProduct>
+									</product>
+									<performer>
+										<assignedEntity>
+											<id extension=&quot;333222222&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<addr>
+												<streetAddressLine>1016 Health Drive</streetAddressLine>
+												<city>Portland</city>
+												<state>OR</state>
+												<postalCode>99123</postalCode>
+												<country>US</country>
+											</addr>
+											<telecom use=&quot;WP&quot; value=&quot;tel:+1(555)555-1016&quot;/>
+											<assignedPerson>
+												<name>
+													<given>Susan</given>
+													<family>Script</family>
+													<suffix qualifier=&quot;AC&quot;>Pharm.D.</suffix>
+												</name>
+											</assignedPerson>
+											<representedOrganization>
+												<name>People's Pharmacy</name>
+											</representedOrganization>
+										</assignedEntity>
+									</performer>
+								</supply>
+							</entryRelationship>
+							<precondition typeCode=&quot;PRCN&quot;>
+								<criterion>
+									<!-- ** Precondition for substance administration (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.25&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.25&quot;/>
+									<code code=&quot;ASSERTION&quot; codeSystem=&quot;2.16.840.1.113883.5.4&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;56018004&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Wheezing&quot;/>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<substanceAdministration classCode=&quot;SBADM&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Medication activity ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.16&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.16&quot;/>
+							<id root=&quot;6c844c75-aa34-411c-b7bd-5e4a9f206e29&quot;/>
+							<statusCode code=&quot;active&quot;/>
+							<effectiveTime xsi:type=&quot;IVL_TS&quot;>
+								<low value=&quot;20120318&quot;/>
+								<high nullFlavor=&quot;UNK&quot;/>
+							</effectiveTime>
+							<effectiveTime xsi:type=&quot;PIVL_TS&quot; institutionSpecified=&quot;true&quot; operator=&quot;A&quot;>
+								<period value=&quot;12&quot; unit=&quot;h&quot;/>
+							</effectiveTime>
+							<routeCode code=&quot;C38288&quot; codeSystem=&quot;2.16.840.1.113883.3.26.1.1&quot; codeSystemName=&quot;NCI Thesaurus&quot; displayName=&quot;ORAL&quot;/>
+							<doseQuantity value=&quot;1&quot;/>
+							<consumable>
+								<manufacturedProduct classCode=&quot;MANU&quot;>
+									<!-- ** Medication information ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.23&quot;/>
+									<id root=&quot;2a620155-9d11-439e-92b3-5d9815ff4ee8&quot;/>
+									<manufacturedMaterial>
+										<code code=&quot;197380&quot; displayName=&quot;Atenolol 25 MG Oral Tablet&quot; codeSystem=&quot;2.16.840.1.113883.6.88&quot; codeSystemName=&quot;RxNorm&quot;/>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<entryRelationship typeCode=&quot;RSON&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Indication ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.19&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.19&quot;/>
+									<id root=&quot;e63166c7-6482-4a44-83a1-37ccdbde725b&quot;/>
+									<code code=&quot;404684003&quot; displayName=&quot;Finding&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+										<!-- MAY
+										<translation code=&quot;75321-0&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Clinical finding&quot;/>
+										-->
+									</code>
+									<statusCode code=&quot;completed&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;38341003&quot; displayName=&quot;Hypertension&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+								</observation>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<!-- *********************** PAYERS ********************** -->
+			<component>
+				<section>
+					<!-- *** Payers Section (V3) *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.18&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.18&quot;/>
+					<code code=&quot;48768-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Payer&quot;/>
+					<title>INSURANCE PROVIDERS</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Payer name</th>
+									<th>Policy type / Coverage type</th>
+									<th>Policy ID</th>
+									<th>Covered party ID</th>
+									<th>Policy Holder</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Good Health Insurance</td>
+									<td>Extended healthcare / Family</td>
+									<td>Contract Number</td>
+									<td>1138345</td>
+									<td>Patient's Mother</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Coverage activity (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.60&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.60&quot;/>
+							<id root=&quot;1fe2cdd0-7aad-11db-9fe1-0800200c9a66&quot;/>
+							<code code=&quot;48768-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Payment sources&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<entryRelationship typeCode=&quot;COMP&quot;>
+								<sequenceNumber value=&quot;2&quot;/>
+								<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Policy activity  (V3) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.61&quot; extension=&quot;2015-08-01&quot;/>
+									<!--Critical Change-->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.61&quot;/>
+									<id root=&quot;3e676a50-7aac-11db-9fe1-0800200c9a66&quot;/>
+									<!-- 5.	SHALL contain exactly one [1..1] code, which SHOULD be selected from ValueSet Health Insurance Type -->
+									<code>
+										<!-- a.	This code SHALL contain at least one [1..*] translation, which SHOULD be selected from ValueSet Payer urn:oid:2.16.840.1.114222.4.11.3591 (CONF:1198-32852). 
+										<translation code=&quot;81&quot; displayName=&quot;self-pay&quot; codeSystemName=&quot;Source of Payment Typology (PHDSC)&quot; codeSystem=&quot;2.16.840.1.113883.3.221.5&quot;/>
+										-->
+										<translation nullFlavor=&quot;NI&quot;/>
+									</code>
+									<statusCode code=&quot;completed&quot;/>
+									<!-- Insurance Company Information -->
+									<performer typeCode=&quot;PRF&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.87&quot;/>
+										<assignedEntity>
+											<id root=&quot;2.16.840.1.113883.19&quot;/>
+											<code code=&quot;PAYOR&quot; codeSystem=&quot;2.16.840.1.113883.5.110&quot; codeSystemName=&quot;HL7 RoleCode&quot;/>
+											<addr use=&quot;WP&quot;>
+												<streetAddressLine>9009 Health Drive</streetAddressLine>
+												<city>Portland</city>
+												<state>OR</state>
+												<postalCode>99123</postalCode>
+												<country>US</country>
+											</addr>
+											<telecom value=&quot;tel:+1(555)555-1515&quot; use=&quot;WP&quot;/>
+											<representedOrganization>
+												<name>Good Health Insurance</name>
+												<telecom value=&quot;tel:+1(555)555-1515&quot; use=&quot;WP&quot;/>
+												<addr use=&quot;WP&quot;>
+													<streetAddressLine>9009 Health Drive</streetAddressLine>
+													<city>Portland</city>
+													<state>OR</state>
+													<postalCode>99123</postalCode>
+												</addr>
+											</representedOrganization>
+										</assignedEntity>
+									</performer>
+									<!-- Guarantor Information... The person responsible for the final bill. -->
+									<performer typeCode=&quot;PRF&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.88&quot;/>
+										<time>
+											<low nullFlavor=&quot;UNK&quot;/>
+											<high nullFlavor=&quot;UNK&quot;/>
+										</time>
+										<assignedEntity>
+											<id root=&quot;329fcdf0-7ab3-11db-9fe1-0800200c9a66&quot;/>
+											<code code=&quot;GUAR&quot; codeSystem=&quot;2.16.840.1.113883.5.110&quot; codeSystemName=&quot;HL7 RoleCode&quot;/>
+											<addr use=&quot;HP&quot;>
+												<streetAddressLine>2222 Home Street</streetAddressLine>
+												<city>Beaverton</city>
+												<state>OR</state>
+												<postalCode>97867</postalCode>
+											</addr>
+											<telecom value=&quot;tel:+1(555)555-1000&quot; use=&quot;HP&quot;/>
+											<assignedPerson>
+												<name>
+													<given>Boris</given>
+													<family>Betterhalf</family>
+												</name>
+											</assignedPerson>
+										</assignedEntity>
+									</performer>
+									<participant typeCode=&quot;COV&quot;>
+										<!-- Covered Party Participant -->
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.89&quot;/>
+										<time>
+											<low nullFlavor=&quot;UNK&quot;/>
+											<high nullFlavor=&quot;UNK&quot;/>
+										</time>
+										<participantRole classCode=&quot;PAT&quot;>
+											<!-- Health plan ID for patient. -->
+											<id root=&quot;14d4a520-7aae-11db-9fe1-0800200c9a66&quot; extension=&quot;1138345&quot;/>
+											<code code=&quot;SELF&quot; codeSystem=&quot;2.16.840.1.113883.5.111&quot; displayName=&quot;Self&quot;/>
+											<addr use=&quot;HP&quot;>
+												<streetAddressLine>2222 Home Street</streetAddressLine>
+												<city>Beaverton</city>
+												<state>OR</state>
+												<postalCode>97867</postalCode>
+											</addr>
+											<playingEntity>
+												<name>
+													<!-- Name is needed if different than health plan name. -->
+													<given>Boris</given>
+													<family>Betterhalf</family>
+												</name>
+												<sdtc:birthTime value=&quot;19750501&quot;/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- Policy Holder -->
+									<participant typeCode=&quot;HLD&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.90&quot;/>
+										<participantRole>
+											<id extension=&quot;1138345&quot; root=&quot;2.16.840.1.113883.19&quot;/>
+											<addr use=&quot;HP&quot;>
+												<streetAddressLine>2222 Home Street</streetAddressLine>
+												<city>Beaverton</city>
+												<state>OR</state>
+												<postalCode>97867</postalCode>
+											</addr>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode=&quot;REFR&quot;>
+										<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+											<!-- ** Authorization activity ** -->
+											<templateId root=&quot;2.16.840.1.113883.10.20.1.19&quot;/>
+											<id root=&quot;f4dce790-8328-11db-9fe1-0800200c9a66&quot;/>
+											<code nullFlavor=&quot;NA&quot;/>
+											<entryRelationship typeCode=&quot;SUBJ&quot;>
+												<procedure classCode=&quot;PROC&quot; moodCode=&quot;PRMS&quot;>
+													<code code=&quot;73761001&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Colonoscopy&quot;/>
+												</procedure>
+											</entryRelationship>
+										</act>
+									</entryRelationship>
+									<!-- The above entryRelationship OR the following. <entryRelationship 
+										typeCode=&quot;REFR&quot;> <act classCode=&quot;ACT&quot; moodCode=&quot;DEF&quot;> <id root=&quot;f4dce790-8328-11db-9fe1-0800200c9a66&quot;/> 
+										<code nullFlavor=&quot;UNK&quot;/> <text>Health Plan Name<reference value=&quot;PntrToHealthPlanNameInSectionText&quot;/> 
+										</text> <statusCode code=&quot;active&quot;/> </act> </entryRelationship> -->
+								</act>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- ******************* PLAN OF TREATMENT ********************** -->
+			<component>
+				<section>
+					<!--  **** Plan of Treatment Section (V2) **** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.10&quot; extension=&quot;2014-06-09&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.10&quot;/>
+					<code code=&quot;18776-5&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Treatment plan&quot;/>
+					<title>TREATMENT PLAN</title>
+					<text>
+						<content styleCode=&quot;Bold&quot;> Hand-off Communication:</content>
+						<content>Nurse Florence, RN to MD to Nancy Nightingale, RN</content>
+						<br/>
+						<br/>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Planned Care</th>
+									<th>Start Date</th>
+									<th>Patient Provider Rating</th>
+									<th>Provider Provider Rating</th>
+									<th>Provider</th>
+									<th>Patient Support/Caregiver</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Procedure: Colonoscopy</td>
+									<td>June 15, 2013</td>
+									<td>1st, Medium</td>
+									<td>3rd, Medium</td>
+									<td/>
+									<td>Caregiver: Mother</td>
+								</tr>
+								<tr>
+									<td>Medication: Heparin 0.25 ml pre-filled syringe</td>
+									<td>July 12, 2013</td>
+									<td/>
+									<td>First, Medium</td>
+									<td>Third, Medium</td>
+									<td>Caregiver: Mother</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- Planned Procedure (V2) -->
+						<procedure moodCode=&quot;RQO&quot; classCode=&quot;PROC&quot;>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.41&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.41&quot;/>
+							<id root=&quot;9a6d1bac-17d3-4195-89c4-1121bc809b5a&quot;/>
+							<code code=&quot;73761001&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Colonoscopy&quot;/>
+							<statusCode code=&quot;active&quot;/>
+							<effectiveTime value=&quot;20130613&quot;/>
+							<!--
+								Author Participation Template
+								In this case, the author is the same as a participant already
+								described in the header.
+								However, the author could be a different provider - someone else in the 
+								header, or a new provider not elsewhere specified.
+							-->
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<time value=&quot;201306131145-0800&quot;/>
+								<assignedAuthor>
+									<!-- This id points back to a participant in the header -->
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode=&quot;COMP&quot;>
+								<!-- Planned Coverage -->
+								<act classCode=&quot;ACT&quot; moodCode=&quot;INT&quot;>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.129&quot;/>
+									<id root=&quot;03f5e10b-7e79-4610-9626-d2984ff10cc1&quot;/>
+									<code code=&quot;48768-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Payment Sources&quot;/>
+									<statusCode code=&quot;active&quot;/>
+									<entryRelationship typeCode=&quot;COMP&quot;>
+										<act classCode=&quot;ACT&quot; moodCode=&quot;INT&quot;>
+											<!-- These act/identifiers are unique identifiers 
+												for the policy or program providing the coverage. -->
+											<id root=&quot;4c9a3be1-5f09-46dd-88e7-14c8ec612e4c&quot;/>
+											<code code=&quot;111&quot; displayName=&quot;Medicare HMO&quot; codeSystemName=&quot;Source of Payment Typology (PHDSC)&quot; codeSystem=&quot;2.16.840.1.113883.3.221.5&quot;/>
+											<statusCode code=&quot;active&quot;/>
+										</act>
+									</entryRelationship>
+								</act>
+							</entryRelationship>
+							<entryRelationship typeCode=&quot;REFR&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- Priority Preference -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.143&quot;/>
+									<id root=&quot;9a6d1bac-17d3-4195-89a4-1121bc809b4d&quot;/>
+									<code code=&quot;225773000&quot; codeSystemName=&quot;SNOMED CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;> </code>
+									<effectiveTime value=&quot;20130615&quot;/>
+									<priorityCode code=&quot;255216001&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;First&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;394848005&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Normal priority&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201306151145-0800&quot;/>
+										<assignedAuthor>
+											<!-- this id indicates the priority preference is a provider not a patient priority preference -->
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode=&quot;REFR&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!--  Priority Preference-->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.143&quot;/>
+									<id root=&quot;9a6d1bac-17d3-4195-89a4-1121bc809b4d&quot;/>
+									<code code=&quot;225773000&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;preference&quot;/>
+									<effectiveTime value=&quot;20130615&quot;/>
+									<value xsi:type=&quot;CD&quot; code=&quot;394848005&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Normal priority&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201306151145-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</entryRelationship>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<!-- ***************** PROBLEM LIST *********************** -->
+			<component>
+				<section>
+					<!--  *** Problem Section (entries required) (V3) *** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.5.1&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.5.1&quot;/>
+					<code code=&quot;11450-4&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;PROBLEM LIST&quot;/>
+					<title>PROBLEMS</title>
+					<text>
+						<paragraph>Active Concerns</paragraph>
+						<list>
+							<item>Problem #1<list>
+									<item>Pneumonia (onset July 3, 2013; resolution Aug 14, 2013) [authored Aug 14, 2013]</item>
+								</list>
+							</item>
+							<item>Problem #2<list>
+									<item>Chest pain (onset Apr 14, 2007) [authored Apr 14, 2007]</item>
+									<item>Angina (onset Apr 17, 2007) [authored Apr 17, 2007]</item>
+								</list>
+							</item>
+						</list>
+						<paragraph>Resolved Concerns</paragraph>
+						<list>
+							<item>Problem #3<list>
+									<item>Pneumonia - Left lower lobe (onset Mar 10, 1998; resolution Mar 16, 1998) [authored Mar 16,
+                    1998]</item>
+								</list>
+							</item>
+						</list>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Problem Concern Act (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.3&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.3&quot;/>
+							<id root=&quot;ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7&quot;/>
+							<code code=&quot;CONC&quot; codeSystem=&quot;2.16.840.1.113883.5.6&quot; displayName=&quot;Concern&quot;/>
+							<!-- The statusCode represents the need to continue tracking the problem -->
+							<!-- This is of ongoing concern to the provider -->
+							<statusCode code=&quot;active&quot;/>
+							<effectiveTime>
+								<!-- The low value represents when the problem was first recorded in the patient's chart -->
+								<!-- Concern was documented on July 6, 2013 -->
+								<low value=&quot;201307061145-0800&quot;/>
+							</effectiveTime>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<!-- Same as Concern effectiveTime/low -->
+								<time value=&quot;201307061145-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode=&quot;SUBJ&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Problem observation  (V3)** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot;/>
+									<id root=&quot;ab1791b0-5c71-11db-b0de-0800200c9a66&quot;/>
+									<code code=&quot;64572001&quot; displayName=&quot;Condition&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+										<!-- a.	This code SHALL contain at least one [1..*] translation, which SHOULD be selected from ValueSet Problem Type (LOINC)
+										<translation code=&quot;75323-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Condition&quot;/>
+										-->
+										<translation nullFlavor=&quot;NI&quot;/>
+									</code>
+									<!-- The statusCode reflects the status of the observation itself -->
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<!-- The low value reflects the date of onset -->
+										<!-- Based on patient symptoms, presumed onset is July 3, 2013 -->
+										<low value=&quot;20130703&quot;/>
+										<!-- The high value reflects when the problem was known to be resolved -->
+										<!-- Based on signs and symptoms, appears to be resolved on Aug 14, 2013 -->
+										<high value=&quot;20080814&quot;/>
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;233604007&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Pneumonia&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200808141030-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+							<!-- Problem concern act ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.3&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.3&quot;/>
+							<id root=&quot;682f6be1-0793-42f4-904b-e199e6e8e457&quot;/>
+							<code code=&quot;CONC&quot; codeSystem=&quot;2.16.840.1.113883.5.6&quot; displayName=&quot;Concern&quot;/>
+							<!-- The statusCode represents the need to continue tracking the problem -->
+							<statusCode code=&quot;active&quot;/>
+							<!-- This is of ongoing concern to the provider -->
+							<effectiveTime>
+								<!-- The low value represents when the problem was first recorded in the patient's chart -->
+								<low value=&quot;200704141515-0800&quot;/>
+								<!-- Concern was documented on Apr 14, 2007 -->
+							</effectiveTime>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<time value=&quot;200704141515-0800&quot;/>
+								<!-- Same as Concern effectiveTime/low -->
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode=&quot;SUBJ&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Problem observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot;/>
+									<id root=&quot;11d088a8-b957-401c-8ee0-3bd20a772fc0&quot;/>
+									<code code=&quot;64572001&quot; displayName=&quot;Condition&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+										<!-- a.	This code SHALL contain at least one [1..*] translation, which SHOULD be selected from ValueSet Problem Type (LOINC)
+										<translation code=&quot;75323-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Condition&quot;/>
+										-->
+										<translation nullFlavor=&quot;NI&quot;/>
+									</code>
+									<!-- The statusCode reflects the status of the observation itself -->
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<!-- The low value reflects the date of onset -->
+										<low value=&quot;20070414&quot;/>
+										<!-- Based on patient symptoms, presumed onset is July 3, 2013 -->
+										<!-- Absence of effectiveTime/high means the condition is not resolved -->
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;29857009&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Chest pain&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200704141515-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode=&quot;SUBJ&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Problem observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot;/>
+									<id root=&quot;4991db40-4c4f-41e8-9146-50c12d716424&quot;/>
+									<code code=&quot;64572001&quot; displayName=&quot;Condition&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+										<!-- a.	This code SHALL contain at least one [1..*] translation, which SHOULD be selected from ValueSet Problem Type (LOINC)
+										<translation code=&quot;75323-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Condition&quot;/>
+										-->
+										<translation nullFlavor=&quot;NI&quot;/>
+									</code>
+									<!-- The statusCode reflects the status of the observation itself -->
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<!-- The low value reflects the date of onset -->
+										<low value=&quot;20070417&quot;/>
+										<!-- Absence of effectiveTime/high means the condition is not resolved -->
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;194828000&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Angina&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200704171515-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;222334444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Problem concern act (V2) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.3&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.3&quot;/>
+							<id root=&quot;b5159d48-04aa-4927-b355-00d1dcb7158c&quot;/>
+							<code code=&quot;CONC&quot; codeSystem=&quot;2.16.840.1.113883.5.6&quot; displayName=&quot;Concern&quot;/>
+							<!-- The statusCode represents the need to continue tracking the problem -->
+							<!-- This is no longer of ongoing concern to the provider -->
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime>
+								<!-- The low value represents when the problem was first recorded in the patient's chart -->
+								<!-- Concern was documented on Mar 10, 1998 -->
+								<low value=&quot;199803101030-0800&quot;/>
+								<!-- The high value reflects when there was no longer a need to track the problem -->
+								<!-- Concern was closed on May 4, 1998 -->
+								<high value=&quot;199805041145-0800&quot;/>
+							</effectiveTime>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<!-- Same as Concern effectiveTime/low -->
+								<time value=&quot;199803161030-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode=&quot;SUBJ&quot;>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Problem observation (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.4&quot;/>
+									<id root=&quot;10506b4d-c30a-4220-8bec-97bff9568fd1&quot;/>
+									<code code=&quot;64572001&quot; displayName=&quot;Condition&quot; codeSystemName=&quot;SNOMED-CT&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;>
+										<!-- a.	This code SHALL contain at least one [1..*] translation, which SHOULD be selected from ValueSet Problem Type (LOINC)
+										<translation code=&quot;75323-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Condition&quot;/>
+										-->
+										<translation nullFlavor=&quot;NI&quot;/>
+									</code>
+									<!-- The statusCode reflects the status of the observation itself -->
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime>
+										<!-- The low value reflects the date of onset -->
+										<!-- Based on patient symptoms, presumed onset is Mar 10, 1998 -->
+										<low value=&quot;19980310&quot;/>
+										<!-- The high value reflects when the problem was known to be resolved -->
+										<high value=&quot;19980316&quot;/>
+									</effectiveTime>
+									<value xsi:type=&quot;CD&quot; code=&quot;233604007&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Pneumonia&quot;>
+										<qualifier>
+											<name code=&quot;363698007&quot; displayName=&quot;Finding site&quot;/>
+											<value code=&quot;41224006&quot; displayName=&quot;Left lower lobe of lung&quot;/>
+										</qualifier>
+									</value>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;199803161030-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- ************** PROCEDURES ***************** -->
+			<component>
+				<section>
+					<!-- Procedures Section (entries required) (V2) -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.7.1&quot; extension=&quot;2014-06-09&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.7.1&quot;/>
+					<code code=&quot;47519-4&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;HISTORY OF PROCEDURES&quot;/>
+					<title>PROCEDURES</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Procedure</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID=&quot;Proc1&quot;>Colonic polypectomy</td>
+									<td>1998</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- Examples of the same procedure are shown in different procedure entries -->
+					<entry typeCode=&quot;DRIV&quot;>
+						<procedure classCode=&quot;PROC&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Procedure activity procedure ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.14&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.14&quot;/>
+							<id root=&quot;d68b7e32-7810-4f5b-9cc2-acd54b0fd85d&quot;/>
+							<code code=&quot;73761001&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Colonoscopy&quot;>
+								<originalText>
+									<reference value=&quot;#Proc1&quot;/>
+								</originalText>
+							</code>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;20120512&quot;/>
+							<methodCode nullFlavor=&quot;UNK&quot;/>
+							<targetSiteCode code=&quot;appropriate_code&quot; displayName=&quot;colon&quot; codeSystem=&quot;2.16.840.1.113883.3.88.12.3221.8.9&quot; codeSystemName=&quot;Body Site Value Set&quot;/>
+							<specimen typeCode=&quot;SPC&quot;>
+								<specimenRole classCode=&quot;SPEC&quot;>
+									<id root=&quot;c2ee9ee9-ae31-4628-a919-fec1cbb58683&quot;/>
+									<specimenPlayingEntity>
+										<code code=&quot;309226005&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;colonic polyp sample&quot;/>
+									</specimenPlayingEntity>
+								</specimenRole>
+							</specimen>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19.5.9999.456&quot; extension=&quot;2981823&quot;/>
+									<addr>
+										<streetAddressLine>1001 Village Avenue</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;+1(555)555-5000&quot;/>
+									<representedOrganization classCode=&quot;ORG&quot;>
+										<id root=&quot;2.16.840.1.113883.19.5.9999.1393&quot;/>
+										<name>Community Health and Hospitals</name>
+										<telecom use=&quot;WP&quot; value=&quot;+1(555)555-5000&quot;/>
+										<addr>
+											<streetAddressLine>1001 Village Avenue</streetAddressLine>
+											<city>Portland</city>
+											<state>OR</state>
+											<postalCode>99123</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<participant typeCode=&quot;DEV&quot;>
+								<participantRole classCode=&quot;MANU&quot;>
+									<!-- ** Product instance ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.37&quot;/>
+									<id root=&quot;742aee30-21c5-11e1-bfc2-0800200c9a66&quot;/>
+									<playingDevice>
+										<code code=&quot;90412006&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Colonoscope&quot;/>
+									</playingDevice>
+									<scopingEntity>
+										<id root=&quot;eb936010-7b17-11db-9fe1-0800200c9b65&quot;/>
+									</scopingEntity>
+								</participantRole>
+							</participant>
+						</procedure>
+					</entry>
+					<entry>
+						<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Procedure activity observation (V2) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.13&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.13&quot;/>
+							<id extension=&quot;123456789&quot; root=&quot;2.16.840.1.113883.19&quot;/>
+							<code code=&quot;274025005&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; displayName=&quot;Colonic polypectomy&quot; codeSystemName=&quot;SNOMED CT&quot;>
+								<originalText>
+									<reference value=&quot;#Proc1&quot;/>
+								</originalText>
+							</code>
+							<statusCode code=&quot;aborted&quot;/>
+							<effectiveTime value=&quot;20110203&quot;/>
+							<priorityCode code=&quot;CR&quot; codeSystem=&quot;2.16.840.1.113883.5.7&quot; codeSystemName=&quot;ActPriority&quot; displayName=&quot;Callback results&quot;/>
+							<value xsi:type=&quot;CD&quot;/>
+							<methodCode nullFlavor=&quot;UNK&quot;/>
+							<targetSiteCode code=&quot;416949008&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Abdomen and pelvis&quot;/>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19.5&quot; extension=&quot;1234&quot;/>
+									<addr>
+										<streetAddressLine>1001 Village Avenue</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5000&quot;/>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5&quot;/>
+										<name>Community Health and Hospitals</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5000&quot;/>
+										<addr>
+											<streetAddressLine>1001 Village Avenue</streetAddressLine>
+											<city>Portland</city>
+											<state>OR</state>
+											<postalCode>99123</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<participant typeCode=&quot;LOC&quot;>
+								<participantRole classCode=&quot;SDLOC&quot;>
+									<!-- ** Service delivery location ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.32&quot;/>
+									<code code=&quot;1118-9&quot; codeSystem=&quot;2.16.840.1.113883.6.259&quot; codeSystemName=&quot;HL7 HealthcareServiceLocation&quot; displayName=&quot;Gastroenterology Clinic&quot;/>
+									<addr>
+										<streetAddressLine>1009 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5009&quot;/>
+									<playingEntity classCode=&quot;PLC&quot;>
+										<name>Community Gastroenterology Clinic</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+						</observation>
+					</entry>
+					<entry>
+						<act classCode=&quot;ACT&quot; moodCode=&quot;EVN&quot;>
+							<!-- Procedure activity act (V2) -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.12&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.12&quot;/>
+							<id root=&quot;1.2.3.4.5.6.7.8&quot; extension=&quot;1234567&quot;/>
+							<code code=&quot;274025005&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Colonic polypectomy&quot;>
+								<originalText>
+									<reference value=&quot;#Proc1&quot;/>
+								</originalText>
+							</code>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime value=&quot;20110203&quot;/>
+							<priorityCode code=&quot;CR&quot; codeSystem=&quot;2.16.840.1.113883.5.7&quot; codeSystemName=&quot;ActPriority&quot; displayName=&quot;Callback results&quot;/>
+							<performer>
+								<assignedEntity>
+									<id root=&quot;2.16.840.1.113883.19&quot; extension=&quot;1234&quot;/>
+									<addr>
+										<streetAddressLine>1001 Village Avenue</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5000&quot;/>
+									<representedOrganization>
+										<id root=&quot;2.16.840.1.113883.19.5&quot;/>
+										<name>Community Health and Hospitals</name>
+										<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)555-5000&quot;/>
+										<addr>
+											<streetAddressLine>1001 Village Avenue</streetAddressLine>
+											<city>Portland</city>
+											<state>OR</state>
+											<postalCode>99123</postalCode>
+											<country>US</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<participant typeCode=&quot;LOC&quot;>
+								<participantRole classCode=&quot;SDLOC&quot;>
+									<!-- ** Service delivery location ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.32&quot;/>
+									<code code=&quot;1118-9&quot; codeSystem=&quot;2.16.840.1.113883.6.259&quot; codeSystemName=&quot;HL7 HealthcareServiceLocation&quot; displayName=&quot;Gastroenterology Clinic&quot;/>
+									<addr>
+										<streetAddressLine>1009 Health Drive</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>99123</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom use=&quot;WP&quot; value=&quot;tel: +1(555)-555-5009&quot;/>
+									<playingEntity classCode=&quot;PLC&quot;>
+										<name>Community Gastroenterology Clinic</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- ******************** RESULTS ************************ -->
+			<component>
+				<section>
+					<!-- Results Section (entries required) (V3) -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.3.1&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.3.1&quot;/>
+					<code code=&quot;30954-2&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;RESULTS&quot;/>
+					<title>RESULTS</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Result Type</th>
+									<th>Result Value</th>
+									<th>Relevant Reference Range</th>
+									<th>Interpretation</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID=&quot;result1&quot;>Hemoglobin</td>
+									<td ID=&quot;resultvalue1&quot;>13.2 g/dL</td>
+									<td ID=&quot;referencerange1&quot;>Normal range for women is 12.0 to 15.5 grams per deciliter</td>
+									<td>Normal</td>
+									<td>03/19/2008</td>
+								</tr>
+								<tr>
+									<td ID=&quot;result2&quot;>Leukocytes</td>
+									<td ID=&quot;resultvalue2&quot;>6.7 10*9/L</td>
+									<td ID=&quot;referencerange2&quot;>Normal white blood cell count range 3.5-10.5 billion cells/L</td>
+									<td>Normal</td>
+									<td>03/19/2008</td>
+								</tr>
+								<tr>
+									<td ID=&quot;result3&quot;>Platelets</td>
+									<td ID=&quot;resultvalue3&quot;>123 10*9/L</td>
+									<td ID=&quot;referencerange3&quot;>Normal white blood cell count range 3.5-10.5 billion cells/L</td>
+									<td>Low</td>
+									<td>03/19/2008</td>
+								</tr>
+								<tr>
+									<td ID=&quot;result4&quot;>Hematocrit</td>
+									<td ID=&quot;resultvalue4&quot;>35.3 %</td>
+									<td ID=&quot;referencerange4&quot;>Normal hematocrit range for female: 34.9-44.5 percent</td>
+									<td>Normal</td>
+									<td>03/19/2008</td>
+								</tr>
+								<tr>
+									<td ID=&quot;result5&quot;>Erythrocytes</td>
+									<td ID=&quot;resultvalue5&quot;>4.21 10*12/L</td>
+									<td ID=&quot;referencerange5&quot;>Normal red blood cell count range 3.90-5.03 trillion cells/L</td>
+									<td>Normal</td>
+									<td>03/19/2008</td>
+								</tr>
+								<tr>
+									<td ID=&quot;result6&quot;>Urea nitrogen, Serum</td>
+									<td>Pending</td>
+									<td>Pending</td>
+									<td>Pending</td>
+									<td>March 20, 2008</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<organizer classCode=&quot;BATTERY&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Result organizer (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.1&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.1&quot;/>
+							<id root=&quot;7d5a02b0-67a4-11db-bd13-0800200c9a66&quot;/>
+							<code code=&quot;57021-8&quot; displayName=&quot;CBC W Auto Differential panel in Blood&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime>
+								<low value=&quot;200803190830-0800&quot;/>
+								<high value=&quot;200803190830-0800&quot;/>
+							</effectiveTime>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Result observation (V3) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot;/>
+									<id root=&quot;107c2dc0-67a5-11db-bd13-0800200c9a66&quot;/>
+									<code code=&quot;718-7&quot; displayName=&quot;Hemoglobin&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;200803190830-0800&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;13.2&quot; unit=&quot;g/dL&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200803190830-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;333444444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;246Q00000X&quot; displayName=&quot;Technician, Pathology&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<referenceRange>
+										<observationRange>
+											<value xsi:type=&quot;IVL_PQ&quot;>
+												<low value=&quot;12.0&quot; unit=&quot;g/dL&quot;/>
+												<high value=&quot;15.5&quot; unit=&quot;g/dL&quot;/>
+											</value>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Result observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot;/>
+									<id root=&quot;a69b3d60-2ffd-4440-958b-72b3335ff35f&quot;/>
+									<code code=&quot;6690-2&quot; displayName=&quot;Leukocytes&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;200803190830-0800&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;6.7&quot; unit=&quot;10*9/L&quot;>
+										<translation>
+											<originalText>6.7 billion per liter</originalText>
+										</translation>
+									</value>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200803190830-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;333444444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;246Q00000X&quot; displayName=&quot;Technician, Pathology&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<referenceRange>
+										<observationRange>
+											<value xsi:type=&quot;IVL_PQ&quot;>
+												<low value=&quot;4.3&quot; unit=&quot;10*9/L&quot;/>
+												<high value=&quot;10.8&quot; unit=&quot;10*9/L&quot;/>
+											</value>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Result observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot;/>
+									<id root=&quot;ef5c1c58-4665-4556-a8e8-6e720d82f572&quot;/>
+									<code code=&quot;777-3&quot; displayName=&quot;Platelets&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<text>
+										<reference value=&quot;#result3&quot;/>
+									</text>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;200803190830-0800&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;123&quot; unit=&quot;10*9/L&quot;/>
+									<interpretationCode code=&quot;LX&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200803190830-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;333444444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;246Q00000X&quot; displayName=&quot;Technician, Pathology&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<referenceRange>
+										<observationRange>
+											<value xsi:type=&quot;IVL_PQ&quot;>
+												<low value=&quot;150&quot; unit=&quot;10*9/L&quot;/>
+												<high value=&quot;350&quot; unit=&quot;10*9/L&quot;/>
+											</value>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Result observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot;/>
+									<id root=&quot;7c0704bb-9c40-41b5-9c7d-26b2d59e234f&quot;/>
+									<code code=&quot;4544-3&quot; displayName=&quot;Hematocrit&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<text>
+										<reference value=&quot;#result4&quot;/>
+									</text>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;200803190830-0800&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;35.3&quot; unit=&quot;%&quot;/>
+									<interpretationCode code=&quot;LX&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200803190830-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;333444444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;246Q00000X&quot; displayName=&quot;Technician, Pathology&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<referenceRange>
+										<observationRange>
+											<value xsi:type=&quot;IVL_PQ&quot;>
+												<low value=&quot;34.9&quot; unit=&quot;%&quot;/>
+												<high value=&quot;44.5&quot; unit=&quot;%&quot;/>
+											</value>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Result observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot;/>
+									<id root=&quot;bccd6fc9-0c7f-455e-8616-923ed0d04d09&quot;/>
+									<code code=&quot;789-8&quot; displayName=&quot;Erythrocytes&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;200803190830-0800&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;4.21&quot; unit=&quot;10*12/L&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;200803190830-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;333444444&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;246Q00000X&quot; displayName=&quot;Technician, Pathology&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+									<referenceRange>
+										<observationRange>
+											<value xsi:type=&quot;IVL_PQ&quot;>
+												<low value=&quot;3.90&quot; unit=&quot;10*12/L&quot;/>
+												<high value=&quot;5.03&quot; unit=&quot;10*12/L&quot;/>
+											</value>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<organizer classCode=&quot;BATTERY&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Result organizer ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.1&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.1&quot;/>
+							<id root=&quot;122ed3ae-6d9e-43d0-bfa2-434ea34b1426&quot;/>
+							<code code=&quot;166312007&quot; displayName=&quot;Blood chemistry test&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot;/>
+							<statusCode code=&quot;active&quot;/>
+							<effectiveTime>
+								<low value=&quot;200803200930-0800&quot;/>
+								<high value=&quot;200803200930-0800&quot;/>
+							</effectiveTime>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Result observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot; extension=&quot;2015-08-01&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.2&quot;/>
+									<id root=&quot;aed821af-3330-4138-97f0-e84dfe5f3c35&quot;/>
+									<code code=&quot;3094-0&quot; displayName=&quot;Urea nitrogen, Serum&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot;/>
+									<statusCode code=&quot;active&quot;/>
+									<effectiveTime value=&quot;200803200930-0800&quot;/>
+									<value xsi:type=&quot;PQ&quot; nullFlavor=&quot;NI&quot;/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<!-- ******************* SOCIAL HISTORY ********************* -->
+			<component>
+				<section>
+					<!--  ** Social History Section (V3) ** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.17&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.17&quot;/>
+					<code code=&quot;29762-2&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Social History&quot;/>
+					<title>SOCIAL HISTORY</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th>Social History Observation</th>
+									<th>Description</th>
+									<th>Dates Observed</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Current Smoking Status</td>
+									<td>Former smoker</td>
+									<td>September 10, 2012</td>
+								</tr>
+								<tr>
+									<td>Tobacco Use</td>
+									<td>Moderate cigarette smoker, 10-19/day</td>
+									<td>February, 2009 - February, 2011</td>
+								</tr>
+								<tr>
+									<td>Alcoholic drinks per day</td>
+									<td>12</td>
+									<td>Since February, 2012</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Smoking Status - Meaningful Use (V2) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.78&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.78&quot;/>
+							<id extension=&quot;123456789&quot; root=&quot;2.16.840.1.113883.19&quot;/>
+							<code code=&quot;72166-2&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Tobacco smoking status NHIS&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<!-- The effectiveTime reflects when the current smoking status was observed. -->
+							<effectiveTime value=&quot;20120910&quot;/>
+							<!-- The value represents the patient's smoking status currently observed. -->
+							<value xsi:type=&quot;CD&quot; code=&quot;8517006&quot; displayName=&quot;Former smoker&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<time value=&quot;201209101145-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+						</observation>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Tobacco use (V2) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.85&quot; extension=&quot;2014-06-09&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.85&quot;/>
+							<id root=&quot;45efb604-7049-4a2e-ad33-d38556c9636c&quot;/>
+							<code code=&quot;11367-0&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;History of tobacco use&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime>
+								<!-- The low value reflects the start date of the observation/value (moderate smoker) -->
+								<low value=&quot;20090214&quot;/>
+								<!-- The high value reflects the end date of the observation/value (moderate smoker) -->
+								<high value=&quot;20110215&quot;/>
+							</effectiveTime>
+							<value xsi:type=&quot;CD&quot; code=&quot;160604004&quot; displayName=&quot;Moderate cigarette smoker, 10-19/day&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot;/>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<time value=&quot;201209101145-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+						</observation>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Social history observation (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.38&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.38&quot;/>
+							<id root=&quot;37f76c51-6411-4e1d-8a37-957fd49d2cef&quot;/>
+							<code code=&quot;74013-4&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Alcoholic drinks per day&quot;/>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime>
+								<low value=&quot;20120215&quot;/>
+							</effectiveTime>
+							<value xsi:type=&quot;PQ&quot; value=&quot;12&quot;/>
+							<author typeCode=&quot;AUT&quot;>
+								<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+								<time value=&quot;201209101145-0800&quot;/>
+								<assignedAuthor>
+									<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+									<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+								</assignedAuthor>
+							</author>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- ************* VITAL SIGNS *************** -->
+			<component>
+				<section>
+					<!-- ** Vital Signs Section (entries required) (V3) ** -->
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.4.1&quot; extension=&quot;2015-08-01&quot;/>
+					<templateId root=&quot;2.16.840.1.113883.10.20.22.2.4.1&quot;/>
+					<code code=&quot;8716-3&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;VITAL SIGNS&quot;/>
+					<title>VITAL SIGNS</title>
+					<text>
+						<table border=&quot;1&quot; width=&quot;100%&quot;>
+							<thead>
+								<tr>
+									<th align=&quot;right&quot;>Date / Time: </th>
+									<th>Sept 10, 2012</th>
+									<th>Sept 1, 2011</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th align=&quot;left&quot;>Height</th>
+									<td ID=&quot;vit1&quot;>177 cm</td>
+									<td ID=&quot;vit2&quot;>177 cm</td>
+								</tr>
+								<tr>
+									<th align=&quot;left&quot;>Weight</th>
+									<td ID=&quot;vit3&quot;>86 kg</td>
+									<td ID=&quot;vit4&quot;>88 kg</td>
+								</tr>
+								<tr>
+									<th align=&quot;left&quot;>Blood Pressure</th>
+									<td ID=&quot;vit5&quot;>132/88</td>
+									<td ID=&quot;vit6&quot;>128/80</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode=&quot;DRIV&quot;>
+						<organizer classCode=&quot;CLUSTER&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Vital signs organizer (V3) ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.26&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.26&quot;/>
+							<id root=&quot;31b73bd0-cffc-4599-902e-dbe54bc56cb4&quot;/>
+							<code code=&quot;46680005&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Vital signs&quot;>
+								<!-- A vitals organizer conformant to both C-CDA 1.1 and C-CDA 2.1 would contain the SNOMED code (46680005) from R1.1 in the root code and a LOINC code in the translation -->
+								<translation code=&quot;74728-7&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Vital signs&quot;/>
+							</code>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime>
+								<low value=&quot;20120910&quot;/>
+								<high value=&quot;20120910&quot;/>
+							</effectiveTime>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation (V2) ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;ed9589fd-fda0-41f7-a3d0-dc537554f5c2&quot;/>
+									<code code=&quot;8302-2&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Height&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20120910&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;177&quot; unit=&quot;cm&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201209101145-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;f4e729e2-a97f-4a7e-8e23-c92f9b6b55cf&quot;/>
+									<code code=&quot;3141-9&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Patient Body Weight - Measured&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20120910&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;86&quot; unit=&quot;kg&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201209101145-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;a0e39c70-9674-4b2a-9837-cdf74200d8d5&quot;/>
+									<code code=&quot;8480-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Intravascular Systolic&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20120910&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;132&quot; unit=&quot;mm[Hg]&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201209101145-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;1c2748b7-e440-41ba-bc01-dde97d84a036&quot;/>
+									<code code=&quot;8462-4&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;BP Diastolic&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20120910&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;88&quot; unit=&quot;mm[Hg]&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201109010915-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry typeCode=&quot;DRIV&quot;>
+						<organizer classCode=&quot;CLUSTER&quot; moodCode=&quot;EVN&quot;>
+							<!-- ** Vital signs organizer ** -->
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.26&quot; extension=&quot;2015-08-01&quot;/>
+							<templateId root=&quot;2.16.840.1.113883.10.20.22.4.26&quot;/>
+							<id root=&quot;24f6ad18-c512-40fc-82bd-1e131aa9e52b&quot;/>
+							<code code=&quot;46680005&quot; codeSystem=&quot;2.16.840.1.113883.6.96&quot; codeSystemName=&quot;SNOMED CT&quot; displayName=&quot;Vital signs&quot;>
+								<!-- A vitals organizer conformant to both C-CDA 1.1 and C-CDA 2.1 would contain the SNOMED code (46680005) from R1.1 in the root code and a LOINC code in the translation -->
+								<translation code=&quot;74728-7&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Vital signs&quot;/>
+							</code>
+							<statusCode code=&quot;completed&quot;/>
+							<effectiveTime>
+								<low value=&quot;20110901&quot;/>
+								<high value=&quot;20110901&quot;/>
+							</effectiveTime>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;05c047cd-28c3-41cd-be6c-56f8cc0c3f2f&quot;/>
+									<code code=&quot;8302-2&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Height&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20110901&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;177&quot; unit=&quot;cm&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201109010915-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;21b0f3d5-7d07-4f4f-ad7e-c33dc2ca3835&quot;/>
+									<code code=&quot;3141-9&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;Patient Body Weight - Measured&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20110901&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;88&quot; unit=&quot;kg&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201109010915-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;b046c35a-59c7-4215-ae09-9a8409a30b21&quot;/>
+									<code code=&quot;8480-6&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;BP Systolic&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20110901&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;128&quot; unit=&quot;mm[Hg]&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201109010915-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+							<component>
+								<observation classCode=&quot;OBS&quot; moodCode=&quot;EVN&quot;>
+									<!-- ** Vital sign observation ** -->
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot; extension=&quot;2014-06-09&quot;/>
+									<templateId root=&quot;2.16.840.1.113883.10.20.22.4.27&quot;/>
+									<id root=&quot;44f54e66-fb4b-4ee5-9ced-9574ef307a23&quot;/>
+									<code code=&quot;8462-4&quot; codeSystem=&quot;2.16.840.1.113883.6.1&quot; codeSystemName=&quot;LOINC&quot; displayName=&quot;BP Diastolic&quot;/>
+									<statusCode code=&quot;completed&quot;/>
+									<effectiveTime value=&quot;20110901&quot;/>
+									<value xsi:type=&quot;PQ&quot; value=&quot;80&quot; unit=&quot;mm[Hg]&quot;/>
+									<interpretationCode code=&quot;N&quot; codeSystem=&quot;2.16.840.1.113883.5.83&quot;/>
+									<author typeCode=&quot;AUT&quot;>
+										<templateId root=&quot;2.16.840.1.113883.10.20.22.4.119&quot;/>
+										<time value=&quot;201109010915-0800&quot;/>
+										<assignedAuthor>
+											<id extension=&quot;555555555&quot; root=&quot;2.16.840.1.113883.4.6&quot;/>
+											<code code=&quot;207QA0505X&quot; displayName=&quot;Adult Medicine&quot; codeSystem=&quot;2.16.840.1.113883.6.101&quot; codeSystemName=&quot;Healthcare Provider Taxonomy (HIPAA)&quot;/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>">
+</BODY>
+</HTML>
