@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>FroozHIE</title>
-<link rel="icon" type="image/png" href="data:image/png;base64,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" />
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-responsive.css">
-<link rel="stylesheet" href="css/XMLDisplay.css">
-<link href='css/google-font.css' rel='stylesheet' type='text/css'>
-<link href="css/bootstrap-toggle.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/froozhie.css">
-<script src="js/jquery.min.js"></script>
-<script src="js/XMLDisplay.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-toggle.min.js"></script>
-<script src="js/sortable.js"></script>
-<script src="js/jquery.sortable.min.js"></script>
-<script src="js/bootbox.js"></script>
-<script src="js/froozhie.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>FroozHIE</title>
+	<link rel="icon" type="image/png" href="data:image/png;base64,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" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="css/XMLDisplay.css">
+	<link href='css/google-font.css' rel='stylesheet' type='text/css'>
+	<link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/froozhie.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/XMLDisplay.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-toggle.min.js"></script>
+	<script src="js/sortable.js"></script>
+	<script src="js/jquery.sortable.min.js"></script>
+	<script src="js/bootbox.js"></script>
+	<script src="js/froozhie.js"></script>
+
 <body>
 	<nav id="menu">
 		<div id="menu-container">
-			<div data-toggle="modal" data-target="#file-modal" id="addfilediv"><i class="fa fa-file" ></i><span>Add File</span></div>
-			<div data-toggle="modal" data-target="#settings-modal"><i class="fa fa-cogs" ></i><span>Settings</span></div>
-			<div data-toggle="modal" data-target="#help-modal"><i class="fa fa-question-circle" ></i><span>Help</span></div>
+			<div data-toggle="modal" data-target="#file-modal" id="addfilediv"><i class="fa fa-file"></i><span>Add File</span></div>
+			<div data-toggle="modal" data-target="#settings-modal"><i class="fa fa-cogs"></i><span>Settings</span></div>
+			<div data-toggle="modal" data-target="#help-modal"><i class="fa fa-question-circle"></i><span>Help</span></div>
 		</div>
 	</nav>
 	<!-- Help Modal -->
@@ -38,64 +40,79 @@
 				<div class="modal-body" id="help-body">
 					<h2>FroozHIE Tool</h2>
 					<p>
-					Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the data must be viewed, compared, and reconciled with existing electronic medical/health records (EMR/EHR) data. This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process. 
+						Successful Health Information Exchange (HIE) requires electronic sharing of patient health information. When a
+						physician receives a medical summary from an outside source (hospital, referring physician, patient, etc.), the
+						data must be viewed, compared, and reconciled with existing electronic medical/health records (EMR/EHR) data.
+						This is usually accomplished with a time-consuming, labor-intensive and error-prone manual process.
 					</p>
 					<P>
-					The goal of FroozHIE is to allow for easy, customized viewing of clinical document architechture (CDA) files, and ultimately easy reconciliation between two sources of information provided via CDA (usually an incoming file, and existing information within a system).
+						The goal of FroozHIE is to allow for easy, customized viewing of clinical document architechture (CDA) files, and
+						ultimately easy reconciliation between two sources of information provided via CDA (usually an incoming file, and
+						existing information within a system).
 					</p>
 					<h3>Features/Instructions</h3>
 					<p>
-					<h4>Opening a file</h4> 
-					To open a new CDA file:
-					<ol>
-					<li> Click the Add File file icon in the upper left of the page. The Add File window opens. </li>
-					<li> Click the Choose File button. A new window opens.The Choose window opens. </li>
-					<li> Select the desired file. The  file displays within the tool. </li>
-					</ol>
+						<h4>Opening a file</h4>
+						To open a new CDA file:
+						<ol>
+							<li> Click the Add File file icon in the upper left of the page. The Add File window opens. </li>
+							<li> Click the Choose File button. A new window opens.The Choose window opens. </li>
+							<li> Select the desired file. The file displays within the tool. </li>
+						</ol>
 					</p>
-					<h4>Viewing a file</h4> 
-					<p>Once a file is opened, all appropriate data is displayed, other than what has been previously designated to be hidden (described in the Settings section below). 
+					<h4>Viewing a file</h4>
+					<p>Once a file is opened, all appropriate data is displayed, other than what has been previously designated to be
+						hidden (described in the Settings section below).
 					</p>
-					<p>Click the "x" in the tab to close a file, or close all files by clicking the Close All button in the upper right.
+					<p>Click the "x" in the tab to close a file, or close all files by clicking the Close All button in the upper
+						right.
 					</p>
-					<h4>Viewing Raw XML</h4> 
+					<h4>Viewing Raw XML</h4>
 					<p>
-					Click the View XML button in the upper left to view the raw XML.
-					</p>
-					<p>
-					Three buttons available:
-					<ul>
-					<li>Collapse All: Collapse all of the  nodes in the file.</li>
-					<li>Expand All: Expand all of the nodes in the file. </li>
-					<li>The Comments On/Off: Toggles display of the comment elements within the file. </li>
-					</ul>
+						Click the View XML button in the upper left to view the raw XML.
 					</p>
 					<p>
-					Note: Multiple instances of a node type at the same node level are numbered past the first instance (the multiple "Component" nodes under "structuredBody" show a good example of this feature).
+						Three buttons available:
+						<ul>
+							<li>Collapse All: Collapse all of the nodes in the file.</li>
+							<li>Expand All: Expand all of the nodes in the file. </li>
+							<li>The Comments On/Off: Toggles display of the comment elements within the file. </li>
+						</ul>
 					</p>
-					<h4>Settings</h4> 
 					<p>
-					Click the Settings icon (the round gears) in the upper right. The following settings are available:
-					<ul>
-					<li>Minimalist Header: Toggle this switch to enable or disable the setting. When enabled, only a few demographic sections in the header display. A button to expand the full header displays when this mode is enabled. </li>
-					<li>Section Order: Drag and drop a section name to change the order the sections display. Sections are only added to the list once you have opened a file, and the sections within that file are added to the sections list for ordering. To hide a section, drag and drop the section to the Removed sections list at the bottom of the settings window.</li> 
-					<li>Clear: Click the Clear button to remove all of the sections and start over with ordering.</li>
-					</ul>
+						Note: Multiple instances of a node type at the same node level are numbered past the first instance (the multiple
+						"Component" nodes under "structuredBody" show a good example of this feature).
+					</p>
+					<h4>Settings</h4>
+					<p>
+						Click the Settings icon (the round gears) in the upper right. The following settings are available:
+						<ul>
+							<li>Minimalist Header: Toggle this switch to enable or disable the setting. When enabled, only a few demographic
+								sections in the header display. A button to expand the full header displays when this mode is enabled. </li>
+							<li>Section Order: Drag and drop a section name to change the order the sections display. Sections are only
+								added to the list once you have opened a file, and the sections within that file are added to the sections list
+								for ordering. To hide a section, drag and drop the section to the Removed sections list at the bottom of the
+								settings window.</li>
+							<li>Clear: Click the Clear button to remove all of the sections and start over with ordering.</li>
+						</ul>
 					</p>
 					<h3>Future planned enhancements/features</h3>
 					<p>
-					<ul>
-						<li><strong>Order by document type</strong>: Section ordering/visibility settings to be set by CCD document type (Summary of Episode Note, Care Plan, etc.), so you may display different document types their own way.
-						</li>
-						<li><strong>File Merging</strong>: Ability to take two files, view differences between the files, and merge the sections into one resulting XML file.
-						</li>
-						<li><strong>Application integration</strong>: Settings that will allow for easier integration into other applications (ability to load a single designated file on page load, etc).
-						</li>
-					</ul>
-					</p>					
+						<ul>
+							<li><strong>Order by document type</strong>: Section ordering/visibility settings to be set by CCD document type
+								(Summary of Episode Note, Care Plan, etc.), so you may display different document types their own way.
+							</li>
+							<li><strong>File Merging</strong>: Ability to take two files, view differences between the files, and merge the
+								sections into one resulting XML file.
+							</li>
+							<li><strong>Application integration</strong>: Settings that will allow for easier integration into other
+								applications (ability to load a single designated file on page load, etc).
+							</li>
+						</ul>
+					</p>
 					<h3>Contact</h3>
-					<p>Email us at: 
-					<a href="mailto:froozhie@mieweb.com?Subject=FroozHIE Inquiry" target="_top">froozhie@mieweb.com</a> </p>
+					<p>Email us at:
+						<a href="mailto:froozhie@mieweb.com?Subject=FroozHIE Inquiry" target="_top">froozhie@mieweb.com</a> </p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -132,11 +149,13 @@
 				<div class="modal-body" id="settings-body">
 					<form>
 						<label for="minimalhead">Minimalist Header</label><br>
-						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1" checked data-onstyle="success" data-offstyle="danger" id="minimalhead" class="custom-toggle">
+						<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-width="85" value="1"
+						 checked data-onstyle="success" data-offstyle="danger" id="minimalhead" class="custom-toggle">
 						<label for="initdisplay">Sections to display on load (0=All)</label>&nbsp;
 						<input type="text" style="width:25px" value="0" id="initdisplay" />
 					</form>
-					<label for="sectionOrder">Section Order</label> <button type="button" class="btn btn-danger" style="float:right" onClick="cleardata();">Clear</button><br>
+					<label for="sectionOrder">Section Order</label> <button type="button" class="btn btn-danger" style="float:right"
+					 onClick="cleardata();">Clear</button><br>
 
 					<ul id="sectionOrder" class="connected sortable list">
 					</ul>
@@ -146,13 +165,13 @@
 					<ul id="removedSections" class="connected sortable list">
 
 					</ul>
-				</div>				
+				</div>
 				<div class="modal-footer" id="settings-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 	<!--file Modal -->
 	<div class="modal fade" id="file-modal" tabindex="-1" role="dialog" aria-labelledby="FroozHIE Add File">
 		<div class="modal-dialog" role="document">
@@ -181,93 +200,111 @@
 		<div id="header-bar" class="cf">
 			<i class="fa fa-bars menu-link"></i>
 			<div id="header-left">
-				<i onClick="document.getElementById('file-message').innerHTML='';" id="addButton" class="fa fa-file" data-toggle="modal" data-target="#file-modal"></i> <span class="header-text">Add File</span>
+				<i onClick="document.getElementById('file-message').innerHTML='';" id="addButton" class="fa fa-file" data-toggle="modal"
+				 data-target="#file-modal"></i> <span class="header-text">Add File</span>
 			</div>
 			<div id="header-right">
 				<i id="settingsButton" class="fa fa-cogs" data-toggle="modal" data-target="#settings-modal" onClick="showHiddens();"></i>
-				<i id="helpButton" class="fa fa-question-circle" data-toggle="modal" data-target="#help-modal"  onClick="showHelp();"></i>
+				<i id="helpButton" class="fa fa-question-circle" data-toggle="modal" data-target="#help-modal" onClick="showHelp();"></i>
 			</div>
 			<IMG ID="froologo" SRC="froozhie.png" style="height:29px;display:none;" />
 		</div>
 		<textarea id="dump" style="display: none"></textarea>
 		<div id="controls-container" class="cf">
-			<div id="SaveButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
+			<div id="SaveButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
 				<button type="button" value="Save" onclick="TaskTooling.save()" title="Save files" id="save-btn" class="btn btn-primary">Save</button>
 			</div>
-			<div id="ViewXMLButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
+			<div id="ViewXMLButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
 				<button type="button" value="ViewXML" onclick="" title="View XML" id="viewxml-btn" class="btn btn-primary">View XML</button>
 			</div>
-			<div id="ViewFullHeadButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="ViewFH" onclick="" title="View Full Header" id="viewfh-btn" class="btn btn-primary">View Full Header</button>
+			<div id="ViewFullHeadButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
+				<button type="button" value="ViewFH" onclick="" title="View Full Header" id="viewfh-btn" class="btn btn-primary">View
+					Full Header</button>
 			</div>
-			<div id="ViewAllSectionsButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="ViewAS" onclick="" title="View All Sections" id="viewas-btn" class="btn btn-primary">View All Sections</button>
+			<div id="ViewAllSectionsButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
+				<button type="button" value="ViewAS" onclick="" title="View All Sections" id="viewas-btn" class="btn btn-primary">View
+					All Sections</button>
 			</div>
-			<div id="MergeXMLButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="MergeXML" onclick="MergeXML();" title="Merge XML" id="mergexml-btn" class="btn btn-primary">Merge XML Files</button>
+			<div id="MergeXMLButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
+				<button type="button" value="MergeXML" onclick="MergeXML();" title="Merge XML" id="mergexml-btn" class="btn btn-primary">Merge
+					XML Files</button>
 			</div>
-			<div id="CollapseButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="CollapseAll" onclick="SetElementCollapse();" title="Collapse All" id="collapse-btn" class="btn btn-primary">Collapse All</button>
+			<div id="CollapseButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
+				<button type="button" value="CollapseAll" onclick="SetElementCollapse();" title="Collapse All" id="collapse-btn"
+				 class="btn btn-primary">Collapse All</button>
 			</div>
-			<div id="ExpandButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="ExpandAll" onclick="SetElementExpand();" title="Expand All" id="expand-btn" class="btn btn-primary">Expand All</button>
+			<div id="ExpandButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
+				<button type="button" value="ExpandAll" onclick="SetElementExpand();" title="Expand All" id="expand-btn" class="btn btn-primary">Expand
+					All</button>
 			</div>
-			<div id="CommentsButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls" style='display:none'>
-				<button type="button" value="Comments On" onclick="SetComments();" title="Expand All" id="comments-btn" class="btn btn-primary" style="width:151px">Comments On</button>
+			<div id="CommentsButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			 style='display:none'>
+				<button type="button" value="Comments On" onclick="SetComments();" title="Expand All" id="comments-btn" class="btn btn-primary"
+				 style="width:151px">Comments On</button>
 			</div>
 			<div class="btn-group btn-group-lg desktop btn-group-right" role="group" aria-label="Global Controls">
-				<button type="button" value="Close All" onclick="TaskTooling.clear()" title="Remove files" id="clear-btn" class="btn btn-primary btn-danger desktop">Close All</button>
+				<button type="button" value="Close All" onclick="TaskTooling.clear()" title="Remove files" id="clear-btn" class="btn btn-primary btn-danger desktop">Close
+					All</button>
 			</div>
-		</div>	
+		</div>
 	</div>
 	<div id="container" class="cf">
-		
+
 		<ul id="pageTab" class="nav nav-tabs">
-		  <li class="active"><a data-toggle="tab" href="#home" onClick="buttonupdate(this);">Welcome</a></li>
+			<li class="active"><a data-toggle="tab" href="#home" onClick="buttonupdate(this);">Welcome</a></li>
 		</ul>
 
 		<div id="pageContent" class="tab-content">
-		  <div id="home" class="tab-pane fade in active">
-		    <h3>FroozHIE</h3>
-		    <p>FroozHIE is a tool to help physicians and health care workers view Consolidated-Clinical Document Architecture (CCDA) and related electronic healthcare documents. </p>
-		    <p>Click the Add File icon in the upper left to add files to view. </p>
-		    <p>Click the help icon (?) in the upper right for additional help and information.</p>
-		  </div>
+			<div id="home" class="tab-pane fade in active">
+				<h3>FroozHIE</h3>
+				<p>FroozHIE is a tool to help physicians and health care workers view Consolidated-Clinical Document Architecture
+					(CCDA) and related electronic healthcare documents. </p>
+				<p>Click the Add File icon in the upper left to add files to view. </p>
+				<p>Click the help icon (?) in the upper right for additional help and information.</p>
+			</div>
 		</div>
 	</div>
 </body>
+
 </html>
 
 <SCRIPT>
-    document.getElementById('file_name').addEventListener('change', readSingleFile, false);
+	document.getElementById('file_name').addEventListener('change', readSingleFile, false);
 </SCRIPT>
 <script src="js/jquery.sortable.js"></script>
 <script>
-    $('.sortable').sortable();
+	$('.sortable').sortable();
 
-	$('.sortable').sortable().bind('sortupdate', function() {
-	    //Triggered when the user stopped sorting and the DOM position has changed.
-	    saveSections();
+	$('.sortable').sortable().bind('sortupdate', function () {
+		//Triggered when the user stopped sorting and the DOM position has changed.
+		saveSections();
 	});
 
 	$('.sortable').sortable({
-	    items: ':not(.disabled)'
+		items: ':not(.disabled)'
 	});
 
 	var singlefile = window.parent.document.getElementById('froo_XML');
 	if (singlefile) {
-		displayCCDAstyled('singlefile.xml',singlefile.value);
+		displayCCDAstyled('singlefile.xml', singlefile.value);
 	}
 	var hidestring = window.parent.document.getElementById('froo_hide');
 	if (hidestring) {
-		hidestring=hidestring.value;
-		if (hidestring.includes("add")) $('#header-left').css('display','none');
-		if (hidestring.includes("xml")) $('#ViewXMLButton').css('display','none');
-		if (hidestring.includes("tabs")) $('#pageTab').css('display','none');
-		if (hidestring.includes("clear")) $('#clear-btn').css("display","none");
-		if (hidestring.includes("help")) $('#helpButton').css("display","none");
-		if (!(hidestring.includes("logo"))) $('#froologo').css("display","");
+		hidestring = hidestring.value;
+		if (hidestring.includes("add")) $('#header-left').css('display', 'none');
+		if (hidestring.includes("xml")) $('#ViewXMLButton').css('display', 'none');
+		if (hidestring.includes("tabs")) $('#pageTab').css('display', 'none');
+		if (hidestring.includes("clear")) $('#clear-btn').css("display", "none");
+		if (hidestring.includes("help")) $('#helpButton').css("display", "none");
+		if (!(hidestring.includes("logo"))) $('#froologo').css("display", "");
 	} else {
-		$('#froologo').css("display","");
+		$('#froologo').css("display", "");
 	}
 </script>
