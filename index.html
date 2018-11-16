@@ -257,15 +257,17 @@
 	var singlefile = window.parent.document.getElementById('froo_XML');
 	if (singlefile) {
 		displayCCDAstyled('singlefile.xml',singlefile.value);
-		var hidestring = window.parent.document.getElementById('froo_hide');
-		if (hidestring) {
-			hidestring=hidestring.value;
-			if (hidestring.includes("add")) $('#header-left').css('display','none');
-			if (hidestring.includes("xml")) $('#ViewXMLButton').css('display','none');
-			if (hidestring.includes("tabs")) $('#pageTab').css('display','none');
-			if (hidestring.includes("clear")) $('#clear-btn').css("display","none");
-			if (hidestring.includes("help")) $('#helpButton').css("display","none");
-			if (!(hidestring.includes("logo"))) $('#froologo').css("display","");
-		}
+	}
+	var hidestring = window.parent.document.getElementById('froo_hide');
+	if (hidestring) {
+		hidestring=hidestring.value;
+		if (hidestring.includes("add")) $('#header-left').css('display','none');
+		if (hidestring.includes("xml")) $('#ViewXMLButton').css('display','none');
+		if (hidestring.includes("tabs")) $('#pageTab').css('display','none');
+		if (hidestring.includes("clear")) $('#clear-btn').css("display","none");
+		if (hidestring.includes("help")) $('#helpButton').css("display","none");
+		if (!(hidestring.includes("logo"))) $('#froologo').css("display","");
+	} else {
+		$('#froologo').css("display","");
 	}
 </script>
