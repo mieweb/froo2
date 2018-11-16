@@ -336,8 +336,7 @@ a:hover {
 .btn-secondary.disabled:active,
 .btn-secondary[disabled]:active,
 .btn-secondary.disabled.active,
-.btn-secondary[disabled].active,
-	{
+.btn-secondary[disabled].active {
 	background-color: #849091;
 	border-color: #909D9E;
 }
@@ -932,6 +931,7 @@ i.active-panel {
 	}
 
 }
+
 #features {
 	margin: auto;
 	width: 460px;
