@@ -669,7 +669,9 @@ function sectionReOrg(idname) {
 		for (var j = 0; j < hideList.length; j++) {
 			var name = hideList[j][0];
 			var loinc = hideList[j][1];
-			$("#secdiv_" + loinc).css('display', 'none');
+			if (loinc>"") {
+				$("#secdiv_" + loinc).css('display', 'none');
+			}
 		}
 	}
 
@@ -712,7 +714,6 @@ function displayXMLResult(xmldata, windowname) {
 	else if (document.implementation && document.implementation.createDocument) {
 		xsltProcessor = new XSLTProcessor();
 		xsltProcessor.importStylesheet(xsl);
-		//alert(xmldata);
 		resultDocument = xsltProcessor.transformToFragment(xml, document);
 		document.getElementById(windowname).appendChild(resultDocument);
 		e = $('#file_name');
@@ -817,6 +818,13 @@ function showHelp() {
 	document.getElementById("help-body").style.height = ((height * .8) - 125) + "px";
 }
 
+function removeItem(xthis) {
+	var parentElement = xthis.parentElement;
+	document.getElementById("removedSections").append(parentElement);
+	xthis.remove();
+	saveSections();
+}
+
 function showHiddens() {
 
 	var height = "innerHeight" in window ?
@@ -827,33 +835,45 @@ function showHiddens() {
 	document.getElementById("settings-body").style.height = ((height * .8) - 125) + "px";
 
 	for (var key in localStorage) {
-		if (key == "hide_list") {
+		if (key == 'hide_list') {
 			var items = (localStorage.getItem(key));
-			var ul = document.getElementById("removedSections");
+			var ul = document.getElementById('removedSections');
 			var hideList = [];
 			if (items) hideList = JSON.parse(items);
 			removeAllChildNodes(ul);
 			for (var j = 0; j < hideList.length; j++) {
-				var li = document.createElement("li");
-				var txt = hideList[j][0] + " (" + hideList[j][1] + ") ";
-				li.setAttribute("id", hideList[j][1] + '_' + hideList[j][0] + "_litem");
-				li.appendChild(document.createTextNode(txt));
-				ul.appendChild(li);
+				var li = document.createElement('li');
+				var txt = hideList[j][0] + ' (' + hideList[j][1] + ') ';
+				if (hideList[j][0]>"") {
+					li.setAttribute("id", hideList[j][1] + '_' + hideList[j][0] + "_litem");
+					li.appendChild(document.createTextNode(txt));
+					ul.appendChild(li);
+				}
 			}
 		}
 
-		if (key == "list_order") {
+		if (key == 'list_order') {
 			var items = (localStorage.getItem(key));
 			var ul = document.getElementById("sectionOrder");
 			var hideList = [];
 			if (items) hideList = JSON.parse(items);
 			removeAllChildNodes(ul);
 			for (var j = 0; j < hideList.length; j++) {
-				var li = document.createElement("li");
-				var txt = hideList[j][0] + " (" + hideList[j][1] + ") ";
-				li.setAttribute("id", hideList[j][1] + '_' + hideList[j][0] + "_litem");
-				li.appendChild(document.createTextNode(txt));
-				ul.appendChild(li);
+				var li = document.createElement('li');
+				var txt = hideList[j][0] + ' (' + hideList[j][1] + ') ';
+				if (hideList[j][0]>"") {
+					var btn = document.createElement('BUTTON');
+					var btntxt = document.createTextNode('X');
+					btn.style.color='red';
+					btn.style.float='right';
+					btn.style.height = '20px';
+					btn.appendChild(btntxt);
+					btn.setAttribute ('onclick','removeItem(this)');
+					li.setAttribute("id", hideList[j][1] + '_' + hideList[j][0] + "_litem");
+					li.appendChild(document.createTextNode(txt));
+					li.appendChild(btn);
+					ul.appendChild(li);
+				}
 			}
 		}
 	}
@@ -911,7 +931,20 @@ function saveSections() {
 	listItems.each(function (li) {
 		var parts = $(this).attr('id').split('_');
 		var section = [parts[1], parts[0]];
-		lolist.push(section);
+		var firstbtn = $(this).children(":button").size();
+		if (firstbtn==0) {
+			var btn = document.createElement('BUTTON');
+			var btntxt = document.createTextNode('X');
+			btn.style.color='red';
+			btn.style.float='right';
+			btn.style.height = '20px';
+			btn.appendChild(btntxt);
+			btn.setAttribute ('onclick','removeItem(this)');
+			$(this).append(btn);
+		}
+		if (parts[0]>"") {
+			lolist.push(section);
+		}
 	});
 	var txtList = JSON.stringify(lolist);
 	localStorage.setItem("list_order", txtList);
@@ -921,7 +954,13 @@ function saveSections() {
 	listItems.each(function (li) {
 		var parts = $(this).attr('id').split('_');
 		var section = [parts[1], parts[0]];
-		lolist.push(section);
+		var firstbtn = $(this).children(":button").size();
+		if (firstbtn==1) {
+			$(this).children(":button").remove();
+		}
+		if (parts[0]>"") {
+			lolist.push(section);
+		}
 	});
 	var txtList = JSON.stringify(lolist);
 	localStorage.setItem("hide_list", txtList);
