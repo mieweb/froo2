@@ -695,10 +695,14 @@ function loadXMLDoc(filename) {
 
 function displayXMLResult(xmldata, windowname) {
 	var filepath = window.parent.document.getElementById('froo_path');
-
+	if (filepath) {
+		filepath=filepath.value;
+	} else {
+		filepath="";
+	}
 	parser = new DOMParser();
 	xml = parser.parseFromString(xmldata, 'text/xml');
-	xsl = loadXMLDoc("CDA.xsl");
+	xsl = loadXMLDoc(filepath+"CDA.xsl");
 	// code for IE
 	if (window.ActiveXObject || xhttp.responseType == 'msxml-document') {
 		ex = xml.transformNode(xsl);
