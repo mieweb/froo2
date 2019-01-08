@@ -8,3 +8,11 @@ It is totally self contained HTML and javascript.  You can download the project 
 Please review the help information within the application for more information.
 
 CDA Challenge: http://www.hl7.org/events/toolingchallenge.cfm?ref=banner
+
+
+## Running Locally
+```
+git clone https://github.com/mieweb/froo2.git
+cd froo2
+./test-server.sh
+```
