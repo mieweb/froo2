@@ -540,6 +540,86 @@ function openViewXML(idname) {
 	}
 }
 
+function openValidateXML(idname) {
+	var column = [];
+	var element = -1;
+
+	for (var i = 0; i < xmlFiles.length; i++) {
+		var xmlData = xmlFiles[i];
+		if (xmlData[0] == idname) {
+			element = i;
+			i = xmlFiles.length;
+		}
+	}
+
+	if (element >= 0) {
+		var item = xmlFiles[element];
+		var filename = item[1];
+		var tabs = ($('a:contains("Validate XML:' + filename + '")').length);
+		if (tabs == 0) {
+			var name = item[0];
+			var contents = item[2];
+			var fname = 'validate' + name;
+			var idname = fname.replace('.xml', '').replace(/ /g, '').replace(/-/g, '').replace(/_/g, '');
+			var tab = '<li><a data-toggle="tab" onClick="buttonupdate(this);" href="#file' + idname + '">Validate XML:' + filename + '<button id="closebutton_' + idname + '" class="close" type="button" onclick="popViewXML(\'file' + idname + '\');"> x </button></a></li>';
+			var xmlOutput = xml_to_string(contents);
+			var validatorHtml = $.ajax({
+				type: "GET",
+				url: 'validate_ui.html',
+				async: false,
+				cache: false
+			}).responseText;
+			if (validatorHtml == null) {
+				validatorHtml = `<h1>Error loading validation tool.</h1>`;
+			} else {
+				validatorHtml = validatorHtml.replace(/{{VALIDATE_API_URL}}/g, 'http://localhost:8080/referenceccdaservice/');
+			}
+			var panel = '<div id="file' + idname + '" class="tab-pane fade"></div>';
+			$('#pageTab').append(tab);
+			$('#pageContent').append(panel);
+			var iframe = document.createElement('iframe');
+
+			jQuery('#file' + idname)[0].appendChild(iframe);
+			iframe.contentWindow.document.open();
+			iframe.contentWindow.document.write(validatorHtml);
+			iframe.contentWindow.document.close();
+			iframe.width = window.innerWidth;
+			iframe.height = window.innerHeight - jQuery("#main-wrapper").height() - 100;
+			iframe.frameBorder = 0;
+			iframe.onload = function () {
+				var jq = jQuery('#file' + idname + ' iframe')[0].contentWindow.jQuery;
+				jq(document).ready(function () {
+					jq('[uib-btn-radio="\'sender\'"]').removeClass('active');
+					jq('[uib-btn-radio]').on('click', function(event){
+						jq('#section_2').fadeIn();
+					});
+					jq('#validation_objectives').on('change', function(event){
+						jq('#section_3').fadeIn();
+					});
+					jq('#CCDAR2_refdocsfordocumenttype').on('change', function(event){
+											
+						jq('#section_4').fadeIn();
+
+
+						//jq('#section_5').fadeIn();
+
+						var file = new File([xmlOutput], fname, {
+							type: "application/xml",
+						});
+						if (file) {
+							jQuery('#file' + idname + ' iframe')[0].contentWindow.blockUI.start();
+							jQuery('#file' + idname + ' iframe')[0].contentWindow.uploadFile(file);
+							jQuery('#file' + idname + ' iframe')[0].contentWindow.blockUI.stop();
+						}
+					});
+				});
+			}
+			$('#file-modal').modal('hide');
+			$('a[href="#file' + idname + '"]').trigger('click');
+		}
+	}
+}
+
 function popViewXML(idname) {
 	var column = [];
 	var element = -1;
@@ -735,7 +815,9 @@ function buttonupdate(ahref) {
 				var idname = iHTML.substr(0, iHTML.indexOf(".xml"));
 				idname = idname.replace(".xml", "").replace(/ /g, "").replace(/-/g, "").replace(/\./g, "");
 				$("#ViewXMLButton").css("display", "");
+				$("#ValidateXMLButton").css("display", "");
 				$("#viewxml-btn").attr('onclick', 'openViewXML("file' + idname + '");');
+				$("#validatexml-btn").attr('onclick', 'openValidateXML("file' + idname + '");');
 				if (xmlFiles.length == 2) {
 					//	$("#MergeXMLButton").css("display","");
 				}

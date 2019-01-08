@@ -219,6 +219,10 @@
 			 style='display:none'>
 				<button type="button" value="ViewXML" onclick="" title="View XML" id="viewxml-btn" class="btn btn-primary">View XML</button>
 			</div>
+			<div id="ValidateXMLButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
+			style='display:none'>
+			 <button type="button" value="ValidateXML" onclick="" title="Validate XML" id="validatexml-btn" class="btn btn-primary">Validate XML</button>
+		 </div>
 			<div id="ViewFullHeadButton" class="btn-group btn-group-lg desktop btn-group-left" role="group" aria-label="Global Controls"
 			 style='display:none'>
 				<button type="button" value="ViewFH" onclick="" title="View Full Header" id="viewfh-btn" class="btn btn-primary">View
@@ -300,6 +304,7 @@
 		hidestring = hidestring.value;
 		if (hidestring.includes("add")) $('#header-left').css('display', 'none');
 		if (hidestring.includes("xml")) $('#ViewXMLButton').css('display', 'none');
+		if (hidestring.includes("xml")) $('#ValidateXMLButton').css('display', 'none');
 		if (hidestring.includes("tabs")) $('#pageTab').css('display', 'none');
 		if (hidestring.includes("clear")) $('#clear-btn').css("display", "none");
 		if (hidestring.includes("help")) $('#helpButton').css("display", "none");
