@@ -297,6 +297,10 @@
 
 	var singlefile = window.parent.document.getElementById('froo_XML');
 	if (singlefile) {
+		var f = new File([singlefile.value], "singlefile.xml", {
+		  type: "application/xml",
+		});
+		xmlFileObjects['singlefile'] = f;
 		displayCCDAstyled('singlefile.xml', singlefile.value);
 	}
 	var hidestring = window.parent.document.getElementById('froo_hide');

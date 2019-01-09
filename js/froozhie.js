@@ -572,7 +572,7 @@ function openValidateXML(idname) {
 			if (validatorHtml == null) {
 				validatorHtml = `<h1>Error loading validation tool.</h1>`;
 			} else {
-				validatorHtml = validatorHtml.replace(/{{VALIDATE_API_URL}}/g, 'http://localhost:8080/referenceccdaservice/');
+				validatorHtml = validatorHtml.replace(/{{VALIDATE_API_URL}}/g, window.parent.document.getElementById('froo_validateurl').value);
 			}
 			var panel = '<div id="file' + idname + '" class="tab-pane fade"></div>';
 			$('#pageTab').append(tab);
@@ -606,7 +606,7 @@ function openValidateXML(idname) {
 							form_data.append('validationObjective', jQuery('#file' + idname + ' iframe')[0].contentWindow.$scope.validationModel.selectedObjective.name);
 
 							$.ajax({
-								url: 'http://localhost:8080/referenceccdaservice/', // point to server-side PHP script 
+								url: window.parent.document.getElementById('froo_validateurl').value, // point to server-side PHP script 
 								dataType: 'json', // what to expect back from the PHP script, if anything
 								cache: false,
 								contentType: false,
@@ -622,6 +622,9 @@ function openValidateXML(idname) {
 								jq("#section_4").html('<strong>An error occurred when trying to communicate with the validation service.</strong><pre>' + ex + '</pre>');
 
 							});
+						} else {
+							jq("#section_4").html('<strong>Error loading file for validation.</strong>');
+							jq('#section_4').fadeIn();
 						}
 					});
 				});
