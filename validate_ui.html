@@ -99,37 +99,15 @@
       };
       self.toggleMessageType = toggleMessageType;
       self.getReferenceFiles = getReferenceFiles;
-      self.validate = validate;
+      window.Upload = Upload;
       window.blockUI = blockUI;
+      window.$scope = $scope;
       $scope.radioModel = 'sender';
       $scope.objectives = [];
       $scope.referenceFileNames = [];
 
-      function validate() {
-        if ($scope.validationModel.file) {
-          blockUI.start();
-          uploadFile($scope.validationModel.file);
-          blockUI.stop();
-        }
-      }
 
-      uploadFile = function(file) {
-        Upload.upload({
-          url: '{{VALIDATE_API_URL}}',
-          fields: {
-            'validationObjective': $scope.validationModel.selectedObjective.name,
-            'referenceFileName': $scope.validationModel.selectedReferenceFileName.name,
-            'ccdaFile': file
-          }
-        }).then(function (resp) {
-          console.log('Success ' + 'uploaded. Response: ' + resp.data);
-          showValidationResults(resp.data)
-        }, function (resp) {
-          jQuery("#section_4").html('<strong>An error occurred when trying to communicate with the validation service.</strong>');
-        });
-      }
-
-      function showValidationResults(data) {
+       showValidationResults = function(data) {
         showValidationResultsModalButtons();
         var tabHtml1 = '';
         if (data.resultsMetaData.serviceError) {

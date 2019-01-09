@@ -590,26 +590,38 @@ function openValidateXML(idname) {
 				var jq = jQuery('#file' + idname + ' iframe')[0].contentWindow.jQuery;
 				jq(document).ready(function () {
 					jq('[uib-btn-radio="\'sender\'"]').removeClass('active');
-					jq('[uib-btn-radio]').on('click', function(event){
+					jq('[uib-btn-radio]').on('click', function (event) {
 						jq('#section_2').fadeIn();
 					});
-					jq('#validation_objectives').on('change', function(event){
+					jq('#validation_objectives').on('change', function (event) {
 						jq('#section_3').fadeIn();
 					});
-					jq('#CCDAR2_refdocsfordocumenttype').on('change', function(event){
-											
-						jq('#section_4').fadeIn();
+					jq('#CCDAR2_refdocsfordocumenttype').on('change', function (event) {
+						var cname = name.substr(4);
+						if (xmlFileObjects[cname]) {
+							jq('#section_4').fadeIn();
+							var form_data = new FormData();
+							form_data.append('ccdaFile', xmlFileObjects[cname]);
+							form_data.append('referenceFileName', jQuery('#file' + idname + ' iframe')[0].contentWindow.$scope.validationModel.selectedReferenceFileName.name);
+							form_data.append('validationObjective', jQuery('#file' + idname + ' iframe')[0].contentWindow.$scope.validationModel.selectedObjective.name);
 
+							$.ajax({
+								url: 'http://localhost:8080/referenceccdaservice/', // point to server-side PHP script 
+								dataType: 'json', // what to expect back from the PHP script, if anything
+								cache: false,
+								contentType: false,
+								processData: false,
+								crossDomain: true,
+								data: form_data,
+								type: 'post',
+								success: function (res) {
+									jQuery('#file' + idname + ' iframe')[0].contentWindow.showValidationResults(res);
+									jq("#section_4").html('<strong>Validation complete!</strong>');
+								}
+							}).fail(function (jqxhr, settings, ex) {
+								jq("#section_4").html('<strong>An error occurred when trying to communicate with the validation service.</strong><pre>' + ex + '</pre>');
 
-						//jq('#section_5').fadeIn();
-
-						var file = new File([xmlOutput], fname, {
-							type: "application/xml",
-						});
-						if (file) {
-							jQuery('#file' + idname + ' iframe')[0].contentWindow.blockUI.start();
-							jQuery('#file' + idname + ' iframe')[0].contentWindow.uploadFile(file);
-							jQuery('#file' + idname + ' iframe')[0].contentWindow.blockUI.stop();
+							});
 						}
 					});
 				});
@@ -662,12 +674,14 @@ function displayCCDAstyled(fname, contents) {
 		$('#file' + idname).remove();
 	}
 }
+xmlFileObjects = [];
 
 function readSingleFile(evt) {
 	//Retrieve the first (and only!) File from the FileList object
 	var f = evt.target.files[0];
 
 	if (f) {
+
 		var r = new FileReader();
 		r.onload = function (e) {
 			var contents = e.target.result;
@@ -680,6 +694,8 @@ function readSingleFile(evt) {
 				if (xmlData[0] == 'file' + idname) element = i;
 			}
 			if (element == -1) {
+				xmlFileObjects[idname] = f;
+
 				displayCCDAstyled(fname, contents);
 			} else {
 				$("#file-message").html("This file has already been loaded.");
@@ -749,7 +765,7 @@ function sectionReOrg(idname) {
 		for (var j = 0; j < hideList.length; j++) {
 			var name = hideList[j][0];
 			var loinc = hideList[j][1];
-			if (loinc>"") {
+			if (loinc > "") {
 				$("#secdiv_" + loinc).css('display', 'none');
 			}
 		}
@@ -778,13 +794,13 @@ function loadXMLDoc(filename) {
 function displayXMLResult(xmldata, windowname) {
 	var filepath = window.parent.document.getElementById('froo_path');
 	if (filepath) {
-		filepath=filepath.value;
+		filepath = filepath.value;
 	} else {
-		filepath="";
+		filepath = "";
 	}
 	parser = new DOMParser();
 	xml = parser.parseFromString(xmldata, 'text/xml');
-	xsl = loadXMLDoc(filepath+"CDA.xsl");
+	xsl = loadXMLDoc(filepath + "CDA.xsl");
 	// code for IE
 	if (window.ActiveXObject || xhttp.responseType == 'msxml-document') {
 		ex = xml.transformNode(xsl);
@@ -926,7 +942,7 @@ function showHiddens() {
 			for (var j = 0; j < hideList.length; j++) {
 				var li = document.createElement('li');
 				var txt = hideList[j][0] + ' (' + hideList[j][1] + ') ';
-				if (hideList[j][0]>"") {
+				if (hideList[j][0] > "") {
 					li.setAttribute("id", hideList[j][1] + '_' + hideList[j][0] + "_litem");
 					li.appendChild(document.createTextNode(txt));
 					ul.appendChild(li);
@@ -943,14 +959,14 @@ function showHiddens() {
 			for (var j = 0; j < hideList.length; j++) {
 				var li = document.createElement('li');
 				var txt = hideList[j][0] + ' (' + hideList[j][1] + ') ';
-				if (hideList[j][0]>"") {
+				if (hideList[j][0] > "") {
 					var btn = document.createElement('BUTTON');
 					var btntxt = document.createTextNode('X');
-					btn.style.color='red';
-					btn.style.float='right';
+					btn.style.color = 'red';
+					btn.style.float = 'right';
 					btn.style.height = '20px';
 					btn.appendChild(btntxt);
-					btn.setAttribute ('onclick','removeItem(this)');
+					btn.setAttribute('onclick', 'removeItem(this)');
 					li.setAttribute("id", hideList[j][1] + '_' + hideList[j][0] + "_litem");
 					li.appendChild(document.createTextNode(txt));
 					li.appendChild(btn);
@@ -1014,17 +1030,17 @@ function saveSections() {
 		var parts = $(this).attr('id').split('_');
 		var section = [parts[1], parts[0]];
 		var firstbtn = $(this).children(":button").size();
-		if (firstbtn==0) {
+		if (firstbtn == 0) {
 			var btn = document.createElement('BUTTON');
 			var btntxt = document.createTextNode('X');
-			btn.style.color='red';
-			btn.style.float='right';
+			btn.style.color = 'red';
+			btn.style.float = 'right';
 			btn.style.height = '20px';
 			btn.appendChild(btntxt);
-			btn.setAttribute ('onclick','removeItem(this)');
+			btn.setAttribute('onclick', 'removeItem(this)');
 			$(this).append(btn);
 		}
-		if (parts[0]>"") {
+		if (parts[0] > "") {
 			lolist.push(section);
 		}
 	});
@@ -1037,10 +1053,10 @@ function saveSections() {
 		var parts = $(this).attr('id').split('_');
 		var section = [parts[1], parts[0]];
 		var firstbtn = $(this).children(":button").size();
-		if (firstbtn==1) {
+		if (firstbtn == 1) {
 			$(this).children(":button").remove();
 		}
-		if (parts[0]>"") {
+		if (parts[0] > "") {
 			lolist.push(section);
 		}
 	});
