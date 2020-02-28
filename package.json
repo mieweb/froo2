@@ -3,7 +3,7 @@
 	"private": true,
 	"dependencies": {
 		"async": "^1.5.2",
-		"colors": "^1.0.3",
+		"colors": "^1.4.0",
 		"corser": "^2.0.1",
 		"debug": "^3.1.0",
 		"ecstatic": "^3.3.2",
