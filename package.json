@@ -18,7 +18,7 @@
 		"ms": "^2.0.0",
 		"opener": "^1.4.3",
 		"optimist": "^0.6.1",
-		"portfinder": "^1.0.20",
+		"portfinder": "^1.0.28",
 		"qs": "^6.9.1",
 		"requires-port": "^1.0.0",
 		"union": "^0.5.0",
