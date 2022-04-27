@@ -2,7 +2,7 @@
 	"name": "froo",
 	"private": true,
 	"dependencies": {
-		"async": "^1.5.2",
+		"async": "^2.6.4",
 		"colors": "^1.4.0",
 		"corser": "^2.0.1",
 		"debug": "^3.2.6",
