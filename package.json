@@ -13,7 +13,7 @@
 		"http-proxy": "^1.18.1",
 		"http-server": "^0.13.0",
 		"mime": "^1.6.0",
-		"minimist": "^1.2.0",
+		"minimist": "^1.2.6",
 		"mkdirp": "^0.5.5",
 		"ms": "^2.0.0",
 		"opener": "^1.4.3",
