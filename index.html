@@ -302,6 +302,10 @@
 		});
 		xmlFileObjects['singlefile'] = f;
 		displayCCDAstyled('singlefile.xml', singlefile.value);
+		var val = (window.parent.document.getElementById('froo_autoOpenRaw').value);
+		if (val == '1') {
+			openViewXML("filesinglefile");
+		}
 	}
 	var hidestring = window.parent.document.getElementById('froo_hide');
 	if (hidestring) {
